@@ -1,6 +1,9 @@
 import Head from "next/head";
 import React, { useEffect } from "react";
 import DreamTeam from "../components/layouts/pages/home/dreamTeam";
+import ManageGuestList from "../components/layouts/pages/home/manageGuestList";
+import OwnCouple from "../components/layouts/pages/home/ownCouple";
+import PlanWedding from "../components/layouts/pages/home/planWedding";
 import VendorSearch from "../components/layouts/pages/home/vendorSearch";
 
 const Home = () => {
@@ -27,6 +30,9 @@ const Home = () => {
       </div>
       <DreamTeam />
       <VendorSearch />
+      <PlanWedding />
+      <OwnCouple />
+      <ManageGuestList />
     </>
   );
 };
