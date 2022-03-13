@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Image from "next/image";
 import SearchIcon from "../../../../../public/icons/search.svg";
 import ListIcon from "../../../../../public/icons/list.svg";
@@ -7,9 +7,13 @@ import CheckedIcon from "../../../../../public/icons/checked.svg";
 import { MdSearch } from "react-icons/md";
 
 const DreamTeam = () => {
+  useEffect(() => {
+    //
+  }, []);
+
   return (
     <div className="bg-bg-romance px-10 py-16 text-bg-primary">
-      <div className="w-full flex flex-col items-center">
+      <div data-aos="fade-right" className="w-full flex flex-col items-center">
         <div className="flex flex-col items-center">
           <p className="font-normal text-3xl">Find Your Dream Team</p>
           <div className="flex flex-col items-center mt-2">
