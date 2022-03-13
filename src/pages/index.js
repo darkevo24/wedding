@@ -1,7 +1,7 @@
 import Head from "next/head";
 import React, { useEffect } from "react";
-import DreamTeam from "../components/layouts/home/dreamTeam";
-import VendorSearch from "../components/layouts/home/vendorSearch";
+import DreamTeam from "../components/layouts/pages/home/dreamTeam";
+import VendorSearch from "../components/layouts/pages/home/vendorSearch";
 
 const Home = () => {
   useEffect(() => {
