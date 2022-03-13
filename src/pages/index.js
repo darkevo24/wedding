@@ -1,6 +1,5 @@
 import Head from "next/head";
 import React, { useEffect } from "react";
-import Footer from "../components/layouts/footer";
 import DreamTeam from "../components/layouts/home/dreamTeam";
 import VendorSearch from "../components/layouts/home/vendorSearch";
 
@@ -28,8 +27,6 @@ const Home = () => {
       </div>
       <DreamTeam />
       <VendorSearch />
-
-      <Footer />
     </>
   );
 };
