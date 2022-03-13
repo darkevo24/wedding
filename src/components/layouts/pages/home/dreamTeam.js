@@ -1,11 +1,10 @@
 import React from "react";
-import { MdManageSearch } from "react-icons/md";
-import { FaClipboardList } from "react-icons/fa";
 import Image from "next/image";
 import SearchIcon from "../../../../../public/icons/search.svg";
 import ListIcon from "../../../../../public/icons/list.svg";
 import CurrencyIcon from "../../../../../public/icons/currency.svg";
 import CheckedIcon from "../../../../../public/icons/checked.svg";
+import { MdSearch } from "react-icons/md";
 
 const DreamTeam = () => {
   return (
@@ -18,15 +17,25 @@ const DreamTeam = () => {
             <p>Handpicked recs in your style, budget, availability and more.</p>
           </div>
         </div>
-        <div className="flex flex-col items-center mt-3">
-          <div>
-            <input type="text" />
+        <div className="flex flex-col items-center w-full mt-3">
+          <div className="w-2/5 bg-white h-10 flex items-center rounded-md">
+            <form className="w-full h-full flex items-center">
+              <div className="w-1/2 h-full flex items-center justify-center border-r border-r-bg-soapstone select-none">
+                <p>Wedding Vendor</p>
+              </div>
+              <div className="w-1/2 flex h-full">
+                <input className="bg-transparent w-full outline-none px-2 text-center" type="text" placeholder="Region / Area" required />
+                <button type="submit" className="bg-bg-primary text-white px-2 h-full rounded-tr-md rounded-br-md">
+                  <MdSearch size={25} />
+                </button>
+              </div>
+            </form>
           </div>
           <div className="mt-2">
             <p className="font-light text-sm">Wedding Venues, Photographers, DJs,Hair & Makeup, Planners, Caterers, Florists and more</p>
           </div>
         </div>
-        <div className="border-t-0.5 border-bg-soapstone w-5/6 my-10"></div>
+        <div className="border-t-0.5 border-bg-soapstone w-11/12 my-10"></div>
         <div className="flex w-full space-x-2">
           <div className="flex flex-col space-y-2 items-center text-center w-1/4">
             <div className="rounded-full border-2 border-bg-eunry w-20 h-20 p-0.5">
