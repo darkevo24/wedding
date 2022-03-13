@@ -15,7 +15,7 @@ const Master = ({ children }) => {
     });
 
     window.addEventListener("scroll", (e) => {
-      window.scrollY > 200 ? (scrollTop?.current?.style?.display = "inline-block") : (scrollTop?.current?.style?.display = "none");
+      window.scrollY > 160 ? (scrollTop?.current?.style?.display = "inline-block") : (scrollTop?.current?.style?.display = "none");
     });
   });
 
