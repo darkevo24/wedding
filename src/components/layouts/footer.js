@@ -9,7 +9,7 @@ const Footer = () => {
     <div className="bg-bg-primary w-full px-5 py-2 text-white">
       <div className="flex justify-between mt-5">
         <div className="flex items-center">
-          <Image src={Logo} width={250} height={75} />
+          <Image src={Logo} width={310} height={75} />
         </div>
         <div>
           <p className="font-bold text-right cursor-pointer">Refer A Friend</p>
@@ -23,7 +23,9 @@ const Footer = () => {
         </div>
       </div>
       <div className="flex justify-between mt-1">
-        <div>Plan Your Wedding into Reality!</div>
+        <div>
+          <p className="text-lg">Plan Your Wedding into Reality!</p>
+        </div>
         <div className="flex items-center space-x-3">
           <div className="cursor-pointer">
             <BsFacebook size={25} />
