@@ -32,6 +32,9 @@ module.exports = {
       borderWidth: {
         0.5: "0.5px",
       },
+      scale: {
+        115: "1.15",
+      },
       keyframes: {
         "fade-in-left": {
           "0%": {
