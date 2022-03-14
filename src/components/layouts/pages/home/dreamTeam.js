@@ -13,7 +13,7 @@ const DreamTeam = () => {
 
   return (
     <div className="bg-bg-romance px-10 py-16 text-bg-primary">
-      <div data-aos="fade-right" className="w-full flex flex-col items-center">
+      <div className="w-full flex flex-col items-center">
         <div className="flex flex-col items-center">
           <p className="font-normal text-3xl">Find Your Dream Team</p>
           <div className="flex flex-col items-center mt-2">
@@ -40,7 +40,7 @@ const DreamTeam = () => {
           </div>
         </div>
         <div className="border-t-0.5 border-bg-soapstone w-11/12 my-10"></div>
-        <div className="flex w-full space-x-2">
+        <div data-aos="fade-right" className="flex w-full space-x-2">
           <div className="flex flex-col space-y-2 items-center text-center w-1/4">
             <div className="rounded-full border-2 border-bg-eunry w-20 h-20 p-0.5">
               <div className="bg-bg-eunry rounded-full w-full h-full text-white flex justify-center items-center">
