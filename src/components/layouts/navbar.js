@@ -11,7 +11,7 @@ const Navbar = () => {
   };
 
   return (
-    // <div className="sticky top-0 z-40" style={{ height: "15vh" }}>
+    // <div className="sticky top-0 z-40" style={{ height: "20vh" }}>
     <div style={{ height: "20vh" }}>
       <div className="hidden md:flex h-30% w-full px-7 justify-between items-center bg-bg-primary text-white">
         <div>
