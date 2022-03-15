@@ -2,6 +2,7 @@ import Image from "next/image";
 import React, { useState } from "react";
 import Logo from "../../../public/images/logo-dark.png";
 import { TiHeart } from "react-icons/ti";
+import NavbarMobile from "./mobile/navbar";
 
 const Navbar = () => {
   const [search, setSearch] = useState();
@@ -11,19 +12,19 @@ const Navbar = () => {
   };
 
   return (
-    // <div className="sticky top-0 z-40" style={{ height: "20vh" }}>
-    <div style={{ height: "20vh" }}>
-      <div className="hidden md:flex h-30% w-full px-7 justify-between items-center bg-bg-primary text-white">
-        <div>
-          <p className="flex items-center">
+    // <div className="sticky top-0 z-40">
+    <div>
+      <div className="px-1 py-1 md:flex md:px-7 justify-between w-full items-center bg-bg-primary text-white">
+        <div className="flex justify-center md:flex-none">
+          <p className="flex items-center text-center">
             Enjoy 5% off
-            <span className="mx-1">
+            <span className="mx-1 hidden sm:inline">
               <TiHeart size={20} />
             </span>
             when you book your service here!
           </p>
         </div>
-        <div className="flex space-x-2">
+        <div className="flex justify-center space-x-2">
           <p className="cursor-pointer hover:underline">Become a Vendor</p>
           <div className="border-r border-r-gray-300"></div>
           <p className="cursor-pointer hover:underline">Login</p>
@@ -31,10 +32,9 @@ const Navbar = () => {
           <p className="cursor-pointer hover:underline">Join Us</p>
         </div>
       </div>
-      <div className="hidden md:flex h-70% w-full px-7 justify-between items-center bg-slate-50 shadow-md">
+      <div className="hidden md:flex py-2 w-full px-7 justify-between items-center bg-slate-50 shadow-md">
         <div>
           <Image src={Logo} width={135} height={70} />
-          {/* <p>wedding platform logo</p> */}
         </div>
         <div className="flex space-x-5 text-bg-primary">
           <p className="font-medium text-lg cursor-pointer select-none hover:underline">Plan a Wedding</p>
@@ -62,6 +62,8 @@ const Navbar = () => {
           </div>
         </div>
       </div>
+
+      <NavbarMobile />
     </div>
   );
 };
