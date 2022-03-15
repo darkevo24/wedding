@@ -16,7 +16,7 @@ const ManageGuestList = () => {
             </div>
             <div className="flex items-center space-x-2">
               <Image src={Love} width={20} height={20} />
-              <p>Collect Guests' mailing address</p>
+              <p>Collect Guests mailing address</p>
             </div>
             <div className="flex items-center space-x-2">
               <Image src={Love} width={20} height={20} />
