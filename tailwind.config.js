@@ -3,7 +3,8 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        "bg-wedding": "url('/images/wedding.png')",
+        // "bg-wedding": "url('/images/wedding.png')",
+        "bg-wedding": "url('/images/wedding-compressed.jpg')",
       },
       height: {
         "9%": "9%",
