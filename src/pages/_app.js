@@ -16,15 +16,21 @@ function MyApp({ Component, pageProps }) {
   }, []);
 
   const component = () => {
-    if (currentRoute == "/login") {
-      return <Component {...pageProps} />;
-    } else {
-      return (
-        <Master>
-          <Component {...pageProps} />
-        </Master>
-      );
-    }
+    // if (currentRoute == "/login") {
+    //   return <Component {...pageProps} />;
+    // } else {
+    //   return (
+    //     <Master>
+    //       <Component {...pageProps} />
+    //     </Master>
+    //   );
+    // }
+
+    return (
+      <Master>
+        <Component {...pageProps} />
+      </Master>
+    );
   };
 
   return <Provider store={store}>{component()}</Provider>;
