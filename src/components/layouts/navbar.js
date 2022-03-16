@@ -3,8 +3,10 @@ import React, { useState } from "react";
 import Logo from "../../../public/images/logo-dark.png";
 import { TiHeart } from "react-icons/ti";
 import NavbarMobile from "./mobile/navbar";
+import { useRouter } from "next/router";
 
 const Navbar = () => {
+  const route = useRouter();
   const [search, setSearch] = useState();
 
   const doSearch = () => {
@@ -25,11 +27,17 @@ const Navbar = () => {
           </p>
         </div>
         <div className="flex justify-center space-x-2">
-          <p className="cursor-pointer hover:underline">Become a Vendor</p>
+          <p onClick={() => route.push("/vendor/register")} className="cursor-pointer hover:underline">
+            Become a Vendor
+          </p>
           <div className="border-r border-r-gray-300"></div>
-          <p className="cursor-pointer hover:underline">Login</p>
+          <p onClick={() => route.push("/login")} className="cursor-pointer hover:underline">
+            Login
+          </p>
           <div className="border-r border-r-gray-300"></div>
-          <p className="cursor-pointer hover:underline">Join Us</p>
+          <p onClick={() => route.push("/register")} className="cursor-pointer hover:underline">
+            Join Us
+          </p>
         </div>
       </div>
       <div className="hidden md:flex py-2 w-full px-7 justify-between items-center bg-slate-50 shadow-md">
