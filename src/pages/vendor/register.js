@@ -19,7 +19,7 @@ const Register = () => {
         <p className="text-2xl">Vendor Information</p>
         <form>
           <div className="mt-5 w-full">
-            <p>form</p>
+            <p>add form here</p>
           </div>
         </form>
       </div>
