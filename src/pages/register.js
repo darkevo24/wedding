@@ -15,7 +15,15 @@ const Register = () => {
         </div>
       </div>
       <div className="py-5 px-5 bg-bg-serenade text-bg-primary">
-        <p>form</p>
+        <div className="flex flex-col items-center">
+          <p className="text-2xl">So you said Yes - Congrats!</p>
+          <p className="text-xl">We cant wait to help you get started!</p>
+        </div>
+        <form>
+          <div className="mt-5 w-full">
+            <p>add form here</p>
+          </div>
+        </form>
       </div>
     </>
   );
