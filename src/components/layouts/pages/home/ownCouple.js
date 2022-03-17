@@ -6,7 +6,7 @@ import Love from "../../../../../public/icons/love.svg";
 const OwnCouple = () => {
   return (
     <div className="bg-bg-serenade text-bg-primary">
-      <div className="w-full flex">
+      <div className="w-full flex md:flex-row flex-col-reverse items-center">
         <div className="w-1/2 flex justify-center py-20">
           <div data-aos="fade-right" style={{ height: "40vh", width: "75%" }} className="relative">
             <Image src={Laptop} layout="fill" />

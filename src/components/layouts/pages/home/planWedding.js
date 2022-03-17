@@ -6,7 +6,7 @@ import Love from "../../../../../public/icons/love-light.svg";
 const PlanWedding = () => {
   return (
     <div className="bg-bg-primary text-white">
-      <div className="w-full flex">
+      <div className="w-full flex flex-col md:flex-row justify-center items-center">
         <div className="w-1/2 py-5 px-16 flex flex-col justify-center">
           <p className="text-3xl">Plan That Perfect Wedding</p>
           <div className="mt-10 space-y-3">

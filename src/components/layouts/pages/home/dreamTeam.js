@@ -5,6 +5,7 @@ import ListIcon from "../../../../../public/icons/list.svg";
 import CurrencyIcon from "../../../../../public/icons/currency.svg";
 import CheckedIcon from "../../../../../public/icons/checked.svg";
 import { MdSearch } from "react-icons/md";
+import DreamTeamMobile from "../../mobile/dreamTeam";
 
 const DreamTeam = () => {
   useEffect(() => {
@@ -21,9 +22,10 @@ const DreamTeam = () => {
             <p>Handpicked recs in your style, budget, availability and more.</p>
           </div>
         </div>
+        <br></br>
         <div className="flex flex-col items-center w-full mt-3">
-          <div className="w-2/5 bg-white h-10 flex items-center rounded-md">
-            <form className="w-full h-full flex items-center">
+          <div className="w-2/5 bg-white h-10 flex items-center rounded-md w-fit">
+            <form className="w-full h-full flex items-center ">
               <div className="w-1/2 h-full flex items-center justify-center border-r border-r-bg-soapstone select-none">
                 <p>Wedding Vendor</p>
               </div>
@@ -40,7 +42,7 @@ const DreamTeam = () => {
           </div>
         </div>
         <div className="border-t-0.5 border-bg-soapstone w-11/12 my-10"></div>
-        <div data-aos="fade-right" className="flex w-full space-x-2">
+        <div data-aos="fade-right" className="hidden md:flex w-full space-x-2">
           <div className="flex flex-col space-y-2 items-center text-center w-1/4">
             <div className="rounded-full border-2 border-bg-eunry w-20 h-20 p-0.5">
               <div className="bg-bg-eunry rounded-full w-full h-full text-white flex justify-center items-center">
@@ -74,6 +76,7 @@ const DreamTeam = () => {
             <p className="font-light">Last milestone payment held until service is delivered / performed</p>
           </div>
         </div>
+        <DreamTeamMobile></DreamTeamMobile>
       </div>
     </div>
   );
