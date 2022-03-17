@@ -3,8 +3,10 @@ import Image from "next/image";
 import Logo from "../../../../public/images/logo-dark.png";
 import { FiMenu } from "react-icons/fi";
 import { AiOutlineSearch } from "react-icons/ai";
+import { useRouter } from "next/router";
 
 const NavbarMobile = () => {
+  const route = useRouter();
   const [mobileNav, setMobileNav] = useState(false);
 
   return (
@@ -14,7 +16,7 @@ const NavbarMobile = () => {
           <div className="text-bg-primary select-none">
             <FiMenu size={30} className="cursor-pointer" onClick={() => setMobileNav(!mobileNav)} />
           </div>
-          <div>
+          <div onClick={() => route.push("/")}>
             <Image src={Logo} width={135} height={70} />
           </div>
           <div className="text-bg-primary">

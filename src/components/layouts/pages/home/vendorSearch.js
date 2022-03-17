@@ -36,11 +36,11 @@ const VendorSearch = () => {
               </div>
             </div>
           </div>
-          <div data-aos="fade-left" className="mx-3 flex flex-col space-y-3">
+          <div id="visible" data-aos="fade-left" className="hidden lg:flex mx-3 flex-col space-y-3">
             <div className="relative rounded-md h-24 w-80 cursor-pointer transition-all hover:scale-105">
               <Image src={Banner3} layout={"fill"} className="rounded-md" />
               <div className="flex justify-center items-center space-x-2 absolute right-2 bottom-2 transition-all hover:right-1">
-                <p>Photographer</p>
+                <p>Photographer</p>aa
                 <HiOutlineArrowRight size={20} />
               </div>
             </div>
@@ -53,18 +53,27 @@ const VendorSearch = () => {
             </div>
             <div className="relative rounded-md h-24 w-80 cursor-pointer transition-all hover:scale-105">
               <Image src={Banner5} layout={"fill"} className="rounded-md" />
-              <div className="bottom-12 flex justify-center items-center space-x-2 absolute right-2 bottom-2 transition-all hover:right-1">
+              <div className=" flex justify-center items-center space-x-2 absolute right-2 bottom-2 transition-all hover:right-1">
                 <p>Cakes & Confectionary</p>
                 <HiOutlineArrowRight size={20} />
               </div>
             </div>
-            <div className="w-full flex justify-end">
-              <div className="bottom-14 relative flex justify-end items-center mt-2 space-x-2 transition-all hover:scale-110 cursor-pointer select-none">
+            <div id="explore" className="w-full flex justify-end">
+              <div className=" relative flex justify-end items-center mt-2 space-x-2 transition-all hover:scale-110 cursor-pointer select-none">
                 <p>Explore more vendors</p>
                 <HiOutlineArrowRight size={20} />
               </div>
             </div>
           </div>
+          <div onClick={function(){
+            document.getElementById("visible").classList.remove("hidden");
+            document.getElementById("explore").classList.add("hidden");
+          }} className="w-full justify-center flex lg:hidden">
+              <div className="relative flex justify-center items-center mt-2 space-x-2 transition-all hover:scale-110 cursor-pointer select-none">
+                <p>Explore more vendors</p>
+                <HiOutlineArrowRight size={20} />
+              </div>
+            </div>
         </div>
       </div>
     </div>
