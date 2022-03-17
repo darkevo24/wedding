@@ -29,7 +29,7 @@ const PlanWedding = () => {
         </div>
         <div className="w-full flex justify-end">
           <div data-aos="fade-right" style={{ height: "70vh", width: "100%" }} className="relative">
-            <Image src={Gift} layout="fill" />
+            <Image className="object-contain" src={Gift} layout="fill" />
           </div>
         </div>
       </div>

@@ -9,7 +9,7 @@ const OwnCouple = () => {
       <div className="w-full flex md:flex-row flex-col-reverse items-start md:items-center">
         <div className="w-full flex justify-center py-20">
           <div data-aos="fade-right" style={{ height: "40vh", width: "75%" }} className="relative">
-            <Image src={Laptop} layout="fill" />
+            <Image className="object-contain" src={Laptop} layout="fill" />
           </div>
         </div>
         <div className="w-full py-5 px-16 flex flex-col justify-center items-start">

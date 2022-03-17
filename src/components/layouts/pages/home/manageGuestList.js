@@ -29,7 +29,7 @@ const ManageGuestList = () => {
         </div>
         <div className="w-full flex justify-end">
           <div data-aos="fade-right" style={{ height: "80vh", width: "90%" }} className="relative">
-            <Image src={Envelope} layout="fill" />
+            <Image className="object-contain" src={Envelope} layout="fill" />
           </div>
         </div>
       </div>
