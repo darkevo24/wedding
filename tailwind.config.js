@@ -5,6 +5,7 @@ module.exports = {
       backgroundImage: {
         // "bg-wedding": "url('/images/wedding.png')",
         "bg-wedding": "url('/images/wedding-compressed.jpg')",
+        "bg-wedding-content": "url('/images/wedding2.jpg')",
       },
       height: {
         "9%": "9%",
