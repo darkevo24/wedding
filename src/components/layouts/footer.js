@@ -8,7 +8,7 @@ import FooterMobile from "./mobile/footer";
 const Footer = () => {
   return (
     <div>
-    <div className="hidden bg-bg-primary w-full px-5 py-2 text-white">
+    <div className="hidden md:block bg-bg-primary w-full px-5 py-2 text-white">
       <div className="flex justify-between mt-5">
         <div className="flex items-center">
           <Image src={Logo} width={310} height={75} />

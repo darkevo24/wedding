@@ -6,7 +6,7 @@ import Logo from "../../../../public/images/logo-light.png";
 
 const FooterMobile = () => {
   return (
-    <div className="bg-bg-primary w-full text-white items-center flex flex-col text-center">
+    <div className="block md:hidden bg-bg-primary w-full text-white items-center flex flex-col text-center">
         <div className="flex items-center justify-center">
           <Image src={Logo} width={310} height={75} />
         </div>
