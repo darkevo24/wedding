@@ -40,7 +40,7 @@ const VendorSearch = () => {
             <div className="relative rounded-md h-24 w-80 cursor-pointer transition-all hover:scale-105">
               <Image src={Banner3} layout={"fill"} className="rounded-md" />
               <div className="flex justify-center items-center space-x-2 absolute right-2 bottom-2 transition-all hover:right-1">
-                <p>Photographer</p>
+                <p>Photographer</p>aa
                 <HiOutlineArrowRight size={20} />
               </div>
             </div>
