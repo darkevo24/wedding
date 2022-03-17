@@ -15,7 +15,7 @@ const Register = () => {
           </div>
         </div>
       </div>
-      <div className="py-5 px-5 bg-bg-romance text-bg-primary">
+      <div className="py-10 px-10 bg-bg-romance text-bg-primary">
         <p className="text-3xl">Vendor Information</p>
         <form>
           <div className="mt-5 w-full text-black">
@@ -46,7 +46,7 @@ const Register = () => {
             </div>
             <div className="w-full  flex flex-col md:flex-row">
               <div className="m-2  w-full font-bold flex">
-                <div className="w-full">
+                <div className="w-28 sm:w-full">
                 <p>BLK NO. *</p>
                 <input type='number' className="mt-2 w-full h-10"></input>
                 </div>
