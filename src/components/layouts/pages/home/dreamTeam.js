@@ -5,7 +5,7 @@ import ListIcon from "../../../../../public/icons/list.svg";
 import CurrencyIcon from "../../../../../public/icons/currency.svg";
 import CheckedIcon from "../../../../../public/icons/checked.svg";
 import { MdSearch } from "react-icons/md";
-import DreamTeamMobile from "../../mobile/dreamTeam";
+import DreamTeamMobile from "../../mobile/pages/home/dreamTeam";
 
 const DreamTeam = () => {
   useEffect(() => {
@@ -24,7 +24,7 @@ const DreamTeam = () => {
         </div>
         <br></br>
         <div className="flex flex-col items-center w-full mt-3">
-          <div className="w-2/5 bg-white h-10 flex items-center rounded-md w-fit">
+          <div className="bg-white h-10 flex items-center rounded-md w-fit">
             <form className="w-full h-full flex items-center ">
               <div className="w-1/2 h-full flex items-center justify-center border-r border-r-bg-soapstone select-none">
                 <p>Wedding Vendor</p>
@@ -76,7 +76,7 @@ const DreamTeam = () => {
             <p className="font-light">Last milestone payment held until service is delivered / performed</p>
           </div>
         </div>
-        <DreamTeamMobile></DreamTeamMobile>
+        <DreamTeamMobile />
       </div>
     </div>
   );
