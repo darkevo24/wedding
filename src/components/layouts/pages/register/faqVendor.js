@@ -1,6 +1,11 @@
 import React from "react";
 import {AiOutlineUp} from "react-icons/ai";
 import {AiOutlineDown} from "react-icons/ai";
+import Accordion from '@mui/material/Accordion';
+import AccordionSummary from '@mui/material/AccordionSummary';
+import AccordionDetails from '@mui/material/AccordionDetails';
+import Typography from '@mui/material/Typography';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 const FaqVendor = () => {
   return (
@@ -10,22 +15,49 @@ const FaqVendor = () => {
       <div className="w-full h-0.5 bg-bg-primary">
       </div>
       <br></br>
-      <div className="flex items-center relative">
+      <Accordion>
+        <AccordionSummary
+        className=""
+        style={{ backgroundColor : "#FCE4D4" }}
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel1a-content"
+          id="panel1a-header"
+        >
+          <Typography >
+            <div className="relative">
         <p className="text-bg-primary text-xl font-bold">WHAT IS A VENDOR'S REGISTRATION FORM?</p>
-      <AiOutlineUp className="ml-auto block"/>
       </div> 
-      <br></br>
-      <div>
-        <p className="text-black">A vendor registration form is a way to collect information about potential vendors to register them as partners or collaborators for a particular event</p>
-        </div>
-        <br></br>
-        <div className="w-full h-0.5 bg-bg-primary">
+      </Typography>
+        </AccordionSummary>
+        <AccordionDetails style={{ backgroundColor : "#FCE4D4" }}>
+          <Typography>
+          A vendor registration form is a way to collect information about potential vendors to register them as partners or collaborators for a particular event
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+      <br></br> 
+      <div className="w-full h-0.5 bg-bg-primary">
+      </div>
+      <Accordion>
+        <AccordionSummary
+        className="text-black"
+        style={{ backgroundColor : "#FCE4D4" }}
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel1a-content"
+          id="panel1a-header"
+        >
+          <Typography >
+            <div className="relative">
+        <p className="text-bg-primary text-xl font-bold">WHAT IS A VENDOR'S REGISTRATION FORM?</p>
       </div> 
-      <br></br>
-      <div className="flex items-center relative">
-        <p className="text-black text-xl font-bold">WHAT IS A VENDOR'S REGISTRATION FORM?</p>
-      <AiOutlineDown className="ml-auto block "/>
-      </div> 
+      </Typography>
+        </AccordionSummary>
+        <AccordionDetails style={{ backgroundColor : "#FCE4D4" }}>
+          <Typography>
+          A vendor registration form is a way to collect information about potential vendors to register them as partners or collaborators for a particular event
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
     </div>
   );
 };
