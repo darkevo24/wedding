@@ -3,10 +3,12 @@ import React from "react";
 import { AiOutlineInstagram } from "react-icons/ai";
 import { BsFacebook } from "react-icons/bs";
 import Logo from "../../../public/images/logo-light.png";
+import FooterMobile from "./mobile/footer";
 
 const Footer = () => {
   return (
-    <div className="bg-bg-primary w-full px-5 py-2 text-white">
+    <div>
+    <div className="hidden bg-bg-primary w-full px-5 py-2 text-white">
       <div className="flex justify-between mt-5">
         <div className="flex items-center">
           <Image src={Logo} width={310} height={75} />
@@ -93,6 +95,8 @@ const Footer = () => {
       <div className="flex justify-center mt-2">
         <p className="font-thin text-sm text-gray-300">Copyright © 2022 WeddingServ. All Rights Reserved. Privacy Policy | Terms & Conditions</p>
       </div>
+    </div>
+    <FooterMobile ></FooterMobile>
     </div>
   );
 };
