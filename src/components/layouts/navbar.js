@@ -41,7 +41,7 @@ const Navbar = () => {
         </div>
       </div>
       <div className="hidden md:flex py-2 w-full px-7 justify-between items-center bg-slate-50 shadow-md">
-        <div>
+        <div onClick={() => route.push("/")} className="cursor-pointer select-none">
           <Image src={Logo} width={135} height={70} />
         </div>
         <div className="flex space-x-5 text-bg-primary">
