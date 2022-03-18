@@ -47,6 +47,7 @@ const FaqVendor = () => {
           id="panel1a-header"
         >
           <Typography >
+            <br></br>
             <div className="relative">
         <p className="text-bg-primary text-xl font-bold">WHAT IS A VENDOR'S REGISTRATION FORM?</p>
       </div> 
