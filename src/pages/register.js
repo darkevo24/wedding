@@ -99,7 +99,7 @@ const Register = () => {
               <div className="md:flex md:space-x-2 mt-5">
                 <div className="md:w-1/2">
                   <div>
-                    <p className="font-semibold text-bg-eunry">BRIDE'S NAME *</p>
+                    <p className="font-semibold text-bg-eunry">{"BRIDE'S NAME *"}</p>
                     <div className="flex space-x-2">
                       <input
                         onChange={(e) => setWeddingParams({ ...weddingParams, bride_first_name: e.target.value })}
@@ -120,7 +120,7 @@ const Register = () => {
                 </div>
                 <div className="md:w-1/2">
                   <div>
-                    <p className="font-semibold">GROOM'S NAME *</p>
+                    <p className="font-semibold">{"GROOM'S NAME *"}</p>
                     <div className="flex space-x-2">
                       <input
                         onChange={(e) => setWeddingParams({ ...weddingParams, groom_first_name: e.target.value })}
