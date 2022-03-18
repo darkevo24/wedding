@@ -1,14 +1,13 @@
 import { CircularProgress, Snackbar } from "@mui/material";
 import Head from "next/head";
 import { useRouter } from "next/router";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 const Login = () => {
   const route = useRouter();
   const [loading, setLoading] = useState(false);
   const [openAlert, setOpenAlert] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
-
   return (
     <>
       <Head>
@@ -17,7 +16,7 @@ const Login = () => {
       <div className="w-full h-96 bg-bg-wedding-content bg-cover object-cover bg-center">
         <div data-aos="fade-right" className="w-full h-full flex flex-col justify-center items-center">
           <div className="mb-8 flex flex-col items-center space-y-3 text-white">
-            <p className="text-4xl">Vendor Login Page</p>
+            <p className="text-4xl">Vendor Login Page</p>{data}
           </div>
         </div>
       </div>

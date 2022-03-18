@@ -15,7 +15,7 @@ const Register = () => {
           </div>
         </div>
       </div>
-      <div className="py-10 px-10 bg-bg-romance text-bg-primary">\
+      <div className="py-10 px-10 bg-bg-romance text-bg-primary">
         <div className="md:w-2/3 m-auto">
         <p className="text-3xl">Vendor Information</p>
         <form>
