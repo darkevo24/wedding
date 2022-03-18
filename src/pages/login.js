@@ -18,6 +18,7 @@ const Login = () => {
 
   const getUser = () => {
     fetchApiGetUser((res) => {
+      setLoading(false);
       if (res.hasOwnProperty("resVal")) {
         dispatch(insertUserData(res.resVal.data));
         localStorage.setItem("userData", res.resVal.data);
@@ -37,13 +38,13 @@ const Login = () => {
 
     setLoading(true);
     fetchApiLogin(params, (res) => {
-      setLoading(false);
       if (res.hasOwnProperty("resVal")) {
         let token = tokenEncrypt(res.resVal.token);
         dispatch(insertToken(token));
         localStorage.setItem("token", token);
         getUser();
       } else {
+        setLoading(false);
         setErrorMessage(res);
         setOpenAlert(true);
       }
