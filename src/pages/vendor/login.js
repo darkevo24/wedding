@@ -31,7 +31,7 @@ const Login = () => {
           }}
         >
           <div className="mt-5 w-full flex flex-col items-center">
-            <div className="mt-5 w-full md:w-1/4 flex flex-col items-center">
+            <div className="mt-5 w-full md:w-1/3 flex flex-col items-center">
               <div className="w-full">
                 <p className="font-semibold">EMAIL ADDRESS *</p>
                 <input type="email" className="w-full outline-none py-2 px-2" required />
