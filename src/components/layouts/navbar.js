@@ -63,6 +63,12 @@ const Navbar = () => {
               Join Us
             </p>
           </div>
+        ) : isLogin && currentRoute === "/" ? (
+          <div className="flex justify-center space-x-2">
+            <p onClick={() => route.push("/user")} className="cursor-pointer hover:underline">
+              Dashboard
+            </p>
+          </div>
         ) : (
           <div className="flex justify-center space-x-2">
             <p onClick={() => doLogout()} className="cursor-pointer hover:underline">
