@@ -57,7 +57,7 @@ const Register = () => {
               </div>
               <div className="m-2 w-full font-bold">
                 <p>BUILDING NAME</p>
-                <input type="number" className="mt-2 w-full h-10"></input>
+                <input type="text" className="mt-2 w-full h-10"></input>
               </div>
             </div>
             <div className="w-full  flex flex-col md:flex-row">
