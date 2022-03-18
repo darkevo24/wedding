@@ -19,7 +19,7 @@ const Register = () => {
         <div className="md:w-2/3 m-auto">
         <p className="text-3xl">Vendor Information</p>
         <form>
-          <div className="mt-5 w-full text-black">
+          <div className="mt-5 w-full text-bg-primary">
             <div className="w-full  flex flex-col sm:flex-row">
               <div className="m-2  w-full font-bold">
                 <p>VENDOR NAME *</p>
@@ -123,7 +123,7 @@ const Register = () => {
           <div className="text-3xl my-6">
             <p>Business Owner Information</p>
           </div>
-          <div className="mt-5 w-full text-black">
+          <div className="mt-5 w-full text-bg-primary">
             <div className="w-full  flex flex-col sm:flex-row">
               <div className="m-2  w-full font-bold">
                 <p>FIRST NAME *</p>
