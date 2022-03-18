@@ -23,11 +23,11 @@ const Register = () => {
             <div className="w-full  flex flex-col sm:flex-row">
               <div className="m-2  w-full font-bold">
                 <p>VENDOR NAME *</p>
-                <input type="text" className="mt-2 w-full h-10"></input>
+                <input type="text" className="mt-2 w-full h-10 outline-none py-2 px-2"></input>
               </div>
               <div className="m-2 w-full font-bold">
                 <p>REGISTERED NO (UEN OR OTHER ID) *</p>
-                <input type="number" className="mt-2 w-full h-10"></input>
+                <input type="number" className="mt-2 w-full h-10 outline-none py-2 px-2"></input>
               </div>
             </div>
             <div className="w-full  flex flex-col md:flex-row">
@@ -37,38 +37,38 @@ const Register = () => {
                   <select className="mt-2 w-20 h-10 bg-white flex justify-center items-center">
                     <option value="65">+65</option>
                   </select>
-                  <input type="tel" className="ml-2 w-full h-10 mt-2"></input>
+                  <input type="tel" className="ml-2 w-full h-10 mt-2 outline-none py-2 px-2"></input>
                 </div>
               </div>
               <div className="m-2 w-full font-bold">
                 <p>EMAIL ADDRESS *</p>
-                <input type="email" className="mt-2 w-full h-10"></input>
+                <input type="email" className="mt-2 w-full h-10 outline-none py-2 px-2"></input>
               </div>
             </div>
             <div className="w-full  flex flex-col md:flex-row">
               <div className="m-2  w-full font-bold flex">
                 <div className="w-28 lg:w-full">
                   <p>BLK NO. *</p>
-                  <input type="number" className="mt-2 w-full h-10"></input>
+                  <input type="number" className="mt-2 w-full h-10 outline-none py-2 px-2"></input>
                 </div>
                 <div className="w-full ml-4">
                   <p>UNIT NO./HOUSE NO.</p>
-                  <input type="number" className="mt-2 w-full h-10"></input>
+                  <input type="number" className="mt-2 w-full h-10 outline-none py-2 px-2"></input>
                 </div>
               </div>
               <div className="m-2 w-full font-bold">
                 <p>BUILDING NAME</p>
-                <input type="text" className="mt-2 w-full h-10"></input>
+                <input type="text" className="mt-2 w-full h-10 outline-none py-2 px-2"></input>
               </div>
             </div>
             <div className="w-full  flex flex-col md:flex-row">
               <div className="m-2  w-full font-bold">
                 <p>STREET ADDRESS 1</p>
-                <input type="text" className="mt-2 w-full h-10"></input>
+                <input type="text" className="mt-2 w-full h-10 outline-none py-2 px-2"></input>
               </div>
               <div className="m-2 w-full font-bold">
                 <p>STREET ADDRESS 2</p>
-                <input type="text" className="mt-2 w-full h-10"></input>
+                <input type="text" className="mt-2 w-full h-10 outline-none py-2 px-2"></input>
               </div>
             </div>
             <div className="w-full  flex flex-col md:flex-row">
@@ -82,17 +82,17 @@ const Register = () => {
               </div>
               <div className="m-2 w-full font-bold">
                 <p>CITY *</p>
-                <input type="text" className="mt-2 w-full h-10"></input>
+                <input type="text" className="mt-2 w-full h-10 outline-none py-2 px-2"></input>
               </div>
               <div className="m-2 w-full font-bold">
                 <p>STATE / REGION</p>
-                <input type="text" className="mt-2 w-full h-10"></input>
+                <input type="text" className="mt-2 w-full h-10 outline-none py-2 px-2"></input>
               </div>
             </div>
             <div className="w-full  flex flex-col md:flex-row">
               <div className="m-2 w-full font-bold">
                 <p>WEBSITE</p>
-                <input type="text" className="mt-2 w-full h-10"></input>
+                <input type="text" className="mt-2 w-full h-10 outline-none py-2 px-2"></input>
               </div>
             </div>
             <div className="w-full  flex flex-col md:flex-row">
@@ -127,11 +127,11 @@ const Register = () => {
             <div className="w-full  flex flex-col sm:flex-row">
               <div className="m-2  w-full font-bold">
                 <p>FIRST NAME *</p>
-                <input type="text" className="mt-2 w-full h-10"></input>
+                <input type="text" className="mt-2 w-full h-10 outline-none py-2 px-2"></input>
               </div>
               <div className="m-2 w-full font-bold">
                 <p>LAST NAME *</p>
-                <input type="text" className="mt-2 w-full h-10"></input>
+                <input type="text" className="mt-2 w-full h-10 outline-none py-2 px-2"></input>
               </div>
             </div>
             <div className="w-full  flex flex-col md:flex-row">
@@ -141,12 +141,12 @@ const Register = () => {
                   <select className="mt-2 w-20 h-10 bg-white flex justify-center items-center">
                     <option value="65">+65</option>
                   </select>
-                  <input type="tel" className="ml-2 w-full h-10 mt-2"></input>
+                  <input type="tel" className="ml-2 w-full h-10 mt-2 outline-none py-2 px-2"></input>
                 </div>
               </div>
               <div className="m-2 w-full font-bold">
                 <p>EMAIL ADDRESS *</p>
-                <input type="email" className="mt-2 w-full h-10"></input>
+                <input type="email" className="mt-2 w-full h-10 outline-none py-2 px-2"></input>
               </div>
             </div>
             <div className="text-white mt-4">
