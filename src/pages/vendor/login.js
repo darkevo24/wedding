@@ -16,7 +16,7 @@ const Login = () => {
       <div className="w-full h-96 bg-bg-wedding-content bg-cover object-cover bg-center">
         <div data-aos="fade-right" className="w-full h-full flex flex-col justify-center items-center">
           <div className="mb-8 flex flex-col items-center space-y-3 text-white">
-            <p className="text-4xl">Vendor Login Page</p>{data}
+            <p className="text-4xl">Vendor Login Page</p>
           </div>
         </div>
       </div>
