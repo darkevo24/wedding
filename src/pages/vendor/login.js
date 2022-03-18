@@ -12,19 +12,19 @@ const Login = () => {
   return (
     <>
       <Head>
-        <title>WeddingPlatform - Login</title>
+        <title>WeddingPlatform | Vendor - Login</title>
       </Head>
       <div className="w-full h-96 bg-bg-wedding-content bg-cover object-cover bg-center">
         <div data-aos="fade-right" className="w-full h-full flex flex-col justify-center items-center">
           <div className="mb-8 flex flex-col items-center space-y-3 text-white">
-            <p className="text-4xl">Login Page</p>
+            <p className="text-4xl">Vendor Login Page</p>
           </div>
         </div>
       </div>
       <div className="py-10 px-5 bg-bg-serenade text-bg-primary">
         <div className="flex flex-col items-center">
           <p className="text-2xl">Welcome Back!</p>
-          <p className="text-xl">Get your best wedding service!</p>
+          <p className="text-xl">Give your best wedding service!</p>
         </div>
         <form
           onSubmit={(e) => {
@@ -42,8 +42,8 @@ const Login = () => {
                 <input type="password" className="w-full outline-none py-2 px-2" required />
               </div>
               <p className="mt-3">
-                Login as Vendor?{" "}
-                <span onClick={() => route.push("/vendor/login")} className="cursor-pointer hover:underline">
+                Login as Customer?{" "}
+                <span onClick={() => route.push("/login")} className="cursor-pointer hover:underline">
                   Click here
                 </span>
               </p>
