@@ -20,6 +20,7 @@ const Login = () => {
     fetchApiGetUser((res) => {
       if (res.hasOwnProperty("resVal")) {
         dispatch(insertUserData(res.resVal.data));
+        localStorage.setItem("userData", res.resVal.data);
         route.push("/user");
       } else {
         setErrorMessage(res);

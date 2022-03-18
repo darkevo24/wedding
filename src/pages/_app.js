@@ -5,6 +5,7 @@ import { store } from "../redux/store/store";
 import { Provider } from "react-redux";
 import { useRouter } from "next/router";
 import Master from "../components/master";
+import MasterUser from "../components/master/user";
 import { useEffect } from "react";
 
 function MyApp({ Component, pageProps }) {
@@ -16,21 +17,25 @@ function MyApp({ Component, pageProps }) {
   }, []);
 
   const component = () => {
-    // if (currentRoute == "/login") {
-    //   return <Component {...pageProps} />;
-    // } else {
-    //   return (
-    //     <Master>
-    //       <Component {...pageProps} />
-    //     </Master>
-    //   );
-    // }
+    if (currentRoute == "/login" || currentRoute == "/register" || currentRoute.includes("/user")) {
+      return (
+        <MasterUser>
+          <Component {...pageProps} />
+        </MasterUser>
+      );
+    } else {
+      return (
+        <Master>
+          <Component {...pageProps} />
+        </Master>
+      );
+    }
 
-    return (
-      <Master>
-        <Component {...pageProps} />
-      </Master>
-    );
+    // return (
+    //   <Master>
+    //     <Component {...pageProps} />
+    //   </Master>
+    // );
   };
 
   return <Provider store={store}>{component()}</Provider>;

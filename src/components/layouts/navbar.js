@@ -1,17 +1,40 @@
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Logo from "../../../public/images/logo-dark.png";
 import { TiHeart } from "react-icons/ti";
 import NavbarMobile from "./mobile/navbar";
 import { useRouter } from "next/router";
+import { useDispatch, useSelector } from "react-redux";
+import { insertToken, insertUserData } from "../../redux/reducers/authToken";
 
 const Navbar = () => {
+  const dispatch = useDispatch();
   const route = useRouter();
+  const currentRoute = route.pathname;
   const [search, setSearch] = useState();
+  const isLoginRedux = useSelector((state) => state.authToken.userData);
+  const [isLogin, setIsLogin] = useState(false);
 
   const doSearch = () => {
     console.log("Searching for: ", search);
   };
+
+  const doLogout = () => {
+    dispatch(insertToken(null));
+    dispatch(insertUserData(null));
+    localStorage.removeItem("token");
+    localStorage.removeItem("userData");
+    route.replace("/");
+  };
+
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+    if (!isLoginRedux && !token) {
+      setIsLogin(false);
+    } else {
+      setIsLogin(true);
+    }
+  }, [currentRoute]);
 
   return (
     // <div className="sticky top-0 z-40">
@@ -26,19 +49,27 @@ const Navbar = () => {
             when you book your service here!
           </p>
         </div>
-        <div className="flex justify-center space-x-2">
-          <p onClick={() => route.push("/vendor/register")} className="cursor-pointer hover:underline">
-            Become a Vendor
-          </p>
-          <div className="border-r border-r-gray-300"></div>
-          <p onClick={() => route.push("/login")} className="cursor-pointer hover:underline">
-            Login
-          </p>
-          <div className="border-r border-r-gray-300"></div>
-          <p onClick={() => route.push("/register")} className="cursor-pointer hover:underline">
-            Join Us
-          </p>
-        </div>
+        {!isLogin ? (
+          <div className="flex justify-center space-x-2">
+            <p onClick={() => route.push("/vendor/register")} className="cursor-pointer hover:underline">
+              Become a Vendor
+            </p>
+            <div className="border-r border-r-gray-300"></div>
+            <p onClick={() => route.push("/login")} className="cursor-pointer hover:underline">
+              Login
+            </p>
+            <div className="border-r border-r-gray-300"></div>
+            <p onClick={() => route.push("/register")} className="cursor-pointer hover:underline">
+              Join Us
+            </p>
+          </div>
+        ) : (
+          <div className="flex justify-center space-x-2">
+            <p onClick={() => doLogout()} className="cursor-pointer hover:underline">
+              Logout
+            </p>
+          </div>
+        )}
       </div>
       <div className="hidden md:flex py-2 w-full px-7 justify-between items-center bg-slate-50 shadow-md">
         <div onClick={() => route.push("/")} className="cursor-pointer select-none">
