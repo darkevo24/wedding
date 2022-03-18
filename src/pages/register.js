@@ -2,7 +2,7 @@ import { CircularProgress, Snackbar } from "@mui/material";
 import Head from "next/head";
 import React, { useState } from "react";
 import PlatformChecklist from "../components/layouts/pages/register/platformChecklist";
-import { fetchApiRegister } from "../helper/fetchApi/register";
+import { fetchApiRegister } from "../helper/fetchApi/user";
 import { fetchApiWeddingPost } from "../helper/fetchApi/wedding";
 
 const Register = () => {
