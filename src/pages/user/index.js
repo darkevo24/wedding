@@ -2,7 +2,7 @@ import React from "react";
 
 const Home = () => {
   return (
-    <div className="py-10 px-10">
+    <div className="h-96">
       <p>user home page</p>
     </div>
   );
