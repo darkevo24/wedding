@@ -12,12 +12,12 @@ const NavbarUser = () => {
   const currentRoute = route.pathname;
 
   return (
-    <div className="w-full px-10 bg-bg-eunry text-white h-20">
-      <div className="flex h-full">
+    <div className="w-full px-2 md:px-10 bg-bg-eunry text-white h-20">
+      <div class="flex h-full overflow-x-auto space-x-8">
         <div
           onClick={() => route.push("/user/my-wedding")}
           className={
-            "h-full w-1/6 space-y-1 flex flex-col items-center justify-center cursor-pointer " +
+            "flex-shrink-0 md:flex-shrink  h-full w-32 md:w-1/6 space-y-1 flex flex-col items-center justify-center cursor-pointer " +
             (currentRoute.includes("my-wedding") && "border-b-2 border-bg-primary pt-0.5")
           }
         >
@@ -27,7 +27,7 @@ const NavbarUser = () => {
         <div
           onClick={() => route.push("/user")}
           className={
-            "h-full w-1/6 space-y-1 flex flex-col items-center justify-center cursor-pointer " +
+            "flex-shrink-0 md:flex-shrink  h-full w-32 md:w-1/6 space-y-1 flex flex-col items-center justify-center cursor-pointer " +
             (currentRoute.includes("checklist") && "border-b-2 border-bg-primary pt-0.5")
           }
         >
@@ -37,7 +37,7 @@ const NavbarUser = () => {
         <div
           onClick={() => route.push("/user/vendor-management")}
           className={
-            "h-full w-1/6 space-y-1 flex flex-col items-center justify-center cursor-pointer " +
+            "flex-shrink-0 md:flex-shrink  h-full w-32 md:w-1/6 space-y-1 flex flex-col items-center justify-center cursor-pointer " +
             (currentRoute.includes("vendor-management") && "border-b-2 border-bg-primary pt-0.5")
           }
         >
@@ -47,7 +47,7 @@ const NavbarUser = () => {
         <div
           onClick={() => route.push("/user")}
           className={
-            "h-full w-1/6 space-y-1 flex flex-col items-center justify-center cursor-pointer " +
+            "flex-shrink-0 md:flex-shrink  h-full w-32 md:w-1/6 space-y-1 flex flex-col items-center justify-center cursor-pointer " +
             (currentRoute.includes("guest-list") && "border-b-2 border-bg-primary pt-0.5")
           }
         >
@@ -57,7 +57,7 @@ const NavbarUser = () => {
         <div
           onClick={() => route.push("/user/wedding-website")}
           className={
-            "h-full w-1/6 space-y-1 flex flex-col items-center justify-center cursor-pointer " +
+            "flex-shrink-0 md:flex-shrink  h-full w-32 md:w-1/6 space-y-1 flex flex-col items-center justify-center cursor-pointer " +
             (currentRoute.includes("wedding-website") && "border-b-2 border-bg-primary pt-0.5")
           }
         >
@@ -67,7 +67,7 @@ const NavbarUser = () => {
         <div
           onClick={() => route.push("/user")}
           className={
-            "h-full w-1/6 space-y-1 flex flex-col items-center justify-center cursor-pointer " +
+            "flex-shrink-0 md:flex-shrink  h-full w-32 md:w-1/6 space-y-1 flex flex-col items-center justify-center cursor-pointer " +
             (currentRoute.includes("messages") && "border-b-2 border-bg-primary pt-0.5")
           }
         >
