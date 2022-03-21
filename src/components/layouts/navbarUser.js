@@ -45,7 +45,7 @@ const NavbarUser = () => {
           <p>Vendor Manager</p>
         </div>
         <div
-          onClick={() => route.push("/user")}
+          onClick={() => route.push("/user/guest-list")}
           className={
             "flex-shrink-0 md:flex-shrink  h-full w-32 md:w-1/6 space-y-1 flex flex-col items-center justify-center cursor-pointer " +
             (currentRoute.includes("guest-list") && "border-b-2 border-bg-primary pt-0.5")
