@@ -21,7 +21,7 @@ const MasterUser = ({ children }) => {
     } else if (!isLoginRedux && !token && currentRoute == "/register") {
       route.replace("/register");
     } else {
-      route.replace("/user");
+      // route.replace("/user");
     }
   }, [currentRoute]);
 
