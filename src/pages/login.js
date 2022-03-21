@@ -22,7 +22,7 @@ const Login = () => {
       if (res.hasOwnProperty("resVal")) {
         dispatch(insertUserData(res.resVal.data));
         localStorage.setItem("userData", res.resVal.data);
-        route.push("/user");
+        route.push("/user/vendor-management");
       } else {
         setErrorMessage(res);
         setOpenAlert(true);
