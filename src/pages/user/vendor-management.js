@@ -15,6 +15,7 @@ import CallIcon from '@mui/icons-material/Call';
 import DateRangeRoundedIcon from '@mui/icons-material/DateRangeRounded';
 import FavoriteBorderRoundedIcon from '@mui/icons-material/FavoriteBorderRounded';
 import BasicSelect from "./select";
+import close from "../../../public/images/close.png"
 
 function valuetext(value) {
   return `${value}`;
@@ -124,7 +125,7 @@ const VendorManagement = () => {
         </div>
         <div className="flex lg:flex-row flex-col justify-center items-center">
           
-          <div style={{ maxWidth : "400px" }} className="rounded-md m-10">
+          <div style={{ maxWidth : "400px" }} className="rounded-md m-10 relative">
             <Image className="w-full" src={venue}></Image>
             <div className="flex p-1">
               <div className="w-2/3  flex justify-center items-center">
@@ -163,9 +164,12 @@ const VendorManagement = () => {
             <div className="w-full p-4 relative bottom-2" >
               <BasicSelect></BasicSelect>
             </div>
+            <div style={{right:0,top:0}} className="absolute">
+              <Image src={close}></Image>
+            </div>
           </div>
 
-          <div style={{ maxWidth : "400px" }} className="rounded-md m-10">
+          <div style={{ maxWidth : "400px" }} className="rounded-md m-10 relative">
             <Image src={Photography}></Image>
             <div className="flex p-1">
               <div className="w-2/3  flex justify-center items-center">
@@ -204,9 +208,12 @@ const VendorManagement = () => {
             <div className="w-full p-4 relative bottom-2" >
               <BasicSelect></BasicSelect>
             </div>
+            <div style={{right:0,top:0}} className="absolute">
+              <Image src={close}></Image>
+            </div>
           </div>
 
-          <div style={{ maxWidth : "400px" }} className="rounded-md m-10">
+          <div style={{ maxWidth : "400px" }} className="rounded-md m-10 relative">
             <Image src={cakes}></Image>
             <div className="flex p-1">
               <div className="w-2/3  flex justify-center items-center">
@@ -244,6 +251,9 @@ const VendorManagement = () => {
             </div>
             <div className="w-full p-4 relative bottom-2" >
               <BasicSelect></BasicSelect>
+            </div>
+            <div style={{right:0,top:0}} className="absolute">
+              <Image src={close}></Image>
             </div>
           </div>
 
