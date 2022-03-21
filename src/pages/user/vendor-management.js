@@ -101,7 +101,7 @@ const VendorManagement = () => {
         </div>
         <AddVendor ></AddVendor>
         <div className=" p-10 relative bottom-10 flex hidden lg:flex">
-          <p>PRICE RANGE</p>
+          <p className="text-bg-primary font-bold">PRICE RANGE</p>
           <p className="ml-10">S$1500</p>
           <Box className="ml-5" sx={{ width: 300 }}>
           <Slider
