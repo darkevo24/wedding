@@ -101,9 +101,9 @@ const Login = () => {
                 />
               </div>
               <p className="mt-3">
-                Login as Vendor?{" "}
-                <span onClick={() => route.push("/vendor/login")} className="cursor-pointer hover:underline">
-                  Click here
+                Don't have an account?{" "}
+                <span onClick={() => route.push("/register")} className="cursor-pointer hover:underline">
+                  Register here
                 </span>
               </p>
               <button type="submit" className="bg-bg-primary hover:bg-bg-primary-darker w-full py-2 mt-8 rounded-md text-white">
