@@ -201,7 +201,7 @@ const VendorManagement = () => {
               </div>
             </div>
 
-            <div className="p-10 pl-0 w-full">
+            <div className="p-10 lg:pl-0 w-full">
               <p className="text-4xl text-white">Guest List</p>
               <p className="font-bold text-white mt-2">0  OUT OF 50 GUESTS ATTENDING</p>
               <p className="hidden text-3xl mt-10">As Soon As Possible</p>
@@ -219,25 +219,25 @@ const VendorManagement = () => {
           <p className="text-4xl text-bg-primary p-10">Your Wedding Website</p>
           </div>
 
-          <div className="text-bg-primary P-20 flex justify-center items-center" style={{ backgroundColor : "#F5F1EA" }}>
+          <div className="text-bg-primary P-20 flex flex-col lg:flex-row justify-center items-center" style={{ backgroundColor : "#F5F1EA" }}>
             <div className="w-2/3 flex justify-center items-center">
               <p className="p-10 text-4xl">Refer A Friend</p>
-              <div className="h-24 w-0.5 bg-bg-primary ml-10">
+              <div className="hidden lg:flex h-24 w-0.5 bg-bg-primary ml-10">
                 
             </div>
             </div>
-            <div className="w-full p-10 font-bold">
-              <div className="flex  p-2">
+            <div className="w-full p-10 font-bold flex justify-center flex-col items-center">
+              <div className="flex justify-center flex-col lg:flex-row  p-2">
                 <p className="text-2xl">YOUR REFERRAL CODE</p>
-                <div className="w-96 h-12 p-2 border-bg-primary border-2 ml-4 flex items-center">
+                <div className="lg:w-96 w-72 h-12 p-2 border-bg-primary border-2 lg:ml-4 flex items-center">
                     <p>X182008SS</p>
                     <div className="block ml-auto mt-1">
                     <Image src={copy}></Image>
                     </div>
                 </div>
               </div>
-              <div className="flex  p-2">
-                <p className="text-2xl">REFERRAL EARNED ___________ REFERRAL PAID ___________ </p>
+              <div className="flex flex-col items-start justify-start lg:justify-center lg:items-center lg:flex-row text-2xl p-2">
+                <p className="">REFERRAL EARNED</p><p> ___________</p><p> REFERRAL PAID</p><p> ___________ </p>
               </div>
             </div>
           </div>
