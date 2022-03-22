@@ -179,7 +179,7 @@ const Register = () => {
                       <input onChange={(e) => setEmail(e.target.value)} type="text" className="w-full outline-none py-2 px-2" required />
                     </div>
                   </div>
-                  <div className="md:flex md:w-2/3 items-center">
+                  {/* <div className="md:flex md:w-2/3 items-center">
                     <div className="md:w-1/4">
                       <p>Phone</p>
                     </div>
@@ -194,7 +194,7 @@ const Register = () => {
                         required
                       />
                     </div>
-                  </div>
+                  </div> */}
                   <div className="md:flex md:w-2/3 items-center">
                     <div className="md:w-1/4">
                       <p>Password</p>
