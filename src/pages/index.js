@@ -31,7 +31,7 @@ const Home = () => {
       <DreamTeam />
       <VendorSearch />
       <PlanWedding />
-      <OwnCouple />
+      {/* <OwnCouple /> */}
       <ManageGuestList />
     </>
   );
