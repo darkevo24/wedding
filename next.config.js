@@ -6,7 +6,7 @@ const nextConfig = {
     SECRET_KEY: process.env.SECRET_KEY,
   },
   images: {
-    domains: ["google.com"],
+    domains: ["google.com", "files.slack.com"],
   },
 };
 
