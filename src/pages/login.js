@@ -1,20 +1,23 @@
 import { CircularProgress, Snackbar } from "@mui/material";
 import Head from "next/head";
 import { useRouter } from "next/router";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { fetchApiGetUser, fetchApiLogin } from "../helper/fetchApi/user";
 import { tokenEncrypt } from "../helper/tokenHash";
 import { useDispatch } from "react-redux";
 import { insertToken, insertUserData } from "../redux/reducers/authToken";
+import { useSelector } from "react-redux";
 
 const Login = () => {
   const route = useRouter();
   const dispatch = useDispatch();
   const [loading, setLoading] = useState(false);
-  const [openAlert, setOpenAlert] = useState(false);
-  const [errorMessage, setErrorMessage] = useState("");
+  const [openAlert, setOpenAlert] = useState(useSelector((state) => state.authToken.openAlert));
+  const [errorMessage, setErrorMessage] = useState(useSelector((state) => state.authToken.errorMessage));
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+
+  console.log(useSelector((state) => state.authToken.errorMessage));
 
   const getUser = () => {
     fetchApiGetUser((res) => {
