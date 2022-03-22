@@ -6,6 +6,8 @@ module.exports = {
         // "bg-wedding": "url('/images/wedding.png')",
         "bg-wedding": "url('/images/wedding-compressed.jpg')",
         "bg-wedding-content": "url('/images/wedding2.jpg')",
+        "bg": "url('/images/bg.png')",
+        "business" : "url('/images/business.png')"
       },
       height: {
         "9%": "9%",
