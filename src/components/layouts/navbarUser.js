@@ -17,7 +17,7 @@ const NavbarUser = () => {
         <div
           onClick={() => route.push("/user/my-wedding")}
           className={
-            "flex-shrink-0 md:flex-shrink  h-full w-32 md:w-1/6 space-y-1 flex flex-col items-center justify-center cursor-pointer " +
+            "flex-shrink-0 md:flex-shrink hover:bg-bg-primary h-full w-32 md:w-1/6 space-y-1 flex flex-col items-center justify-center cursor-pointer " +
             (currentRoute.includes("my-wedding") && "border-b-2 border-bg-primary pt-0.5")
           }
         >
@@ -26,7 +26,7 @@ const NavbarUser = () => {
         </div>
         <div
           className={
-            "flex-shrink-0 md:flex-shrink  h-full w-32 md:w-1/6 space-y-1 flex flex-col items-center justify-center cursor-pointer " +
+            "flex-shrink-0 md:flex-shrink hover:bg-bg-primary h-full w-32 md:w-1/6 space-y-1 flex flex-col items-center justify-center cursor-pointer " +
             (currentRoute.includes("checklist") && "border-b-2 border-bg-primary pt-0.5")
           }
         >
@@ -36,7 +36,7 @@ const NavbarUser = () => {
         <div
           onClick={() => route.push("/user/vendor-management")}
           className={
-            "flex-shrink-0 md:flex-shrink  h-full w-32 md:w-1/6 space-y-1 flex flex-col items-center justify-center cursor-pointer " +
+            "flex-shrink-0 md:flex-shrink hover:bg-bg-primary h-full w-32 md:w-1/6 space-y-1 flex flex-col items-center justify-center cursor-pointer " +
             (currentRoute.includes("vendor-management") && "border-b-2 border-bg-primary pt-0.5")
           }
         >
@@ -46,7 +46,7 @@ const NavbarUser = () => {
         <div
           onClick={() => route.push("/user/guest-list")}
           className={
-            "flex-shrink-0 md:flex-shrink  h-full w-32 md:w-1/6 space-y-1 flex flex-col items-center justify-center cursor-pointer " +
+            "flex-shrink-0 md:flex-shrink hover:bg-bg-primary h-full w-32 md:w-1/6 space-y-1 flex flex-col items-center justify-center cursor-pointer " +
             (currentRoute.includes("guest-list") && "border-b-2 border-bg-primary pt-0.5")
           }
         >
@@ -56,7 +56,7 @@ const NavbarUser = () => {
         <div
           onClick={() => route.push("/user/wedding-website")}
           className={
-            "flex-shrink-0 md:flex-shrink  h-full w-32 md:w-1/6 space-y-1 flex flex-col items-center justify-center cursor-pointer " +
+            "flex-shrink-0 md:flex-shrink hover:bg-bg-primary h-full w-32 md:w-1/6 space-y-1 flex flex-col items-center justify-center cursor-pointer " +
             (currentRoute.includes("wedding-website") && "border-b-2 border-bg-primary pt-0.5")
           }
         >
@@ -65,7 +65,7 @@ const NavbarUser = () => {
         </div>
         <div
           className={
-            "flex-shrink-0 md:flex-shrink  h-full w-32 md:w-1/6 space-y-1 flex flex-col items-center justify-center cursor-pointer " +
+            "flex-shrink-0 md:flex-shrink hover:bg-bg-primary h-full w-32 md:w-1/6 space-y-1 flex flex-col items-center justify-center cursor-pointer " +
             (currentRoute.includes("messages") && "border-b-2 border-bg-primary pt-0.5")
           }
         >
