@@ -83,7 +83,7 @@ const VendorManagement = () => {
                 <SearchIcon style={{ color: "white", width: "100%", height: "80%" }}></SearchIcon>
               </div>
             </div>
-            <div className="hidden lg:flex">
+            <div className="flex hidden lg:flex">
               <div className="flex">
                 <p className="cursor-pointer rounded-md border-2 p-1 m-1">Location</p>
               </div>
@@ -104,7 +104,7 @@ const VendorManagement = () => {
               </div>
             </div>
           </div>
-          <div className="lg:flex p-5 flex flex-row-reverse justify-center lg:flex-col items-end">
+          <div className="hidden lg:flex p-5 flex flex-row-reverse justify-center lg:flex-col items-end">
             <button className="bg-bg-primary text-white font-bold w-36 h-8">+ add vendor</button>
             <button className="bg-bg-primary text-white font-bold w-52 h-8 mt-5">Shortlisted Vendors</button>
           </div>
