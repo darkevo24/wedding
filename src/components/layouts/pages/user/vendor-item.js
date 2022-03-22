@@ -35,8 +35,11 @@ const VendorItem = () => {
             </div>
             <div className="flex items-center justify-between">
               <p className="font-medium">Payment Status</p>
-              <div className="w-2/3 h-12 bg-bg-romance rounded-md">
-                <input type="text" className="w-full h-full rounded-md outline-none bg-transparent px-2" />
+              <div className="w-2/3 h-12 bg-bg-romance rounded-md relative">
+                <div className="w-full h-full absolute flex items-center justify-center">
+                  <p className="text-bg-eunry">50% completed</p>
+                </div>
+                <div style={{ width: "50%" }} className="h-full bg-bg-primary rounded-l-md"></div>
               </div>
             </div>
           </div>
