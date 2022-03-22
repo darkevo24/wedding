@@ -16,6 +16,7 @@ import DateRangeRoundedIcon from '@mui/icons-material/DateRangeRounded';
 import FavoriteBorderRoundedIcon from '@mui/icons-material/FavoriteBorderRounded';
 import BasicSelect from "./select";
 import close from "../../../public/images/close.png"
+import officiants from "../../../public/images/officiants.png"
 
 function valuetext(value) {
   return `${value}`;
@@ -126,7 +127,10 @@ const VendorManagement = () => {
         <div className="flex lg:flex-row flex-col justify-center items-center">
           
           <div style={{ maxWidth : "400px" }} className="rounded-md m-10 relative">
-            <Image className="w-full" src={venue}></Image>
+            <Image src={venue}></Image>
+            <div style={{top:0 ,left: "50%" ,transform: "translate(-50%, -50%)"}} className="mt-5 text-2xl text-white absolute flex justify-center items-center">
+              <p>Venue</p>
+            </div>
             <div className="flex p-1">
               <div className="w-2/3  flex justify-center items-center">
               <p>Budget</p>
@@ -171,6 +175,9 @@ const VendorManagement = () => {
 
           <div style={{ maxWidth : "400px" }} className="rounded-md m-10 relative">
             <Image src={Photography}></Image>
+            <div style={{top:0 ,left: "50%" ,transform: "translate(-50%, -50%)"}} className="mt-5 text-2xl text-white absolute flex justify-center items-center">
+              <p>Photography</p>
+            </div>
             <div className="flex p-1">
               <div className="w-2/3  flex justify-center items-center">
               <p>Budget</p>
@@ -215,6 +222,9 @@ const VendorManagement = () => {
 
           <div style={{ maxWidth : "400px" }} className="rounded-md m-10 relative">
             <Image src={cakes}></Image>
+            <div style={{top:0 ,left: "50%" ,transform: "translate(-50%, -50%)"}} className="w-full mt-5 text-2xl text-white absolute flex justify-center items-center">
+              <p>Cakes & Confectionary</p>
+            </div>
             <div className="flex p-1">
               <div className="w-2/3  flex justify-center items-center">
               <p>Budget</p>
@@ -249,7 +259,7 @@ const VendorManagement = () => {
               </div>
             </div>
             </div>
-            <div className="w-full p-4 relative bottom-2" >
+            <div className="w-full p-4 relative bottom-2 text-center" >
               <BasicSelect></BasicSelect>
             </div>
             <div style={{right:0,top:0}} className="absolute">
@@ -259,6 +269,320 @@ const VendorManagement = () => {
 
 
         </div>
+
+        <div className="flex flex-col justify-center items-center lg:items-start w-full">
+
+        <div style={{ maxWidth : "400px" }} className="rounded-md m-10 relative">
+            <Image src={cakes}></Image>
+            <div style={{top:0 ,left: "50%" ,transform: "translate(-50%, -50%)"}} className="mt-5 text-2xl text-white absolute flex justify-center items-center">
+              <p>Honeymoon</p>
+            </div>
+            <div className="flex p-1">
+              <div className="w-2/3  flex justify-center items-center">
+              <p>Budget</p>
+              </div>
+              <div className=" w-full">
+                <LinearWithValueLabel></LinearWithValueLabel>
+              </div>
+            </div>
+            <div className="flex p-1">
+              <div className="w-2/3  flex justify-center items-center">
+              <p>Order Amount</p>
+              </div>
+              <div className=" w-full">
+                <LinearWithValueLabel></LinearWithValueLabel>
+              </div>
+            </div>
+            <div className="flex p-1">
+              <div className="w-2/3  flex justify-center items-center">
+              <p>Payment status</p>
+              </div>
+              <div className=" w-full">
+                <LinearWithValueLabel></LinearWithValueLabel>
+              </div>
+            </div>
+            <div className="flex justify-center items-center">
+            <div style={{ backgroundColor : "#DBA8A1" }} className="w-10/12 h-20 m-2 rounded-md flex flex-col justify-center items-center">
+              <p className="text-white">Gardens Boutique Hotel</p>
+              <div className="flex justify-center items-center">
+                <CallIcon style={{ color:"white" }}></CallIcon>
+                <DateRangeRoundedIcon style={{ color:"white" }}></DateRangeRoundedIcon>
+                <FavoriteBorderRoundedIcon style={{ color:"white" }}></FavoriteBorderRoundedIcon>
+              </div>
+            </div>
+            </div>
+            <div className="w-full p-4 relative bottom-2 text-center" >
+              <BasicSelect></BasicSelect>
+            </div>
+            <div style={{right:0,top:0}} className="absolute">
+              <Image src={close}></Image>
+            </div>
+          </div>
+          </div>
+
+          <div style={{ backgroundColor : "#AAAAAA" }} className="w-11/12 h-0.5">
+        </div>
+
+        <div className="flex lg:flex-row flex-col justify-center items-center">
+          
+          <div style={{ maxWidth : "400px" }} className="rounded-md m-10 relative">
+            <Image className="w-full" src={venue}></Image>
+            <div style={{top:0 ,left: "50%" ,transform: "translate(-50%, -50%)"}} className="mt-5 text-2xl text-white absolute flex justify-center items-center">
+              <p>Venue</p>
+            </div>
+            <div className="flex p-1">
+              <div className="w-2/3  flex justify-center items-center">
+              <p>Budget</p>
+              </div>
+              <div className=" w-full">
+                <LinearWithValueLabel></LinearWithValueLabel>
+              </div>
+            </div>
+            <div className="flex p-1">
+              <div className="w-2/3  flex justify-center items-center">
+              <p>Order Amount</p>
+              </div>
+              <div className=" w-full">
+                <LinearWithValueLabel></LinearWithValueLabel>
+              </div>
+            </div>
+            <div className="flex p-1">
+              <div className="w-2/3  flex justify-center items-center">
+              <p>Payment status</p>
+              </div>
+              <div className=" w-full">
+                <LinearWithValueLabel></LinearWithValueLabel>
+              </div>
+            </div>
+            <div className="flex justify-center items-center">
+            <div style={{ backgroundColor : "#F5F1EA" }} className="w-10/12 h-20 m-2 rounded-md flex flex-col justify-center items-center">
+              <button className="bg-bg-primary w-7/12 rounded-md h-8 text-white font-bold">Venue Search</button>
+            </div>
+            </div>
+            <div className="w-full p-4 relative bottom-2" >
+              <BasicSelect></BasicSelect>
+            </div>
+            <div style={{right:0,top:0}} className="absolute">
+              <Image src={close}></Image>
+            </div>
+          </div>
+
+          <div style={{ maxWidth : "400px" }} className="rounded-md m-10 relative">
+            <Image src={officiants}></Image>
+            <div style={{top:0 ,left: "50%" ,transform: "translate(-50%, -50%)"}} className="mt-5 text-2xl text-white absolute flex justify-center items-center">
+              <p>Officiants</p>
+            </div>
+            <div className="flex p-1">
+              <div className="w-2/3  flex justify-center items-center">
+              <p>Budget</p>
+              </div>
+              <div className=" w-full">
+                <LinearWithValueLabel></LinearWithValueLabel>
+              </div>
+            </div>
+            <div className="flex p-1">
+              <div className="w-2/3  flex justify-center items-center">
+              <p>Order Amount</p>
+              </div>
+              <div className=" w-full">
+                <LinearWithValueLabel></LinearWithValueLabel>
+              </div>
+            </div>
+            <div className="flex p-1">
+              <div className="w-2/3  flex justify-center items-center">
+              <p>Payment status</p>
+              </div>
+              <div className=" w-full">
+                <LinearWithValueLabel></LinearWithValueLabel>
+              </div>
+            </div>
+            <div className="flex justify-center items-center">
+            <div style={{ backgroundColor : "#F5F1EA" }} className="w-10/12 h-20 m-2 rounded-md flex flex-col justify-center items-center">
+              <button className="bg-bg-primary w-7/12 rounded-md h-8 text-white font-bold">Officiants Search</button>
+            </div>
+            </div>
+            <div className="w-full p-4 relative bottom-2" >
+              <BasicSelect></BasicSelect>
+            </div>
+            <div style={{right:0,top:0}} className="absolute">
+              <Image src={close}></Image>
+            </div>
+          </div>
+
+          <div style={{ maxWidth : "400px" }} className="rounded-md m-10 relative">
+          <Image src={officiants}></Image>
+            <div style={{top:0 ,left: "50%" ,transform: "translate(-50%, -50%)"}} className="mt-5 text-2xl text-white absolute flex justify-center items-center">
+              <p>Decor</p>
+            </div>
+            <div className="flex p-1">
+              <div className="w-2/3  flex justify-center items-center">
+              <p>Budget</p>
+              </div>
+              <div className=" w-full">
+                <LinearWithValueLabel></LinearWithValueLabel>
+              </div>
+            </div>
+            <div className="flex p-1">
+              <div className="w-2/3  flex justify-center items-center">
+              <p>Order Amount</p>
+              </div>
+              <div className=" w-full">
+                <LinearWithValueLabel></LinearWithValueLabel>
+              </div>
+            </div>
+            <div className="flex p-1">
+              <div className="w-2/3  flex justify-center items-center">
+              <p>Payment status</p>
+              </div>
+              <div className=" w-full">
+                <LinearWithValueLabel></LinearWithValueLabel>
+              </div>
+            </div>
+            <div className="flex justify-center items-center">
+            <div style={{ backgroundColor : "#F5F1EA" }} className="w-10/12 h-20 m-2 rounded-md flex flex-col justify-center items-center">
+              <button className="bg-bg-primary w-7/12 rounded-md h-8 text-white font-bold">Officiants Search</button>
+            </div>
+            </div>
+            <div className="w-full p-4 relative bottom-2 text-center" >
+              <BasicSelect></BasicSelect>
+            </div>
+            <div style={{right:0,top:0}} className="absolute">
+              <Image src={close}></Image>
+            </div>
+          </div>
+
+        </div>
+
+        <div className="flex lg:flex-row flex-col justify-center items-center">
+          
+          <div style={{ maxWidth : "400px" }} className="rounded-md m-10 relative">
+            <Image className="w-full" src={officiants}></Image>
+            <div style={{top:0 ,left: "50%" ,transform: "translate(-50%, -50%)"}} className="mt-5 text-2xl text-white absolute flex justify-center items-center">
+              <p>Venue</p>
+            </div>
+            <div className="flex p-1">
+              <div className="w-2/3  flex justify-center items-center">
+              <p>Budget</p>
+              </div>
+              <div className=" w-full">
+                <LinearWithValueLabel></LinearWithValueLabel>
+              </div>
+            </div>
+            <div className="flex p-1">
+              <div className="w-2/3  flex justify-center items-center">
+              <p>Order Amount</p>
+              </div>
+              <div className=" w-full">
+                <LinearWithValueLabel></LinearWithValueLabel>
+              </div>
+            </div>
+            <div className="flex p-1">
+              <div className="w-2/3  flex justify-center items-center">
+              <p>Payment status</p>
+              </div>
+              <div className=" w-full">
+                <LinearWithValueLabel></LinearWithValueLabel>
+              </div>
+            </div>
+            <div className="flex justify-center items-center">
+            <div style={{ backgroundColor : "#F5F1EA" }} className="w-10/12 h-20 m-2 rounded-md flex flex-col justify-center items-center">
+              <button className="bg-bg-primary w-7/12 rounded-md h-8 text-white font-bold">Venue Search</button>
+            </div>
+            </div>
+            <div className="w-full p-4 relative bottom-2" >
+              <BasicSelect></BasicSelect>
+            </div>
+            <div style={{right:0,top:0}} className="absolute">
+              <Image src={close}></Image>
+            </div>
+          </div>
+
+          <div style={{ maxWidth : "400px" }} className="rounded-md m-10 relative">
+            <Image src={officiants}></Image>
+            <div style={{top:0 ,left: "50%" ,transform: "translate(-50%, -50%)"}} className="mt-5 text-2xl text-white absolute flex justify-center items-center">
+              <p>Officiants</p>
+            </div>
+            <div className="flex p-1">
+              <div className="w-2/3  flex justify-center items-center">
+              <p>Budget</p>
+              </div>
+              <div className=" w-full">
+                <LinearWithValueLabel></LinearWithValueLabel>
+              </div>
+            </div>
+            <div className="flex p-1">
+              <div className="w-2/3  flex justify-center items-center">
+              <p>Order Amount</p>
+              </div>
+              <div className=" w-full">
+                <LinearWithValueLabel></LinearWithValueLabel>
+              </div>
+            </div>
+            <div className="flex p-1">
+              <div className="w-2/3  flex justify-center items-center">
+              <p>Payment status</p>
+              </div>
+              <div className=" w-full">
+                <LinearWithValueLabel></LinearWithValueLabel>
+              </div>
+            </div>
+            <div className="flex justify-center items-center">
+            <div style={{ backgroundColor : "#F5F1EA" }} className="w-10/12 h-20 m-2 rounded-md flex flex-col justify-center items-center">
+              <button className="bg-bg-primary w-7/12 rounded-md h-8 text-white font-bold">Officiants Search</button>
+            </div>
+            </div>
+            <div className="w-full p-4 relative bottom-2" >
+              <BasicSelect></BasicSelect>
+            </div>
+            <div style={{right:0,top:0}} className="absolute">
+              <Image src={close}></Image>
+            </div>
+          </div>
+
+          <div style={{ maxWidth : "400px" }} className="rounded-md m-10 relative">
+          <Image src={officiants}></Image>
+            <div style={{top:0 ,left: "50%" ,transform: "translate(-50%, -50%)"}} className="mt-5 text-2xl text-white absolute flex justify-center items-center">
+              <p>Decor</p>
+            </div>
+            <div className="flex p-1">
+              <div className="w-2/3  flex justify-center items-center">
+              <p>Budget</p>
+              </div>
+              <div className=" w-full">
+                <LinearWithValueLabel></LinearWithValueLabel>
+              </div>
+            </div>
+            <div className="flex p-1">
+              <div className="w-2/3  flex justify-center items-center">
+              <p>Order Amount</p>
+              </div>
+              <div className=" w-full">
+                <LinearWithValueLabel></LinearWithValueLabel>
+              </div>
+            </div>
+            <div className="flex p-1">
+              <div className="w-2/3  flex justify-center items-center">
+              <p>Payment status</p>
+              </div>
+              <div className=" w-full">
+                <LinearWithValueLabel></LinearWithValueLabel>
+              </div>
+            </div>
+            <div className="flex justify-center items-center">
+            <div style={{ backgroundColor : "#F5F1EA" }} className="w-10/12 h-20 m-2 rounded-md flex flex-col justify-center items-center">
+              <button className="bg-bg-primary w-7/12 rounded-md h-8 text-white font-bold">Officiants Search</button>
+            </div>
+            </div>
+            <div className="w-full p-4 relative bottom-2 text-center" >
+              <BasicSelect></BasicSelect>
+            </div>
+            <div style={{right:0,top:0}} className="absolute">
+              <Image src={close}></Image>
+            </div>
+          </div>
+
+        </div>
+
       </div>
     </>
   );
