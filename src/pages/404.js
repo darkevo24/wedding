@@ -1,13 +1,16 @@
 import React from "react";
+import Head from "next/head";
 
 const Custom404 = () => {
   return (
-    <div
-      className="flex justify-center items-center w-full absolute"
-      style={{ height: "90vh" }}
-    >
-      <p className="font-thin text-3xl">Error 404 - Page Not Found</p>
-    </div>
+    <>
+      <Head>
+        <title>WeddingPlatform | 404 - Page Not Found</title>
+      </Head>
+      <div className="h-96 flex justify-center items-center">
+        <p className="text-bg-primary text-2xl">Error 404 - Page Not Found</p>
+      </div>
+    </>
   );
 };
 
