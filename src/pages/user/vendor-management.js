@@ -10,11 +10,11 @@ import Image from "next/image";
 import venue from "../../../public/images/venue.png"
 import Photography from "../../../public/images/photography.png"
 import cakes from "../../../public/images/cakes.png"
-import LinearWithValueLabel from "./ProgressBar";
+import LinearWithValueLabel from "../../components/vendor-management-style/ProgressBar";
 import CallIcon from '@mui/icons-material/Call';
 import DateRangeRoundedIcon from '@mui/icons-material/DateRangeRounded';
 import FavoriteBorderRoundedIcon from '@mui/icons-material/FavoriteBorderRounded';
-import BasicSelect from "./select";
+import BasicSelect from "../../components/vendor-management-style/select";
 import close from "../../../public/images/close.png"
 import officiants from "../../../public/images/officiants.png"
 
@@ -270,7 +270,7 @@ const VendorManagement = () => {
 
         </div>
 
-        <div className="flex flex-col justify-center items-center lg:items-start w-full">
+        <div className="flex flex-col justify-center items-center lg:items-start w-full ">
 
         <div style={{ maxWidth : "400px" }} className="rounded-md m-10 relative">
             <Image src={cakes}></Image>
