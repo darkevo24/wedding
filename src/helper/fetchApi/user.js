@@ -59,3 +59,21 @@ export const fetchApiGetUser = (res) => {
       }
     });
 };
+
+export const fetchApiVerifyUser = (token, res) => {
+  fetch(process.env.API_URL + "token/" + token, {
+    method: "GET",
+    headers: {
+      Accept: "application/json",
+      "Content-Type": "application/json",
+    },
+  })
+    .then((response) => response.json())
+    .then((responseJson) => {
+      if (responseJson.hasOwnProperty("success") && responseJson.success == true) {
+        res({ resVal: responseJson });
+      } else {
+        res(JSON.stringify(responseJson.message));
+      }
+    });
+};

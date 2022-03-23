@@ -7,7 +7,7 @@ const Custom404 = () => {
       <Head>
         <title>WeddingPlatform | 404 - Page Not Found</title>
       </Head>
-      <div className="h-96 flex justify-center items-center">
+      <div className="h-screen flex justify-center items-center">
         <p className="text-bg-primary text-2xl">Error 404 - Page Not Found</p>
       </div>
     </>

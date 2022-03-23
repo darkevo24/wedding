@@ -33,11 +33,11 @@ const Register = () => {
     setLoading(true);
     fetchApiRegister(weddingParams, (res) => {
       if (res.hasOwnProperty("resVal")) {
-        dispatch(setErrorMessage("Registration successful! Please login."));
+        dispatch(setErrorMessage("Please check your email and verify your account first!"));
         dispatch(setOpenAlert(true));
         route.push("/login");
       } else {
-        setErrorMessageLocal(res);
+        setErrorMessageLocal(res.replace(/['"]+/g, ""));
         setOpenAlertLocal(true);
       }
       setLoading(false);
