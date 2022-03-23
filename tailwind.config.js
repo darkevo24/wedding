@@ -6,8 +6,11 @@ module.exports = {
         // "bg-wedding": "url('/images/wedding.png')",
         "bg-wedding": "url('/images/wedding-compressed.jpg')",
         "bg-wedding-content": "url('/images/wedding2.jpg')",
-        "bg": "url('/images/bg.png')",
-        "business" : "url('/images/business.png')"
+        bg: "url('/images/bg.png')",
+        business: "url('/images/business.png')",
+        "bg-vendor-section1": "url('/images/vendor-search/banner3.png')",
+        "bg-vendor-section2": "url('/images/vendor-search/banner4.png')",
+        "bg-vendor-section3": "url('/images/vendor-search/banner5.png')",
       },
       height: {
         "9%": "9%",
