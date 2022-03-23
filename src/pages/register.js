@@ -72,7 +72,7 @@ const Register = () => {
               <div className="md:flex md:space-x-2 mt-5">
                 <div className="md:w-1/2">
                   <div>
-                    <p className="font-semibold text-bg-eunry">{"BRIDE'S NAME *"}</p>
+                    <p className="font-semibold hover:text-bg-eunry">{"BRIDE'S NAME *"}</p>
                     <div className="flex space-x-2">
                       <input
                         onChange={(e) => setWeddingParams({ ...weddingParams, bride_first_name: e.target.value })}
@@ -93,7 +93,7 @@ const Register = () => {
                 </div>
                 <div className="md:w-1/2">
                   <div>
-                    <p className="font-semibold">{"GROOM'S NAME *"}</p>
+                    <p className="font-semibold hover:text-bg-eunry">{"GROOM'S NAME *"}</p>
                     <div className="flex space-x-2">
                       <input
                         onChange={(e) => setWeddingParams({ ...weddingParams, groom_first_name: e.target.value })}
@@ -116,7 +116,7 @@ const Register = () => {
               <div className="md:flex md:space-x-2 mt-5">
                 <div className="md:w-1/2">
                   <div>
-                    <p className="font-semibold">EMAIL ADDRESS *</p>
+                    <p className="font-semibold hover:text-bg-eunry">EMAIL ADDRESS *</p>
                     <input
                       onChange={(e) => setWeddingParams({ ...weddingParams, email: e.target.value })}
                       value={weddingParams.email}
@@ -128,7 +128,7 @@ const Register = () => {
                 </div>
                 <div className="md:w-1/2">
                   <div>
-                    <p className="font-semibold">WEDDING DATE *</p>
+                    <p className="font-semibold hover:text-bg-eunry">WEDDING DATE *</p>
                     <input
                       onChange={(e) => setWeddingParams({ ...weddingParams, wedding_date: e.target.value })}
                       type="date"
@@ -142,8 +142,8 @@ const Register = () => {
                 <p className="font-semibold mb-3">HOW DID YOU HEAR ABOUT US?</p>
                 <PlatformChecklist />
               </div>
-              <div className="mt-5">
-                <p className="text-xl">Almost There!</p>
+              <div className="mt-9">
+                <p className="text-2xl font-cagily">Almost There!</p>
                 <div className="md:flex">
                   <p className="font-medium">Create an account, so we can save your preferences.&nbsp;</p>
                   <p className="font-normal italic">

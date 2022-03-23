@@ -3,7 +3,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        cagily: ["Cagily", "cursive"],
+        cagily: ["Cagily, cursive"],
       },
       backgroundImage: {
         // "bg-wedding": "url('/images/wedding.png')",
