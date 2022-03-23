@@ -4,7 +4,7 @@ import { useSelector } from "react-redux";
 import Footer from "../layouts/footer";
 import Navbar from "../layouts/navbar";
 import { useRouter } from "next/router";
-import NavbarUser from "../layouts/navbarUser";
+import UserMenu from "../layouts/UserMenu";
 
 const MasterUser = ({ children }) => {
   const route = useRouter();
@@ -49,7 +49,7 @@ const MasterUser = ({ children }) => {
   return (
     <div className="h-screen">
       <Navbar />
-      {currentRoute.includes("/user") && <NavbarUser />}
+      {currentRoute.includes("/user") && <UserMenu />}
       <div>{children}</div>
       <Footer />
       {visible && (

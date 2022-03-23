@@ -7,7 +7,7 @@ import List from "../../../public/icons/list.svg";
 import Persons from "../../../public/icons/persons.svg";
 import Ring from "../../../public/icons/ring.svg";
 
-const NavbarUser = () => {
+const UserMenu = () => {
   const route = useRouter();
   const currentRoute = route.pathname;
 
@@ -67,4 +67,4 @@ const NavbarUser = () => {
   );
 };
 
-export default NavbarUser;
+export default UserMenu;
