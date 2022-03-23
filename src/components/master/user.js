@@ -17,20 +17,20 @@ const MasterUser = ({ children }) => {
     const token = localStorage.getItem("token");
     const authRoute = ["/login", "/register"];
 
-    // // check if user not logged in, cannot access user page
-    // if (!isLoginRedux && !token && currentRoute.includes("/user")) {
-    //   route.replace("/");
-    // }
-    // // check if user not logged in, user can acces auth page
-    // else if (!isLoginRedux && !token && authRoute.includes(currentRoute)) {
-    //   route.replace(currentRoute);
-    // }
-    // // check if user logged in, user cannot access auth page
-    // else if ((isLoginRedux || token) && authRoute.includes(currentRoute)) {
-    //   route.push("/user/vendor-management");
-    // } else {
-    //   // route.replace("/user");
-    // }
+    // check if user not logged in, cannot access user page
+    if (!isLoginRedux && !token && currentRoute.includes("/user")) {
+      route.replace("/");
+    }
+    // check if user not logged in, user can acces auth page
+    else if (!isLoginRedux && !token && authRoute.includes(currentRoute)) {
+      route.replace(currentRoute);
+    }
+    // check if user logged in, user cannot access auth page
+    else if ((isLoginRedux || token) && authRoute.includes(currentRoute)) {
+      route.push("/user/vendor-management");
+    } else {
+      // route.replace("/user");
+    }
   }, [currentRoute]);
 
   useEffect(() => {
