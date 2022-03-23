@@ -22,10 +22,9 @@ const DreamTeam = () => {
             <p>Handpicked recs in your style, budget, availability and more.</p>
           </div>
         </div>
-        <br></br>
-        <div className="flex flex-col items-center w-full mt-3">
-          <div className="bg-white h-10 flex items-center rounded-md w-fit">
-            <form className="w-full h-full flex items-center ">
+        <div className="flex flex-col items-center w-full mt-5">
+          <div className="bg-white h-10 flex items-center rounded-md w-2/5">
+            <form className="w-full h-full flex items-center">
               <div className="w-1/2 h-full flex items-center justify-center border-r border-r-bg-soapstone select-none">
                 <p>Wedding Vendor</p>
               </div>
