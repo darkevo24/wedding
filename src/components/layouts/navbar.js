@@ -54,18 +54,18 @@ const Navbar = () => {
             <p onClick={() => route.push("/vendor/register")} className="cursor-pointer hover:underline">
               Become a Vendor
             </p>
-            <div className="border-r border-r-gray-300"></div>
+            <div className="border-r border-r-gray-300 opacity-20"></div>
             <p onClick={() => route.push("/login")} className="cursor-pointer hover:underline">
               Login
             </p>
-            <div className="border-r border-r-gray-300"></div>
+            <div className="border-r border-r-gray-300 opacity-20"></div>
             <p onClick={() => route.push("/register")} className="cursor-pointer hover:underline">
               Join Us
             </p>
           </div>
         ) : isLogin && currentRoute === "/" ? (
           <div className="flex justify-center space-x-2">
-            <p onClick={() => route.push("/user")} className="cursor-pointer hover:underline">
+            <p onClick={() => route.push("/user/vendor-management")} className="cursor-pointer hover:underline">
               Dashboard
             </p>
           </div>
@@ -81,13 +81,13 @@ const Navbar = () => {
         <div onClick={() => route.push("/")} className="cursor-pointer select-none">
           <Image src={Logo} width={135} height={70} />
         </div>
-        <div className="flex space-x-5 text-bg-primary">
-          <p className="font-medium text-lg cursor-pointer select-none hover:underline">Plan a Wedding</p>
-          <p className="font-medium text-lg cursor-pointer select-none hover:underline">Vendor</p>
-          <p className="font-medium text-lg cursor-pointer select-none hover:underline">Website</p>
-          <p className="font-medium text-lg cursor-pointer select-none hover:underline">Guest List</p>
-          <p className="font-medium text-lg cursor-pointer select-none hover:underline">Inspiration</p>
-          <p className="font-medium text-lg cursor-pointer select-none hover:underline">Helpful Tips</p>
+        <div className="flex space-x-5 text-bg-charcoal">
+          <p className="font-medium text-lg cursor-pointer select-none hover:text-bg-primary">Plan a Wedding</p>
+          <p className="font-medium text-lg cursor-pointer select-none hover:text-bg-primary">Vendor</p>
+          <p className="font-medium text-lg cursor-pointer select-none hover:text-bg-primary">Website</p>
+          <p className="font-medium text-lg cursor-pointer select-none hover:text-bg-primary">Guest List</p>
+          <p className="font-medium text-lg cursor-pointer select-none hover:text-bg-primary">Inspiration</p>
+          <p className="font-medium text-lg cursor-pointer select-none hover:text-bg-primary">Helpful Tips</p>
           <div>
             <form
               onSubmit={(e) => {

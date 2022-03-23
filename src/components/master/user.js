@@ -15,12 +15,14 @@ const MasterUser = ({ children }) => {
 
   useEffect(() => {
     const token = localStorage.getItem("token");
+    const authRoute = ["/login", "/register"];
+
     if (!isLoginRedux && !token && currentRoute.includes("/user")) {
       route.replace("/");
-    } else if (!isLoginRedux && !token && currentRoute == "/login") {
-      route.replace("/login");
-    } else if (!isLoginRedux && !token && currentRoute == "/register") {
-      route.replace("/register");
+    } else if (!isLoginRedux && !token && authRoute.includes(currentRoute)) {
+      route.replace(currentRoute);
+    } else if ((isLoginRedux || token) && authRoute.includes(currentRoute)) {
+      route.push("/user/vendor-management");
     } else {
       // route.replace("/user");
     }

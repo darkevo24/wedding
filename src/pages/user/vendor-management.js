@@ -6,7 +6,7 @@ import Slider from "@mui/material/Slider";
 import Box from "@mui/material/Box";
 import { createTheme } from "@mui/material/styles";
 import { red } from "@mui/material/colors";
-import VendorItem from "../../components/layouts/pages/user/vendor-item";
+import VendorItem from "../../components/layouts/pages/user/vendorItem";
 
 const VendorManagement = () => {
   const [value, setValue] = useState([1500, 12000]);
