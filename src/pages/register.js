@@ -19,7 +19,6 @@ const Register = () => {
     groom_first_name: "",
     groom_last_name: "",
     wedding_date: "",
-    phone: "",
     email: "",
     password: "",
   });
@@ -57,7 +56,7 @@ const Register = () => {
           </div>
         </div>
       </div>
-      <div className="py-10 px-5 bg-bg-serenade text-bg-primary">
+      <div className="py-10 px-5 bg-bg-serenade text-bg-charcoal">
         <div className="flex flex-col items-center">
           <p className="text-2xl">So you said Yes - Congrats!</p>
           <p className="text-xl">We cant wait to help you get started!</p>
@@ -78,14 +77,14 @@ const Register = () => {
                       <input
                         onChange={(e) => setWeddingParams({ ...weddingParams, bride_first_name: e.target.value })}
                         type="text"
-                        className="w-full outline-none py-2 px-2"
+                        className="w-full outline-none py-2 px-2 rounded-sm mt-3"
                         placeholder="First Name"
                         required
                       />
                       <input
                         onChange={(e) => setWeddingParams({ ...weddingParams, bride_last_name: e.target.value })}
                         type="text"
-                        className="w-full outline-none py-2 px-2"
+                        className="w-full outline-none py-2 px-2 rounded-sm mt-3"
                         placeholder="Last Name"
                         required
                       />
@@ -99,14 +98,14 @@ const Register = () => {
                       <input
                         onChange={(e) => setWeddingParams({ ...weddingParams, groom_first_name: e.target.value })}
                         type="text"
-                        className="w-full outline-none py-2 px-2"
+                        className="w-full outline-none py-2 px-2 rounded-sm mt-3"
                         placeholder="First Name"
                         required
                       />
                       <input
                         onChange={(e) => setWeddingParams({ ...weddingParams, groom_last_name: e.target.value })}
                         type="text"
-                        className="w-full outline-none py-2 px-2"
+                        className="w-full outline-none py-2 px-2 rounded-sm mt-3"
                         placeholder="Last Name"
                         required
                       />
@@ -117,11 +116,12 @@ const Register = () => {
               <div className="md:flex md:space-x-2 mt-5">
                 <div className="md:w-1/2">
                   <div>
-                    <p className="font-semibold">PHONE *</p>
+                    <p className="font-semibold">EMAIL ADDRESS *</p>
                     <input
-                      onChange={(e) => setWeddingParams({ ...weddingParams, phone: e.target.value })}
-                      type="number"
-                      className="w-full outline-none py-2 px-2"
+                      onChange={(e) => setWeddingParams({ ...weddingParams, email: e.target.value })}
+                      value={weddingParams.email}
+                      type="email"
+                      className="w-full outline-none py-2 px-2 rounded-sm mt-3"
                       required
                     />
                   </div>
@@ -132,12 +132,13 @@ const Register = () => {
                     <input
                       onChange={(e) => setWeddingParams({ ...weddingParams, wedding_date: e.target.value })}
                       type="date"
-                      className="w-full outline-none py-2 px-2"
+                      className="w-full outline-none py-2 px-2 rounded-sm mt-3"
                     />
+                    <p className="italic mt-2">You can always change this later if you need to.</p>
                   </div>
                 </div>
               </div>
-              <div className="mt-5">
+              <div className="mt-10">
                 <p className="font-semibold mb-3">HOW DID YOU HEAR ABOUT US?</p>
                 <PlatformChecklist />
               </div>
@@ -145,33 +146,35 @@ const Register = () => {
                 <p className="text-xl">Almost There!</p>
                 <div className="md:flex">
                   <p className="font-medium">Create an account, so we can save your preferences.&nbsp;</p>
-                  <p>
-                    Already have an account? <span className="cursor-pointer hover:underline">Login.</span>
+                  <p className="font-normal italic">
+                    Already have an account? <span className="cursor-pointer text-bg-primary hover:underline">Login.</span>
                   </p>
                 </div>
                 <div className="mt-4 space-y-3">
                   <div className="md:flex md:w-2/3 items-center">
                     <div className="md:w-1/4">
-                      <p>Email Address</p>
+                      <p className="font-medium">Email Address</p>
                     </div>
                     <div className="md:w-3/4">
                       <input
                         onChange={(e) => setWeddingParams({ ...weddingParams, email: e.target.value })}
+                        value={weddingParams.email}
                         type="text"
-                        className="w-full outline-none py-2 px-2"
+                        className="w-full outline-none py-2 px-2 rounded-sm mt-3"
                         required
                       />
                     </div>
                   </div>
                   <div className="md:flex md:w-2/3 items-center">
                     <div className="md:w-1/4">
-                      <p>Password</p>
+                      <p className="font-medium">Password</p>
+                      <p className="italic">(8 or more characters)</p>
                     </div>
                     <div className="md:w-3/4">
                       <input
                         onChange={(e) => setWeddingParams({ ...weddingParams, password: e.target.value })}
                         type="password"
-                        className="w-full outline-none py-2 px-2"
+                        className="w-full outline-none py-2 px-2 rounded-sm mt-3"
                         required
                       />
                     </div>
