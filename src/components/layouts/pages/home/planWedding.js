@@ -8,7 +8,7 @@ const PlanWedding = () => {
     <div className="bg-bg-primary text-white">
       <div className="w-full flex flex-col md:flex-row justify-center items-start md:items-center">
         <div className=" w-full py-5 px-16 flex flex-col justify-center">
-          <p className="text-3xl">Plan That Perfect Wedding</p>
+          <p className="text-3xl font-cagily">Plan That Perfect Wedding</p>
           <div className="mt-10 space-y-3">
             <div className="flex items-center space-x-2">
               <Image src={Love} width={20} height={20} />

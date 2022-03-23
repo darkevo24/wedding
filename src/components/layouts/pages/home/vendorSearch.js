@@ -14,8 +14,8 @@ const VendorSearch = () => {
         </div>
         <div className="bg-bg-eunry px-5 py-12 text-white">
           <div className="w-full flex flex-col items-center">
-            <p className="text-3xl text-center">Your Vendor Search - Streamlined</p>
-            <p className="text-center">Pre-screened vendors ready to help your planning</p>
+            <p className="text-3xl text-center font-cagily">Your Vendor Search - Streamlined</p>
+            <p className="text-center font-cagily">Pre-screened vendors ready to help your planning</p>
             <div className="flex flex-col lg:flex-row mt-7 justify-center">
               <div data-aos="fade-right">
                 <div className="mx-3 cursor-pointer transition-all hover:scale-105 max-w-screen my-2 lg:my-0">

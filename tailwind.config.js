@@ -2,6 +2,9 @@ module.exports = {
   content: ["./src/pages/**/*.{js,ts,jsx,tsx}", "./src/components/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
+      fontFamily: {
+        cagily: ["Cagily", "cursive"],
+      },
       backgroundImage: {
         // "bg-wedding": "url('/images/wedding.png')",
         "bg-wedding": "url('/images/wedding-compressed.jpg')",

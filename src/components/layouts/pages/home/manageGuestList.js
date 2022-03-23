@@ -8,7 +8,7 @@ const ManageGuestList = () => {
     <div className="bg-bg-romance text-bg-primary">
       <div className="w-full flex flex-col md:flex-row items-start md:items-center">
         <div className="w-full py-5 px-16 flex flex-col justify-center">
-          <p className="text-3xl">Easily Manage Guest List</p>
+          <p className="text-3xl font-cagily">Easily Manage Guest List</p>
           <div className="mt-10 space-y-3">
             <div className="flex items-center space-x-2">
               <Image src={Love} width={20} height={20} />
