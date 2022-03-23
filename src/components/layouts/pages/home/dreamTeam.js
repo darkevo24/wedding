@@ -23,7 +23,7 @@ const DreamTeam = () => {
           </div>
         </div>
         <div className="flex flex-col items-center w-full mt-5">
-          <div className="bg-white h-10 flex items-center rounded-md w-2/5">
+          <div className="bg-white h-10 flex items-center rounded-md w-1/2">
             <form className="w-full h-full flex items-center">
               <div className="w-1/2 h-full flex items-center justify-center border-r border-r-bg-soapstone select-none">
                 <p>Wedding Vendor</p>
@@ -48,7 +48,7 @@ const DreamTeam = () => {
                 <Image src={SearchIcon} width={60} height={30} />
               </div>
             </div>
-            <p className="font-light">Streamlines & Highly Personalized Search</p>
+            <p className="font-normal text-bg-charcoal">Streamlines & Highly Personalized Search</p>
           </div>
           <div className="flex flex-col space-y-2 items-center text-center w-1/4">
             <div className="rounded-full border-2 border-bg-eunry w-20 h-20 p-0.5">
@@ -56,7 +56,7 @@ const DreamTeam = () => {
                 <Image src={ListIcon} width={35} height={45} />
               </div>
             </div>
-            <p className="font-light">Checklist to guide your planning</p>
+            <p className="font-normal text-bg-charcoal">Checklist to guide your planning</p>
           </div>
           <div className="flex flex-col space-y-2 items-center text-center w-1/4">
             <div className="rounded-full border-2 border-bg-eunry w-20 h-20 p-0.5">
@@ -64,7 +64,7 @@ const DreamTeam = () => {
                 <Image src={CurrencyIcon} width={45} height={55} />
               </div>
             </div>
-            <p className="font-light">Milestone payments lets you save as you go towards your wedding</p>
+            <p className="font-normal text-bg-charcoal">Milestone payments lets you save as you go towards your wedding</p>
           </div>
           <div className="flex flex-col space-y-2 items-center text-center w-1/4">
             <div className="rounded-full border-2 border-bg-eunry w-20 h-20 p-0.5">
@@ -72,7 +72,7 @@ const DreamTeam = () => {
                 <Image src={CheckedIcon} width={35} height={45} />
               </div>
             </div>
-            <p className="font-light">Last milestone payment held until service is delivered / performed</p>
+            <p className="font-normal text-bg-charcoal">Last milestone payment held until service is delivered / performed</p>
           </div>
         </div>
         <DreamTeamMobile />
