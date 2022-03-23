@@ -14,6 +14,9 @@ module.exports = {
         "bg-vendor-section1": "url('/images/vendor-search/banner3.png')",
         "bg-vendor-section2": "url('/images/vendor-search/banner4.png')",
         "bg-vendor-section3": "url('/images/vendor-search/banner5.png')",
+        "bg-menu": "url('/images/menu-bg.png')",
+        "bg-menu1": "url('/images/menu-bg1.png')",
+        "bg-menu2": "url('/images/menu-bg2.png')",
       },
       height: {
         "9%": "9%",
@@ -94,12 +97,13 @@ module.exports = {
           to: {
             opacity: "0",
             transform: "translateY(10px)",
+            display: "none",
           },
         },
       },
       animation: {
         "fade-in-left": "fade-in-left 0.7s ease-out",
-        "fade-in-down": "fade-in-down 0.7s ease-out",
+        "fade-in-down": "fade-in-down 0.3s ease-out",
         "fade-out-down": "fade-out-down 0.3s ease-out",
         "fade-in-up": "fade-in-up 0.3s ease-out",
         "fade-out-up": "fade-out-up 0.3s ease-out",
