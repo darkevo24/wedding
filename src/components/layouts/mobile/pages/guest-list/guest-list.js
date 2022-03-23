@@ -1,10 +1,10 @@
 import Head from "next/head";
 import React from "react";
 import Image from "next/image";
-import img1 from "../../../public/images/img1.png"
-import img2 from "../../../public/images/img2.png"
-import img3 from "../../../public/images/img3.png"
-import img4 from "../../../public/images/img4.png"
+import img1 from "../../../../../../public/images/img1.png"
+import img2 from "../../../../../../public/images/img2.png"
+import img3 from "../../../../../../public/images/img3.png"
+import img4 from "../../../../../../public/images/img4.png"
 import { BsFilter, BsPlusLg } from "react-icons/bs";
 import SearchIcon from '@mui/icons-material/Search';
 import Box from '@mui/material/Box';
@@ -13,37 +13,20 @@ import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 import TelegramIcon from '@mui/icons-material/Telegram';
-import dot from "../../../public/images/dot.png"
-import Guest from "../../components/layouts/mobile/pages/guest-list/guest-list";
-const VendorManagement = () => {
+import dot from "../../../../../../public/images/dot.png"
+
+const Guest = () => {
   return (
     <>
       <Head>
         <title>WeddingPlatform | User - Guest List</title>
       </Head>
-      <div className="hidden lg:block">
+      <div className="lg:hidden block">
         <div style={{ backgroundColor : "#FCE4D4" }} className="w-full p-10">
-          <div className="flex justify-center items-center">
-            <div className="w-32 h-10 bg-white flex justify-center items-center">
-              <p>Overview</p>
-            </div>
-            <div className="w-32 h-10 bg-white border-white border-2 flex justify-center items-center opacity-50">
-              <p>Wedding</p>
-            </div>
-            <div className="w-32 h-10 bg-white border-white border-2 flex justify-center items-center opacity-50">
-              <p>Rehearsal Dinner</p>
-            </div>
-            <div className="w-32 h-10 bg-white border-white border-2 flex justify-center items-center opacity-50">
-              <p>Shower</p>
-            </div>
-            <div className="w-12 h-10 bg-white border-white border-2 flex justify-center items-center opacity-50">
-            <BsPlusLg size={20} />
-            </div>
-          </div>
             <div className="text-3xl text-bg-primary">
               <p>Overview</p>
             </div>
-            <div className="h-24 w-full bg-white flex mt-2 overflow-x-auto space-x-8">
+            <div className="h-24 w-full bg-white mt-10 flex overflow-x-auto space-x-8">
               <div className="p-6  w-full flex justify-start items-center flex-shrink-1">
               <Image objectFit="cover" cursor="pointer" src={img1}></Image>
               </div>
@@ -173,9 +156,8 @@ const VendorManagement = () => {
     
         </div>
       </div>
-      <Guest></Guest>
     </>
   );
 };
 
-export default VendorManagement;
+export default Guest;

@@ -17,7 +17,7 @@ const Register = () => {
       </div>
       <div className="py-10 px-10 bg-bg-romance text-bg-primary">
         <div className="md:w-2/3 m-auto">
-        <p className="text-3xl">Vendor Information</p>
+        <p className="text-3xl ml-1">Vendor Information</p>
         <form>
           <div className="mt-5 w-full text-bg-primary">
             <div className="w-full  flex flex-col sm:flex-row">
@@ -26,8 +26,8 @@ const Register = () => {
                 <input type="text" className="mt-2 w-full h-10 outline-none py-2 px-2" required></input>
               </div>
               <div className="m-2 w-full font-bold">
-                <p>REGISTERED NO (UEN OR OTHER ID) *</p>
-                <input type="number" className="mt-2 w-full h-10 outline-none py-2 px-2" required></input>
+                <p>REGISTERED NO (UEN OR OTHER ID)</p>
+                <input type="number" className="mt-2 w-full h-10 outline-none py-2 px-2"></input>
               </div>
             </div>
             <div className="w-full  flex flex-col md:flex-row">
@@ -48,8 +48,8 @@ const Register = () => {
             <div className="w-full  flex flex-col md:flex-row">
               <div className="m-2  w-full font-bold flex">
                 <div className="w-28 lg:w-full">
-                  <p>BLK NO. *</p>
-                  <input type="number" className="mt-2 w-full h-10 outline-none py-2 px-2" required></input>
+                  <p>BLK NO.</p>
+                  <input type="number" className="mt-2 w-full h-10 outline-none py-2 px-2"></input>
                 </div>
                 <div className="w-full ml-4">
                   <p>UNIT NO./HOUSE NO.</p>
