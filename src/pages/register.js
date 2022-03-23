@@ -3,71 +3,45 @@ import Head from "next/head";
 import React, { useState } from "react";
 import PlatformChecklist from "../components/layouts/pages/register/platformChecklist";
 import { fetchApiRegister } from "../helper/fetchApi/user";
-import { fetchApiWeddingPost } from "../helper/fetchApi/wedding";
+import { useRouter } from "next/router";
+import { useDispatch } from "react-redux";
+import { setOpenAlert, setErrorMessage } from "../redux/reducers/authToken";
 
 const Register = () => {
-  const [email, setEmail] = useState("");
-  const [phone, setPhone] = useState("");
-  const [password, setPassword] = useState("");
+  const route = useRouter();
+  const dispatch = useDispatch();
   const [loading, setLoading] = useState(false);
-  const [openAlert, setOpenAlert] = useState(false);
-  const [errorMessage, setErrorMessage] = useState("");
+  const [openAlertLocal, setOpenAlertLocal] = useState(false);
+  const [errorMessageLocal, setErrorMessageLocal] = useState("");
   const [weddingParams, setWeddingParams] = useState({
     bride_first_name: "",
     bride_last_name: "",
     groom_first_name: "",
     groom_last_name: "",
     wedding_date: "",
-    bride_prepare_location: "",
     phone: "",
-    opt_photos_taken: false,
-    opt_before_ceremony: true,
-    ceremony_location: "",
-    reception_location: "",
-    coordinator: "",
-    no_guests: "",
-    guideline: "",
-    is_religious: true,
-    time_ceremony: "",
-    start_date: "",
-    end_date: "",
-    time_reception: "",
+    email: "",
+    password: "",
   });
 
-  const registerUser = (wedding_uuid) => {
-    if (password.length < 6) {
+  const doRegister = () => {
+    if (weddingParams.password.length < 6) {
       setErrorMessage("Password must be at least 6 characters");
-      setOpenAlert(true);
+      setOpenAlertLocal(true);
       return;
     }
 
-    let params = {
-      email: email,
-      phone: phone,
-      password: password,
-      wedding_uuid: wedding_uuid,
-    };
-
-    fetchApiRegister(params, (res) => {
+    setLoading(true);
+    fetchApiRegister(weddingParams, (res) => {
       if (res.hasOwnProperty("resVal")) {
-        console.log(res.resVal);
+        dispatch(setErrorMessage("Registration successful! Please login."));
+        dispatch(setOpenAlert(true));
+        route.push("/login");
       } else {
-        setErrorMessage(res);
-        setOpenAlert(true);
+        setErrorMessageLocal(res);
+        setOpenAlertLocal(true);
       }
       setLoading(false);
-    });
-  };
-
-  const doRegister = () => {
-    // setLoading(true);
-    fetchApiWeddingPost(weddingParams, (res) => {
-      if (res.hasOwnProperty("resVal")) {
-        console.log(res.resVal);
-        // registerUser("b97ffdbe-90c7-4882-a754-0d3866cb1f9d");
-      } else {
-        console.log(res);
-      }
     });
   };
 
@@ -143,8 +117,13 @@ const Register = () => {
               <div className="md:flex md:space-x-2 mt-5">
                 <div className="md:w-1/2">
                   <div>
-                    <p className="font-semibold">EMAIL ADDRESS *</p>
-                    <input type="email" className="w-full outline-none py-2 px-2" required />
+                    <p className="font-semibold">PHONE *</p>
+                    <input
+                      onChange={(e) => setWeddingParams({ ...weddingParams, phone: e.target.value })}
+                      type="number"
+                      className="w-full outline-none py-2 px-2"
+                      required
+                    />
                   </div>
                 </div>
                 <div className="md:w-1/2">
@@ -176,31 +155,25 @@ const Register = () => {
                       <p>Email Address</p>
                     </div>
                     <div className="md:w-3/4">
-                      <input onChange={(e) => setEmail(e.target.value)} type="text" className="w-full outline-none py-2 px-2" required />
-                    </div>
-                  </div>
-                  {/* <div className="md:flex md:w-2/3 items-center">
-                    <div className="md:w-1/4">
-                      <p>Phone</p>
-                    </div>
-                    <div className="md:w-3/4">
                       <input
-                        onChange={(e) => {
-                          setPhone(e.target.value);
-                          setWeddingParams({ ...weddingParams, phone: e.target.value });
-                        }}
-                        type="number"
+                        onChange={(e) => setWeddingParams({ ...weddingParams, email: e.target.value })}
+                        type="text"
                         className="w-full outline-none py-2 px-2"
                         required
                       />
                     </div>
-                  </div> */}
+                  </div>
                   <div className="md:flex md:w-2/3 items-center">
                     <div className="md:w-1/4">
                       <p>Password</p>
                     </div>
                     <div className="md:w-3/4">
-                      <input onChange={(e) => setPassword(e.target.value)} type="password" className="w-full outline-none py-2 px-2" required />
+                      <input
+                        onChange={(e) => setWeddingParams({ ...weddingParams, password: e.target.value })}
+                        type="password"
+                        className="w-full outline-none py-2 px-2"
+                        required
+                      />
                     </div>
                   </div>
                 </div>
@@ -214,12 +187,12 @@ const Register = () => {
 
         <Snackbar
           anchorOrigin={{ vertical: "top", horizontal: "right" }}
-          open={openAlert}
+          open={openAlertLocal}
           autoHideDuration={5000}
-          onClose={() => setOpenAlert(false)}
+          onClose={() => setOpenAlertLocal(false)}
         >
           <div className="bg-bg-primary px-3 py-1 text-white rounded-md">
-            <p className="text-xl">{errorMessage}</p>
+            <p className="text-xl">{errorMessageLocal}</p>
           </div>
         </Snackbar>
       </div>
