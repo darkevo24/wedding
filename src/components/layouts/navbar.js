@@ -84,7 +84,7 @@ const Navbar = () => {
         <div className="flex space-x-5 text-bg-charcoal">
           <p className="font-medium text-lg cursor-pointer select-none hover:text-bg-primary">Plan a Wedding</p>
           <p className="font-medium text-lg cursor-pointer select-none hover:text-bg-primary">Vendor</p>
-          <p className="font-medium text-lg cursor-pointer select-none hover:text-bg-primary">Website</p>
+          {/* <p className="font-medium text-lg cursor-pointer select-none hover:text-bg-primary">Website</p> */}
           <p className="font-medium text-lg cursor-pointer select-none hover:text-bg-primary">Guest List</p>
           <p className="font-medium text-lg cursor-pointer select-none hover:text-bg-primary">Inspiration</p>
           <p className="font-medium text-lg cursor-pointer select-none hover:text-bg-primary">Helpful Tips</p>
