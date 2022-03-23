@@ -16,10 +16,10 @@ const DreamTeam = () => {
     <div className="bg-bg-romance px-10 py-16 text-bg-primary">
       <div className="w-full flex flex-col items-center">
         <div className="flex flex-col items-center">
-          <p className="font-normal text-3xl">Find Your Dream Team</p>
+          <p className="font-cagily text-3xl">Find Your Dream Team</p>
           <div className="flex flex-col items-center mt-2">
-            <p>Streamline your search of pre-screened vendors with highly personalized preferences.</p>
-            <p>Handpicked recs in your style, budget, availability and more.</p>
+            <p className="font-cagily">Streamline your search of pre-screened vendors with highly personalized preferences.</p>
+            <p className="font-cagily">Handpicked recs in your style, budget, availability and more.</p>
           </div>
         </div>
         <div className="flex flex-col items-center w-full mt-5">
