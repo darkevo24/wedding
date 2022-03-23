@@ -102,7 +102,7 @@ const Login = () => {
                 />
               </div>
               <p className="mt-3">
-                Don't have an account?{" "}
+                {"Don't have an account?"}{" "}
                 <span onClick={() => route.push("/register")} className="cursor-pointer hover:underline">
                   Register here
                 </span>
