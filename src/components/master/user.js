@@ -4,7 +4,7 @@ import { useSelector } from "react-redux";
 import Footer from "../layouts/footer";
 import Navbar from "../layouts/navbar";
 import { useRouter } from "next/router";
-import UserMenu from "../layouts/UserMenu";
+import UserMenu from "../layouts/userMenu";
 
 const MasterUser = ({ children }) => {
   const route = useRouter();

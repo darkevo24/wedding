@@ -1,6 +1,4 @@
 import React from "react";
-import { AiOutlineUp } from "react-icons/ai";
-import { AiOutlineDown } from "react-icons/ai";
 import Accordion from "@mui/material/Accordion";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
@@ -11,7 +9,7 @@ const FaqVendor = () => {
   return (
     <div className="w-full bg-bg-serenade px-10 py-10 text-bg-primary">
       <p className="text-3xl">FAQs</p>
-      <div className="w-full h-0.5 bg-bg-primary my-8"></div>
+      <div className="w-full border-t border-t-bg-primary my-8"></div>
       <Accordion>
         <AccordionSummary
           className=""
@@ -20,11 +18,7 @@ const FaqVendor = () => {
           aria-controls="panel1a-content"
           id="panel1a-header"
         >
-          <Typography>
-            <div className="relative">
-              <p className="text-bg-primary text-xl font-bold">{"WHAT IS A VENDOR'S REGISTRATION FORM?"}</p>
-            </div>
-          </Typography>
+          <Typography>{"WHAT IS A VENDOR'S REGISTRATION FORM?"}</Typography>
         </AccordionSummary>
         <AccordionDetails style={{ backgroundColor: "#FCE4D4" }}>
           <Typography>
@@ -33,7 +27,7 @@ const FaqVendor = () => {
           </Typography>
         </AccordionDetails>
       </Accordion>
-      <div className="w-full h-0.5 bg-bg-primary my-6"></div>
+      <div className="w-full border-t border-t-bg-primary my-8"></div>
       <Accordion>
         <AccordionSummary
           className="text-black"
@@ -42,11 +36,7 @@ const FaqVendor = () => {
           aria-controls="panel1a-content"
           id="panel1a-header"
         >
-          <Typography>
-            <div className="relative">
-              <p className="text-bg-primary text-xl font-bold">{"WHAT IS A VENDOR'S REGISTRATION FORM?"}</p>
-            </div>
-          </Typography>
+          <Typography>{"WHAT IS A VENDOR'S REGISTRATION FORM?"}</Typography>
         </AccordionSummary>
         <AccordionDetails style={{ backgroundColor: "#FCE4D4" }}>
           <Typography>

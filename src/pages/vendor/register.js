@@ -1,8 +1,73 @@
 import Head from "next/head";
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import FaqVendor from "../../components/layouts/pages/register/faqVendor";
+import { AiFillPlusCircle, AiFillMinusCircle } from "react-icons/ai";
 
 const Register = () => {
+  const [serviceOffering, setServiceOffering] = useState([{ id: "", serviceName: "" }]);
+  const [openService, setOpenService] = useState(null);
+  const wrapperRef = useRef(null);
+
+  const addServiceOffering = () => {
+    if (serviceOffering.length < 5) {
+      setServiceOffering([...serviceOffering, { id: "", serviceName: "" }]);
+    }
+  };
+
+  const removeServiceOffering = (index) => {
+    const newServiceOffering = [...serviceOffering];
+    newServiceOffering.splice(index, 1);
+    setServiceOffering(newServiceOffering);
+  };
+
+  const serviceOfferingChange = (item, index) => {
+    const newServiceOffering = [...serviceOffering];
+    newServiceOffering[index].id = item.id;
+    newServiceOffering[index].serviceName = item.name;
+    setServiceOffering(newServiceOffering);
+  };
+
+  const dummyServiceOffering = [
+    {
+      id: 1,
+      name: "Service 1",
+    },
+    {
+      id: 2,
+      name: "Service 2",
+    },
+    {
+      id: 3,
+      name: "Service 3",
+    },
+    {
+      id: 4,
+      name: "Service 4",
+    },
+    {
+      id: 5,
+      name: "Service 5",
+    },
+    {
+      id: 6,
+      name: "Service 6",
+    },
+  ];
+
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (wrapperRef.current && !wrapperRef.current.contains(event.target)) {
+        setOpenService(null);
+      }
+    }
+    // Bind the event listener
+    document.addEventListener("mouseup", handleClickOutside);
+    return () => {
+      // Unbind the event listener on clean up
+      document.removeEventListener("mouseup", handleClickOutside);
+    };
+  }, [wrapperRef]);
+
   return (
     <>
       <Head>
@@ -20,7 +85,7 @@ const Register = () => {
           <div className="flex w-full">
             <p className="text-2xl font-cagily">Vendor Information</p>
           </div>
-          <form>
+          <form className="w-full">
             <div className="mt-5 w-full space-y-3 text-bg-primary">
               <div className="w-full flex flex-col md:flex-row md:space-x-2">
                 <div className="w-full font-medium">
@@ -37,7 +102,7 @@ const Register = () => {
                   <p>PHONE NUMBER *</p>
                   <div className="flex">
                     <select className="mt-2 w-20 h-10 bg-white flex justify-center items-center">
-                      <option value="65">+65</option>
+                      <option>+65</option>
                     </select>
                     <input type="tel" className="ml-2 w-full h-10 mt-2 outline-none py-2 px-2" required></input>
                   </div>
@@ -77,9 +142,7 @@ const Register = () => {
                 <div className="  w-full font-medium">
                   <p>COUNTRY *</p>
                   <select className="mt-2 w-full h-10" required>
-                    <option selected hidden>
-                      Select country
-                    </option>
+                    <option>Select country</option>
                   </select>
                 </div>
                 <div className=" w-full font-medium">
@@ -102,22 +165,50 @@ const Register = () => {
                   <div className="mt-1 font-medium">
                     <p>NATURE OF PRIMARY SERVICE OFFERING (MAX. 5,SEPERATE WITH COMMA) *</p>
                   </div>
-                  <div className="flex md:space-x-2 w-full flex-col md:flex-row">
-                    <div className="w-full font-medium">
-                      <select className="mt-2 w-full h-10 align-center" required>
-                        <option selected disabled hidden>
-                          Hair,Makeup,Gowns & Suits
-                        </option>
-                      </select>
-                    </div>
-                    <div className="w-full font-medium">
-                      <div className="text-white bg-bg-primary hover:bg-bg-primary-darker mt-2 h-10 w-full cursor-pointer flex justify-center items-center">
-                        <p className="text-center text-sm">+ SECONDAY SERVICE OFFERING</p>
+                  <div className="space-y-2 select-none">
+                    {serviceOffering.map((item, index) => (
+                      <div key={index} className="flex md:space-x-2 w-full flex-col md:flex-row">
+                        <div className="w-full font-medium relative">
+                          <div
+                            onClick={() => setOpenService(openService == index ? null : index)}
+                            className="mt-2 w-full h-10 bg-white cursor-pointer"
+                          >
+                            <p>Select</p>
+                          </div>
+                          {openService == index && (
+                            <div
+                              ref={wrapperRef}
+                              className="absolute top-13 px-6 py-2 space-y-2 bg-white rounded-md shadow-lg z-20 animate-fade-in-down"
+                            >
+                              {dummyServiceOffering.map((xitem, xindex) => (
+                                <p key={xindex}>{xitem.name}</p>
+                              ))}
+                            </div>
+                          )}
+                        </div>
+                        <div className="w-full font-medium">
+                          {index === 0 ? (
+                            <div
+                              onClick={() => addServiceOffering()}
+                              className="text-white bg-bg-primary hover:bg-bg-primary-darker mt-2 h-10 w-full cursor-pointer flex rounded-md justify-center items-center"
+                            >
+                              <AiFillPlusCircle size={25} />
+                              <p className="text-center text-sm ml-1">SECONDARY SERVICE OFFERING</p>
+                            </div>
+                          ) : (
+                            <div
+                              onClick={() => removeServiceOffering(index)}
+                              className="bg-bg-primary hover:bg-bg-primary-darker mt-2 h-10 w-12 flex justify-center items-center cursor-pointer rounded-md text-white"
+                            >
+                              <AiFillMinusCircle size={25} />
+                            </div>
+                          )}
+                        </div>
+                        <div className="w-full font-normal">
+                          {index === 0 && <p>You can add additional service offerings if you are able to offer more than 1 service types</p>}
+                        </div>
                       </div>
-                    </div>
-                    <div className="w-full">
-                      <p>You can add additional service offerings if you are able to offer more than 1 service types</p>
-                    </div>
+                    ))}
                   </div>
                 </div>
               </div>
@@ -141,7 +232,7 @@ const Register = () => {
                   <p>PHONE NUMBER *</p>
                   <div className="flex">
                     <select className="mt-2 w-20 h-10 bg-white flex justify-center items-center">
-                      <option value="65">+65</option>
+                      <option>+65</option>
                     </select>
                     <input type="tel" className="ml-2 w-full h-10 mt-2 outline-none py-2 px-2" required></input>
                   </div>
