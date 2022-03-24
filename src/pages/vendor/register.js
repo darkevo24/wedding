@@ -130,12 +130,16 @@ const Register = () => {
                 </div>
               </div>
               <div className="w-full flex flex-col md:flex-row md:space-x-2">
-                <div className="  w-full font-medium">
+                <div className="w-full font-medium">
                   <p>STREET ADDRESS 1</p>
                   <input type="text" className="mt-2 w-full h-10 outline-none py-2 px-2"></input>
                 </div>
-                <div className=" w-full font-medium">
+                <div className="w-full font-medium">
                   <p>STREET ADDRESS 2</p>
+                  <input type="text" className="mt-2 w-full h-10 outline-none py-2 px-2"></input>
+                </div>
+                <div className="w-full font-medium">
+                  <p>STREET ADDRESS 3</p>
                   <input type="text" className="mt-2 w-full h-10 outline-none py-2 px-2"></input>
                 </div>
               </div>
