@@ -68,6 +68,10 @@ const Register = () => {
     };
   }, [wrapperRef]);
 
+  // useEffect(() => {
+  //   console.log(serviceOffering);
+  // }, [serviceOffering]);
+
   return (
     <>
       <Head>
@@ -173,7 +177,7 @@ const Register = () => {
                             onClick={() => setOpenService(openService == index ? null : index)}
                             className="mt-2 w-full h-10 bg-white cursor-pointer"
                           >
-                            <p>Select</p>
+                            <p>{item.serviceName ? item.serviceName : "Select"}</p>
                           </div>
                           {openService == index && (
                             <div
@@ -181,7 +185,16 @@ const Register = () => {
                               className="absolute top-13 px-6 py-2 space-y-2 bg-white rounded-md shadow-lg z-20 animate-fade-in-down"
                             >
                               {dummyServiceOffering.map((xitem, xindex) => (
-                                <p key={xindex}>{xitem.name}</p>
+                                <p
+                                  onClick={() => {
+                                    serviceOfferingChange(xitem, index);
+                                    setOpenService(null);
+                                  }}
+                                  key={xindex}
+                                  className="cursor-pointer"
+                                >
+                                  {xitem.name}
+                                </p>
                               ))}
                             </div>
                           )}
