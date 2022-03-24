@@ -60,14 +60,14 @@ const Login = () => {
       <div className="w-full h-96 bg-bg-wedding-content bg-cover object-cover bg-center">
         <div data-aos="fade-right" className="w-full h-full flex flex-col justify-center items-center">
           <div className="mb-8 flex flex-col items-center space-y-3 text-white">
-            <p className="text-4xl">Login Page</p>
+            <p className="text-4xl font-cagily">Login Page</p>
           </div>
         </div>
       </div>
       <div className="py-10 px-5 bg-bg-serenade text-bg-primary">
         <div className="flex flex-col items-center">
-          <p className="text-2xl">Welcome Back!</p>
-          <p className="text-xl">Get your best wedding service!</p>
+          <p className="text-2xl font-cagily">Welcome Back!</p>
+          <p className="text-xl font-cagily">Get your best wedding service!</p>
         </div>
         <form
           onSubmit={(e) => {
@@ -101,15 +101,15 @@ const Login = () => {
                   required
                 />
               </div>
+              <button type="submit" className="bg-bg-primary hover:bg-bg-primary-darker w-full py-2 mt-8 rounded-md text-white">
+                {!loading ? "Login" : <CircularProgress size={24} color="inherit" />}
+              </button>
               <p className="mt-3">
                 {"Don't have an account?"}{" "}
                 <span onClick={() => route.push("/register")} className="cursor-pointer hover:underline">
                   Register here
                 </span>
               </p>
-              <button type="submit" className="bg-bg-primary hover:bg-bg-primary-darker w-full py-2 mt-8 rounded-md text-white">
-                {!loading ? "Login" : <CircularProgress size={24} color="inherit" />}
-              </button>
             </div>
           </div>
         </form>

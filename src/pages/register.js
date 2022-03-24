@@ -13,11 +13,12 @@ const Register = () => {
   const [loading, setLoading] = useState(false);
   const [openAlertLocal, setOpenAlertLocal] = useState(false);
   const [errorMessageLocal, setErrorMessageLocal] = useState("");
+  const [confirmPass, setConfirmPass] = useState("");
   const [weddingParams, setWeddingParams] = useState({
-    bride_first_name: "",
-    bride_last_name: "",
-    groom_first_name: "",
-    groom_last_name: "",
+    // bride_first_name: "",
+    // bride_last_name: "",
+    // groom_first_name: "",
+    // groom_last_name: "",
     wedding_date: "",
     email: "",
     password: "",
@@ -25,7 +26,12 @@ const Register = () => {
 
   const doRegister = () => {
     if (weddingParams.password.length < 6) {
-      setErrorMessage("Password must be at least 6 characters");
+      setErrorMessageLocal("Password must be at least 6 characters");
+      setOpenAlertLocal(true);
+      return;
+    }
+    if (weddingParams.password !== confirmPass) {
+      setErrorMessageLocal("Password and Confirm Password must be same");
       setOpenAlertLocal(true);
       return;
     }
@@ -72,60 +78,44 @@ const Register = () => {
               <div className="md:flex md:space-x-2 mt-5">
                 <div className="md:w-1/2">
                   <div>
-                    <p className="font-semibold hover:text-bg-eunry">{"BRIDE'S NAME *"}</p>
+                    <p className="font-semibold hover:text-bg-eunry">{"BRIDE'S NAME"}</p>
                     <div className="flex space-x-2">
                       <input
                         onChange={(e) => setWeddingParams({ ...weddingParams, bride_first_name: e.target.value })}
                         type="text"
                         className="w-full outline-none py-2 px-2 rounded-sm mt-3"
                         placeholder="First Name"
-                        required
                       />
                       <input
                         onChange={(e) => setWeddingParams({ ...weddingParams, bride_last_name: e.target.value })}
                         type="text"
                         className="w-full outline-none py-2 px-2 rounded-sm mt-3"
                         placeholder="Last Name"
-                        required
                       />
                     </div>
                   </div>
                 </div>
                 <div className="md:w-1/2">
                   <div>
-                    <p className="font-semibold hover:text-bg-eunry">{"GROOM'S NAME *"}</p>
+                    <p className="font-semibold hover:text-bg-eunry">{"GROOM'S NAME"}</p>
                     <div className="flex space-x-2">
                       <input
                         onChange={(e) => setWeddingParams({ ...weddingParams, groom_first_name: e.target.value })}
                         type="text"
                         className="w-full outline-none py-2 px-2 rounded-sm mt-3"
                         placeholder="First Name"
-                        required
                       />
                       <input
                         onChange={(e) => setWeddingParams({ ...weddingParams, groom_last_name: e.target.value })}
                         type="text"
                         className="w-full outline-none py-2 px-2 rounded-sm mt-3"
                         placeholder="Last Name"
-                        required
                       />
                     </div>
                   </div>
                 </div>
               </div>
               <div className="md:flex md:space-x-2 mt-5">
-                <div className="md:w-1/2">
-                  <div>
-                    <p className="font-semibold hover:text-bg-eunry">EMAIL ADDRESS *</p>
-                    <input
-                      onChange={(e) => setWeddingParams({ ...weddingParams, email: e.target.value })}
-                      value={weddingParams.email}
-                      type="email"
-                      className="w-full outline-none py-2 px-2 rounded-sm mt-3"
-                      required
-                    />
-                  </div>
-                </div>
                 <div className="md:w-1/2">
                   <div>
                     <p className="font-semibold hover:text-bg-eunry">WEDDING DATE *</p>
@@ -173,6 +163,19 @@ const Register = () => {
                     <div className="md:w-3/4">
                       <input
                         onChange={(e) => setWeddingParams({ ...weddingParams, password: e.target.value })}
+                        type="password"
+                        className="w-full outline-none py-2 px-2 rounded-sm mt-3"
+                        required
+                      />
+                    </div>
+                  </div>
+                  <div className="md:flex md:w-2/3 justify-center items-center">
+                    <div className="md:w-1/4 flex items-center">
+                      <p className="font-medium">Confirmation Password</p>
+                    </div>
+                    <div className="md:w-3/4">
+                      <input
+                        onChange={(e) => setConfirmPass(e.target.value)}
                         type="password"
                         className="w-full outline-none py-2 px-2 rounded-sm mt-3"
                         required
