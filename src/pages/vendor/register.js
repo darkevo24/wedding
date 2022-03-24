@@ -6,7 +6,8 @@ import { AiFillPlusCircle, AiFillMinusCircle } from "react-icons/ai";
 const Register = () => {
   const [serviceOffering, setServiceOffering] = useState([{ id: "", serviceName: "" }]);
   const [openService, setOpenService] = useState(null);
-  const wrapperRef = useRef(null);
+  const optionRef = useRef(null);
+  const selectRef = useRef(null);
 
   const addServiceOffering = () => {
     if (serviceOffering.length < 5) {
@@ -56,7 +57,7 @@ const Register = () => {
 
   useEffect(() => {
     function handleClickOutside(event) {
-      if (wrapperRef.current && !wrapperRef.current.contains(event.target)) {
+      if (optionRef.current && !optionRef.current.contains(event.target) && selectRef.current && !selectRef.current.contains(event.target)) {
         setOpenService(null);
       }
     }
@@ -66,11 +67,7 @@ const Register = () => {
       // Unbind the event listener on clean up
       document.removeEventListener("mouseup", handleClickOutside);
     };
-  }, [wrapperRef]);
-
-  // useEffect(() => {
-  //   console.log(serviceOffering);
-  // }, [serviceOffering]);
+  }, [optionRef]);
 
   return (
     <>
@@ -174,6 +171,7 @@ const Register = () => {
                       <div key={index} className="flex md:space-x-2 w-full flex-col md:flex-row">
                         <div className="w-full font-medium relative">
                           <div
+                            ref={selectRef}
                             onClick={() => setOpenService(openService == index ? null : index)}
                             className="mt-2 w-full h-10 bg-white cursor-pointer"
                           >
@@ -181,7 +179,7 @@ const Register = () => {
                           </div>
                           {openService == index && (
                             <div
-                              ref={wrapperRef}
+                              ref={optionRef}
                               className="absolute top-13 px-6 py-2 space-y-2 bg-white rounded-md shadow-lg z-20 animate-fade-in-down"
                             >
                               {dummyServiceOffering.map((xitem, xindex) => (
