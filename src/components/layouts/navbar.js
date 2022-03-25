@@ -82,19 +82,10 @@ const Navbar = () => {
         <div onClick={() => route.push("/")} className="cursor-pointer select-none">
           <Image src={Logo} width={135} height={70} />
         </div>
-        <div className="flex space-x-5 text-bg-charcoal">
-          {/* <div className="relative">
-            <p className="font-medium text-lg cursor-pointer select-none hover:text-bg-primary">Plan a Wedding</p>
-            <div className="absolute -right-1/2 top-7 z-20 bg-white h-20 w-60 rounded-md shadow-lg">
-              <p>sad</p>
-            </div>
-          </div>
-          <p className="font-medium text-lg cursor-pointer select-none hover:text-bg-primary">Vendor</p>
-          <p className="font-medium text-lg cursor-pointer select-none hover:text-bg-primary">Guest List</p>
-          <p className="font-medium text-lg cursor-pointer select-none hover:text-bg-primary">Inspiration</p>
-          <p className="font-medium text-lg cursor-pointer select-none hover:text-bg-primary">Helpful Tips</p> */}
 
-          <NavbarMenu />
+        <NavbarMenu />
+
+        <div className="flex space-x-5 text-bg-charcoal">
           <div>
             <form
               onSubmit={(e) => {

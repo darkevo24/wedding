@@ -1,17 +1,33 @@
 import { CircularProgress, Snackbar } from "@mui/material";
 import Head from "next/head";
-import React, { useState } from "react";
+import Image from "next/image";
+import React, { useState, useRef } from "react";
+import { AiOutlineDown } from "react-icons/ai";
+import DayPicker from "react-day-picker";
+import { DateUtils } from "react-day-picker";
+import "react-day-picker/lib/style.css";
 import PlatformChecklist from "../components/layouts/pages/register/platformChecklist";
 import { fetchApiRegister } from "../helper/fetchApi/user";
 import { useRouter } from "next/router";
 import { useDispatch } from "react-redux";
 import { setOpenAlert, setErrorMessage } from "../redux/reducers/authToken";
+import dateFnsFormat from "date-fns/format";
+import dateFnsParse from "date-fns/parse";
+
+import Flower from "../../public/images/flower.png";
+import Flower2 from "../../public/images/flower2.png";
+
+const FORMAT = "dd-MMM-yyyy";
 
 const Register = () => {
+  const calendarRef = useRef(null);
+
   const route = useRouter();
   const dispatch = useDispatch();
   const [loading, setLoading] = useState(false);
   const [openAlertLocal, setOpenAlertLocal] = useState(false);
+  const [selectedDay, setSelectedDay] = useState();
+  const [showDate, setShowDate] = useState(false);
   const [errorMessageLocal, setErrorMessageLocal] = useState("");
   const [confirmPass, setConfirmPass] = useState("");
   const [weddingParams, setWeddingParams] = useState({
@@ -23,6 +39,18 @@ const Register = () => {
     email: "",
     password: "",
   });
+
+  function formatDate(date, format, locale) {
+    return dateFnsFormat(date, format, { locale });
+  }
+
+  function parseDate(str, format, locale) {
+    const parsed = dateFnsParse(str, format, new Date(), { locale });
+    if (DateUtils.isDate(parsed)) {
+      return parsed;
+    }
+    return undefined;
+  }
 
   const doRegister = () => {
     if (weddingParams.password.length < 6) {
@@ -62,10 +90,10 @@ const Register = () => {
           </div>
         </div>
       </div>
-      <div className="py-10 px-5 bg-bg-serenade text-bg-charcoal">
-        <div className="flex flex-col items-center">
+      <div className="py-10 px-5 bg-bg-serenade text-bg-charcoal relative">
+        <div className="flex flex-col items-center text-bg-primary">
           <p className="text-2xl font-cagily">So you said Yes - Congrats!</p>
-          <p className="text-xl font-cagily">We cant wait to help you get started!</p>
+          <p className="text-xl font-cagily">{`We can't wait to help you get started!`}</p>
         </div>
         <form
           onSubmit={(e) => {
@@ -117,13 +145,31 @@ const Register = () => {
               </div>
               <div className="md:flex md:space-x-2 mt-5">
                 <div className="md:w-1/2">
-                  <div>
-                    <p className="font-semibold hover:text-bg-eunry">WEDDING DATE *</p>
-                    <input
-                      onChange={(e) => setWeddingParams({ ...weddingParams, wedding_date: e.target.value })}
-                      type="date"
-                      className="w-full outline-none py-2 px-2 rounded-sm mt-3"
-                    />
+                  <div className="relative">
+                    <p className="font-semibold hover:text-bg-eunry">WEDDING DATE</p>
+                    <div
+                      onClick={() => {
+                        setShowDate(true);
+                      }}
+                      className="w-full outline-none py-2 px-2 rounded-sm mt-3 bg-white flex justify-between items-center"
+                    >
+                      <p className={weddingParams.wedding_date.length === 0 && "text-slate-400"}>
+                        {weddingParams.wedding_date.length === 0 ? "Select date" : weddingParams.wedding_date}
+                      </p>
+                      <AiOutlineDown className="text-bg-primary font-bold" />
+                    </div>
+                    <div className="bg-white absolute top-20">
+                      {showDate && (
+                        <DayPicker
+                          onDayClick={(e) => {
+                            setSelectedDay(e);
+                            setShowDate(false);
+                            setWeddingParams({ ...weddingParams, wedding_date: dateFnsFormat(e, FORMAT) });
+                          }}
+                          selectedDays={selectedDay}
+                        />
+                      )}
+                    </div>
                     <p className="italic mt-2">You can always change this later if you need to.</p>
                   </div>
                 </div>
@@ -184,12 +230,38 @@ const Register = () => {
                   </div>
                 </div>
               </div>
-              <button type="submit" className="bg-bg-primary hover:bg-bg-primary-darker px-8 py-2 mt-5 rounded-md text-white">
-                {!loading ? "Submit" : <CircularProgress size={24} color="inherit" />}
-              </button>
+              <div className="flex my-3">
+                <input
+                  className="mr-2 mt-3 appearance-none h-5 w-5 border rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 align-top bg-no-repeat bg-center bg-contain float-left cursor-pointer"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckDefault"
+                />
+                <div className="md:w-3/4 mt-3 flex">
+                  <p>{`By clicking 'Sign Up', I agree to WeddingServ's `}</p>
+                  <p className="ml-1 font-semibold">Privacy</p>
+                  <p className="ml-1">and</p>
+                  <p className="ml-1 font-semibold">Term of Condition</p>
+                </div>
+              </div>
+              <div className="md:flex items-center ">
+                <div className="md:w-1/6 flex items-center">
+                  <button type="submit" className="bg-bg-primary hover:bg-bg-primary-darker px-8 py-2 mt-5 rounded-md text-white">
+                    {!loading ? "Sign Up" : <CircularProgress size={24} color="inherit" />}
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
         </form>
+
+        <d className="absolute right-0 top-32">
+          <Image src={Flower2} />
+        </d>
+
+        <d className="absolute right-0 bottom-0">
+          <Image src={Flower} />
+        </d>
 
         <Snackbar
           anchorOrigin={{ vertical: "top", horizontal: "right" }}
