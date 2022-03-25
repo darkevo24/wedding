@@ -21,7 +21,8 @@ const NavbarMenu = () => {
       >
         <p
           className={
-            "font-medium text-lg cursor-pointer select-none hover:text-bg-primary " + (pathname.includes("plan-wedding") && "text-bg-primary")
+            "font-worksans-semibold text-lg cursor-pointer select-none hover:text-bg-primary " +
+            (pathname.includes("plan-wedding") && "text-bg-primary")
           }
         >
           Plan a Wedding
@@ -33,7 +34,11 @@ const NavbarMenu = () => {
         </div>
       </div>
       <div className="relative" onClick={() => route.push("/vendor")} onMouseEnter={(e) => setVendor(true)} onMouseLeave={(e) => setVendor(false)}>
-        <p className={"font-medium text-lg cursor-pointer select-none hover:text-bg-primary " + (pathname.includes("vendor") && "text-bg-primary")}>
+        <p
+          className={
+            "font-worksans-semibold text-lg cursor-pointer select-none hover:text-bg-primary " + (pathname.includes("vendor") && "text-bg-primary")
+          }
+        >
           Vendor
         </p>
         <div className={"absolute -right-1/2 top-5 z-20 bg-transparent cursor-pointer " + (vendor ? "inline animate-fade-in-down" : "hidden")}>
@@ -44,7 +49,10 @@ const NavbarMenu = () => {
       </div>
       <div className="relative" onClick={() => route.push("/guest-list")} onMouseEnter={(e) => setGuest(true)} onMouseLeave={(e) => setGuest(false)}>
         <p
-          className={"font-medium text-lg cursor-pointer select-none hover:text-bg-primary " + (pathname.includes("guest-list") && "text-bg-primary")}
+          className={
+            "font-worksans-semibold text-lg cursor-pointer select-none hover:text-bg-primary " +
+            (pathname.includes("guest-list") && "text-bg-primary")
+          }
         >
           Guest List
         </p>
@@ -62,7 +70,8 @@ const NavbarMenu = () => {
       >
         <p
           className={
-            "font-medium text-lg cursor-pointer select-none hover:text-bg-primary " + (pathname.includes("inspiration") && "text-bg-primary")
+            "font-worksans-semibold text-lg cursor-pointer select-none hover:text-bg-primary " +
+            (pathname.includes("inspiration") && "text-bg-primary")
           }
         >
           Inspiration
@@ -76,7 +85,8 @@ const NavbarMenu = () => {
       <div className="relative" onClick={() => route.push("/helpful-tips")} onMouseEnter={(e) => setTips(true)} onMouseLeave={(e) => setTips(false)}>
         <p
           className={
-            "font-medium text-lg cursor-pointer select-none hover:text-bg-primary " + (pathname.includes("helpful-tips") && "text-bg-primary")
+            "font-worksans-semibold text-lg cursor-pointer select-none hover:text-bg-primary " +
+            (pathname.includes("helpful-tips") && "text-bg-primary")
           }
         >
           Helpful Tips

@@ -4,7 +4,9 @@ module.exports = {
     extend: {
       fontFamily: {
         cagily: ["Cagily, cursive"],
-        worksans: ["Work Sans, sans-serif"],
+        worksans: ["WorkSans-Regular, cursive"],
+        "worksans-medium": ["WorkSans-Medium, cursive"],
+        "worksans-semibold": ["WorkSans-SemiBold, cursive"],
       },
       backgroundImage: {
         // "bg-wedding": "url('/images/wedding.png')",
