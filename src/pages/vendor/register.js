@@ -2,6 +2,7 @@ import Head from "next/head";
 import React, { useEffect, useRef, useState } from "react";
 import FaqVendor from "../../components/layouts/pages/register/faqVendor";
 import { AiFillPlusCircle, AiFillMinusCircle } from "react-icons/ai";
+import { BsChevronDown } from "react-icons/bs";
 
 const Register = () => {
   const [serviceOffering, setServiceOffering] = useState([{ id: "", serviceName: "" }]);
@@ -83,7 +84,7 @@ const Register = () => {
       </div>
       <div className="py-14 px-4 bg-bg-romance text-bg-primary w-full flex flex-col items-center">
         <div className="md:w-2/3 flex flex-col items-center">
-          <div className="flex w-full">
+          <div className="flex w-full mb-5">
             <p className="text-2xl font-cagily">Vendor Information</p>
           </div>
           <form className="w-full">
@@ -105,7 +106,7 @@ const Register = () => {
                     <select className="mt-2 w-20 h-10 bg-white flex justify-center items-center">
                       <option>+65</option>
                     </select>
-                    <input type="tel" className="ml-2 w-full h-10 mt-2 outline-none py-2 px-2" required></input>
+                    <input type="number" className="ml-2 w-full h-10 mt-2 outline-none py-2 px-2" required></input>
                   </div>
                 </div>
                 <div className="w-full font-medium">
@@ -124,7 +125,7 @@ const Register = () => {
                     <input type="number" className="mt-2 w-full h-10 outline-none py-2 px-2"></input>
                   </div>
                 </div>
-                <div className=" w-full font-medium">
+                <div className="w-full font-medium">
                   <p>BUILDING NAME</p>
                   <input type="text" className="mt-2 w-full h-10 outline-none py-2 px-2"></input>
                 </div>
@@ -150,11 +151,11 @@ const Register = () => {
                     <option>Select country</option>
                   </select>
                 </div>
-                <div className=" w-full font-medium">
+                <div className="w-full font-medium">
                   <p>CITY *</p>
                   <input type="text" className="mt-2 w-full h-10 outline-none py-2 px-2" required></input>
                 </div>
-                <div className=" w-full font-medium">
+                <div className="w-full font-medium">
                   <p>STATE / REGION</p>
                   <input type="text" className="mt-2 w-full h-10 outline-none py-2 px-2"></input>
                 </div>
@@ -177,26 +178,30 @@ const Register = () => {
                           <div
                             ref={selectRef}
                             onClick={() => setOpenService(openService == index ? null : index)}
-                            className="mt-2 w-full h-10 bg-white cursor-pointer"
+                            className="mt-2 w-full h-10 bg-white cursor-pointer flex px-2 items-center relative"
                           >
-                            <p>{item.serviceName ? item.serviceName : "Select"}</p>
+                            <p className="font-normal">{item.serviceName ? item.serviceName : "Select Service"}</p>
+                            <div className="absolute right-2 top-0 h-full flex items-center">
+                              <BsChevronDown size={13} />
+                            </div>
                           </div>
                           {openService == index && (
                             <div
                               ref={optionRef}
-                              className="absolute top-13 px-6 py-2 space-y-2 bg-white rounded-md shadow-lg z-20 animate-fade-in-down"
+                              className="absolute top-13 px-1 py-2 space-y-2 bg-white rounded-md shadow-lg z-20 animate-fade-in-down"
                             >
                               {dummyServiceOffering.map((xitem, xindex) => (
-                                <p
-                                  onClick={() => {
-                                    serviceOfferingChange(xitem, index);
-                                    setOpenService(null);
-                                  }}
-                                  key={xindex}
-                                  className="cursor-pointer"
-                                >
-                                  {xitem.name}
-                                </p>
+                                <div className="px-4 py-1 cursor-pointer hover:bg-gray-200 rounded-md">
+                                  <p
+                                    onClick={() => {
+                                      serviceOfferingChange(xitem, index);
+                                      setOpenService(null);
+                                    }}
+                                    key={xindex}
+                                  >
+                                    {xitem.name}
+                                  </p>
+                                </div>
                               ))}
                             </div>
                           )}
@@ -228,11 +233,11 @@ const Register = () => {
                 </div>
               </div>
             </div>
-            <div className="text-2xl mt-10">
+            <div className="text-2xl mt-14">
               <p className="font-cagily">Business Owner Information</p>
             </div>
             <div className="mt-5 w-full text-bg-primary">
-              <div className="w-full flex flex-col md:flex-row md:space-x-2">
+              <div className="w-full flex flex-col md:flex-row md:space-x-2 mt-10">
                 <div className="  w-full font-medium">
                   <p>FIRST NAME *</p>
                   <input type="text" className="mt-2 w-full h-10 outline-none py-2 px-2" required></input>
@@ -242,14 +247,14 @@ const Register = () => {
                   <input type="text" className="mt-2 w-full h-10 outline-none py-2 px-2" required></input>
                 </div>
               </div>
-              <div className="w-full flex flex-col md:flex-row md:space-x-2">
+              <div className="w-full flex flex-col md:flex-row md:space-x-2 mt-5">
                 <div className="  w-full font-medium">
                   <p>PHONE NUMBER *</p>
                   <div className="flex">
                     <select className="mt-2 w-20 h-10 bg-white flex justify-center items-center">
                       <option>+65</option>
                     </select>
-                    <input type="tel" className="ml-2 w-full h-10 mt-2 outline-none py-2 px-2" required></input>
+                    <input type="number" className="ml-2 w-full h-10 mt-2 outline-none py-2 px-2" required></input>
                   </div>
                 </div>
                 <div className=" w-full font-medium">
