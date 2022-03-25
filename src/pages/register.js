@@ -130,13 +130,13 @@ const Register = () => {
                       <input
                         onChange={(e) => setWeddingParams({ ...weddingParams, groom_first_name: e.target.value })}
                         type="text"
-                        className="w-full outline-none py-2 px-2 rounded-sm mt-3"
+                        className="w-full outline-none py-2 px-2 rounded-sm mt-3 z-10"
                         placeholder="First Name"
                       />
                       <input
                         onChange={(e) => setWeddingParams({ ...weddingParams, groom_last_name: e.target.value })}
                         type="text"
-                        className="w-full outline-none py-2 px-2 rounded-sm mt-3"
+                        className="w-full outline-none py-2 px-2 rounded-sm mt-3 z-10"
                         placeholder="Last Name"
                       />
                     </div>
@@ -255,13 +255,13 @@ const Register = () => {
           </div>
         </form>
 
-        <d className="absolute right-0 top-32">
+        <div className="absolute right-0 top-32">
           <Image src={Flower2} />
-        </d>
+        </div>
 
-        <d className="absolute right-0 bottom-0">
+        <div className="absolute right-0 bottom-0">
           <Image src={Flower} />
-        </d>
+        </div>
 
         <Snackbar
           anchorOrigin={{ vertical: "top", horizontal: "right" }}
