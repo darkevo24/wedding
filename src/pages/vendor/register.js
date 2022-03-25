@@ -242,7 +242,7 @@ const Register = () => {
                               className="absolute top-13 px-1 py-2 space-y-2 bg-white rounded-md shadow-lg z-20 animate-fade-in-down max-h-80 overflow-y-auto scrollbar-thin scrollbar-thumb-bg-primary scrollbar-track-gray-200"
                             >
                               {dummyServiceOffering.map((xitem, xindex) => (
-                                <div className="px-4 py-1 cursor-pointer hover:bg-gray-200 rounded-md">
+                                <div key={index} className="px-4 py-1 cursor-pointer hover:bg-gray-200 rounded-md">
                                   <p
                                     onClick={() => {
                                       serviceOfferingChange(xitem, index);
