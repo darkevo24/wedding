@@ -2,12 +2,20 @@ import Head from "next/head";
 import React, { useEffect, useRef, useState } from "react";
 import FaqVendor from "../../components/layouts/pages/register/faqVendor";
 import { AiFillPlusCircle, AiFillMinusCircle } from "react-icons/ai";
+import { BsChevronDown } from "react-icons/bs";
+import PhoneJson from "../../json/phoneCode.json";
 
 const Register = () => {
   const [serviceOffering, setServiceOffering] = useState([{ id: "", serviceName: "" }]);
   const [openService, setOpenService] = useState(null);
   const optionRef = useRef(null);
   const selectRef = useRef(null);
+  const [phoneCode, setPhoneCode] = useState("+65");
+  const [openPhoneCode, setOpenPhoneCode] = useState(false);
+  const [phoneCodeVendor, setPhoneCodeVendor] = useState("+65");
+  const [openPhoneCodeVendor, setOpenPhoneCodeVendor] = useState(false);
+  const [country, setCountry] = useState("Singapore");
+  const [openCountry, setOpenCountry] = useState(false);
 
   const addServiceOffering = () => {
     if (serviceOffering.length < 5) {
@@ -83,7 +91,7 @@ const Register = () => {
       </div>
       <div className="py-14 px-4 bg-bg-romance text-bg-primary w-full flex flex-col items-center">
         <div className="md:w-2/3 flex flex-col items-center">
-          <div className="flex w-full">
+          <div className="flex w-full mb-5">
             <p className="text-2xl font-cagily">Vendor Information</p>
           </div>
           <form className="w-full">
@@ -102,10 +110,33 @@ const Register = () => {
                 <div className="w-full font-medium">
                   <p>PHONE NUMBER *</p>
                   <div className="flex">
-                    <select className="mt-2 w-20 h-10 bg-white flex justify-center items-center">
-                      <option>+65</option>
-                    </select>
-                    <input type="tel" className="ml-2 w-full h-10 mt-2 outline-none py-2 px-2" required></input>
+                    <div className="relative mt-2 w-20 h-10 select-none">
+                      <div
+                        onClick={() => setOpenPhoneCodeVendor(!openPhoneCodeVendor)}
+                        className="w-full h-full bg-white flex justify-center items-center cursor-pointer"
+                      >
+                        <p>{phoneCodeVendor}</p>
+                      </div>
+                      {openPhoneCodeVendor && (
+                        <div className="absolute top-13 px-3 py-2 space-y-2 bg-white rounded-md shadow-lg z-20 animate-fade-in-down max-h-80 overflow-y-auto scrollbar-thin scrollbar-thumb-bg-primary scrollbar-track-gray-200">
+                          {PhoneJson.countries.map((item, index) => (
+                            <div
+                              key={index}
+                              onClick={() => {
+                                setPhoneCodeVendor(item.code);
+                                setOpenPhoneCodeVendor(false);
+                              }}
+                              className="px-2 py-1 w-60 cursor-pointer hover:bg-gray-200 rounded-md"
+                            >
+                              <p>
+                                {item.code} | {item.name}
+                              </p>
+                            </div>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                    <input type="number" className="ml-2 w-full h-10 mt-2 outline-none py-2 px-2" required></input>
                   </div>
                 </div>
                 <div className="w-full font-medium">
@@ -124,7 +155,7 @@ const Register = () => {
                     <input type="number" className="mt-2 w-full h-10 outline-none py-2 px-2"></input>
                   </div>
                 </div>
-                <div className=" w-full font-medium">
+                <div className="w-full font-medium">
                   <p>BUILDING NAME</p>
                   <input type="text" className="mt-2 w-full h-10 outline-none py-2 px-2"></input>
                 </div>
@@ -146,15 +177,36 @@ const Register = () => {
               <div className="w-full flex flex-col md:flex-row md:space-x-2">
                 <div className="  w-full font-medium">
                   <p>COUNTRY *</p>
-                  <select className="mt-2 w-full h-10" required>
-                    <option>Select country</option>
-                  </select>
+                  <div className="relative mt-2 w-full h-10 select-none">
+                    <div onClick={() => setOpenCountry(!openCountry)} className="w-full h-full bg-white flex px-2 items-center cursor-pointer">
+                      <p>{country ? country : "Select Country"}</p>
+                      <div className="absolute right-2 top-0 h-full flex items-center">
+                        <BsChevronDown size={13} />
+                      </div>
+                    </div>
+                    {openCountry && (
+                      <div className="absolute top-13 px-3 py-2 space-y-2 bg-white rounded-md shadow-lg z-20 animate-fade-in-down max-h-80 overflow-y-auto scrollbar-thin scrollbar-thumb-bg-primary scrollbar-track-gray-200">
+                        {PhoneJson.countries.map((item, index) => (
+                          <div
+                            key={index}
+                            onClick={() => {
+                              setCountry(item.name);
+                              setOpenCountry(false);
+                            }}
+                            className="px-2 py-1 cursor-pointer hover:bg-gray-200 rounded-md"
+                          >
+                            <p>{item.name}</p>
+                          </div>
+                        ))}
+                      </div>
+                    )}
+                  </div>
                 </div>
-                <div className=" w-full font-medium">
+                <div className="w-full font-medium">
                   <p>CITY *</p>
                   <input type="text" className="mt-2 w-full h-10 outline-none py-2 px-2" required></input>
                 </div>
-                <div className=" w-full font-medium">
+                <div className="w-full font-medium">
                   <p>STATE / REGION</p>
                   <input type="text" className="mt-2 w-full h-10 outline-none py-2 px-2"></input>
                 </div>
@@ -177,26 +229,30 @@ const Register = () => {
                           <div
                             ref={selectRef}
                             onClick={() => setOpenService(openService == index ? null : index)}
-                            className="mt-2 w-full h-10 bg-white cursor-pointer"
+                            className="mt-2 w-full h-10 bg-white cursor-pointer flex px-2 items-center relative"
                           >
-                            <p>{item.serviceName ? item.serviceName : "Select"}</p>
+                            <p className="font-medium">{item.serviceName ? item.serviceName : "Select Service"}</p>
+                            <div className="absolute right-2 top-0 h-full flex items-center">
+                              <BsChevronDown size={13} />
+                            </div>
                           </div>
                           {openService == index && (
                             <div
                               ref={optionRef}
-                              className="absolute top-13 px-6 py-2 space-y-2 bg-white rounded-md shadow-lg z-20 animate-fade-in-down"
+                              className="absolute top-13 px-1 py-2 space-y-2 bg-white rounded-md shadow-lg z-20 animate-fade-in-down max-h-80 overflow-y-auto scrollbar-thin scrollbar-thumb-bg-primary scrollbar-track-gray-200"
                             >
                               {dummyServiceOffering.map((xitem, xindex) => (
-                                <p
-                                  onClick={() => {
-                                    serviceOfferingChange(xitem, index);
-                                    setOpenService(null);
-                                  }}
-                                  key={xindex}
-                                  className="cursor-pointer"
-                                >
-                                  {xitem.name}
-                                </p>
+                                <div key={index} className="px-4 py-1 cursor-pointer hover:bg-gray-200 rounded-md">
+                                  <p
+                                    onClick={() => {
+                                      serviceOfferingChange(xitem, index);
+                                      setOpenService(null);
+                                    }}
+                                    key={xindex}
+                                  >
+                                    {xitem.name}
+                                  </p>
+                                </div>
                               ))}
                             </div>
                           )}
@@ -228,11 +284,11 @@ const Register = () => {
                 </div>
               </div>
             </div>
-            <div className="text-2xl mt-10">
+            <div className="text-2xl mt-14">
               <p className="font-cagily">Business Owner Information</p>
             </div>
             <div className="mt-5 w-full text-bg-primary">
-              <div className="w-full flex flex-col md:flex-row md:space-x-2">
+              <div className="w-full flex flex-col md:flex-row md:space-x-2 mt-10">
                 <div className="  w-full font-medium">
                   <p>FIRST NAME *</p>
                   <input type="text" className="mt-2 w-full h-10 outline-none py-2 px-2" required></input>
@@ -242,14 +298,37 @@ const Register = () => {
                   <input type="text" className="mt-2 w-full h-10 outline-none py-2 px-2" required></input>
                 </div>
               </div>
-              <div className="w-full flex flex-col md:flex-row md:space-x-2">
-                <div className="  w-full font-medium">
+              <div className="w-full flex flex-col md:flex-row md:space-x-2 mt-5">
+                <div className="w-full font-medium">
                   <p>PHONE NUMBER *</p>
                   <div className="flex">
-                    <select className="mt-2 w-20 h-10 bg-white flex justify-center items-center">
-                      <option>+65</option>
-                    </select>
-                    <input type="tel" className="ml-2 w-full h-10 mt-2 outline-none py-2 px-2" required></input>
+                    <div className="relative mt-2 w-20 h-10 select-none">
+                      <div
+                        onClick={() => setOpenPhoneCode(!openPhoneCode)}
+                        className="w-full h-full bg-white flex justify-center items-center cursor-pointer"
+                      >
+                        <p>{phoneCode}</p>
+                      </div>
+                      {openPhoneCode && (
+                        <div className="absolute select-none top-13 px-3 py-2 space-y-2 bg-white rounded-md shadow-lg z-20 animate-fade-in-down max-h-80 overflow-y-auto scrollbar-thin scrollbar-thumb-bg-primary scrollbar-track-gray-200">
+                          {PhoneJson.countries.map((item, index) => (
+                            <div
+                              key={index}
+                              onClick={() => {
+                                setPhoneCode(item.code);
+                                setOpenPhoneCode(false);
+                              }}
+                              className="px-2 py-1 w-60 cursor-pointer hover:bg-gray-200 rounded-md"
+                            >
+                              <p>
+                                {item.code} | {item.name}
+                              </p>
+                            </div>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                    <input type="number" className="ml-2 w-full h-10 mt-2 outline-none py-2 px-2" required></input>
                   </div>
                 </div>
                 <div className=" w-full font-medium">
