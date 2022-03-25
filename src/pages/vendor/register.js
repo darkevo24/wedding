@@ -118,7 +118,7 @@ const Register = () => {
                         <p>{phoneCodeVendor}</p>
                       </div>
                       {openPhoneCodeVendor && (
-                        <div className="absolute top-13 px-3 py-2 space-y-2 bg-white rounded-md shadow-lg z-20 animate-fade-in-down max-h-80 overflow-y-auto scrollbar-thin scrollbar-thumb-bg-primary scrollbar-track-gray-200">
+                        <div className="absolute select-none top-13 px-3 py-2 space-y-2 bg-white rounded-md shadow-lg z-20 animate-fade-in-down max-h-80 overflow-y-auto scrollbar-thin scrollbar-thumb-bg-primary scrollbar-track-gray-200">
                           {PhoneJson.countries.map((item, index) => (
                             <div
                               key={index}
@@ -126,11 +126,14 @@ const Register = () => {
                                 setPhoneCodeVendor(item.code);
                                 setOpenPhoneCodeVendor(false);
                               }}
-                              className="px-2 py-1 w-60 cursor-pointer hover:bg-gray-200 rounded-md"
+                              className="px-2 py-1 w-60 flex items-center cursor-pointer hover:bg-gray-200 rounded-md"
                             >
-                              <p>
-                                {item.code} | {item.name}
-                              </p>
+                              <div className="w-1/4 mr-2 border-r border-r-bg-primary">
+                                <p>{item.code}</p>
+                              </div>
+                              <div className="w-3/4">
+                                <p>{item.name}</p>
+                              </div>
                             </div>
                           ))}
                         </div>
@@ -220,7 +223,7 @@ const Register = () => {
               <div className="w-full flex flex-col md:flex-row md:space-x-2">
                 <div className="w-full">
                   <div className="mt-1 font-medium">
-                    <p>NATURE OF PRIMARY SERVICE OFFERING (MAX. 5,SEPERATE WITH COMMA) *</p>
+                    <p>NATURE OF PRIMARY SERVICE OFFERING (MAX. 5, SEPARATE WITH COMMA) *</p>
                   </div>
                   <div className="space-y-2 select-none">
                     {serviceOffering.map((item, index) => (
@@ -318,11 +321,14 @@ const Register = () => {
                                 setPhoneCode(item.code);
                                 setOpenPhoneCode(false);
                               }}
-                              className="px-2 py-1 w-60 cursor-pointer hover:bg-gray-200 rounded-md"
+                              className="px-2 py-1 w-60 flex items-center cursor-pointer hover:bg-gray-200 rounded-md"
                             >
-                              <p>
-                                {item.code} | {item.name}
-                              </p>
+                              <div className="w-1/4 mr-2 border-r border-r-bg-primary">
+                                <p>{item.code}</p>
+                              </div>
+                              <div className="w-3/4">
+                                <p>{item.name}</p>
+                              </div>
                             </div>
                           ))}
                         </div>
@@ -334,6 +340,20 @@ const Register = () => {
                 <div className=" w-full font-medium">
                   <p>EMAIL ADDRESS *</p>
                   <input type="email" className="mt-2 w-full h-10 outline-none py-2 px-2" required></input>
+                </div>
+              </div>
+              <div className="flex my-3 items-center">
+                <input
+                  className="mr-2 mt-3 h-5 w-5 border rounded-sm transition duration-200 align-top"
+                  type="checkbox"
+                  value=""
+                  id="flexCheckDefault"
+                />
+                <div className="md:w-3/4 mt-3 flex select-none">
+                  <p>{`By clicking 'Sign Up', I agree to WeddingServ's `}</p>
+                  <p className="ml-1 font-semibold">Privacy</p>
+                  <p className="ml-1">and</p>
+                  <p className="ml-1 font-semibold hover:underline cursor-pointer">Term of Condition</p>
                 </div>
               </div>
               <div className="text-white mt-8">
