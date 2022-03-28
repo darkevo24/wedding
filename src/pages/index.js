@@ -15,9 +15,6 @@ const Home = () => {
     <>
       <Head>
         <title>WeddingPlatform - Home</title>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
-        <link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" rel="stylesheet" />
       </Head>
       {/* banner section */}
       <div style={{ height: "85vh" }} className="w-full bg-bg-wedding bg-cover object-cover bg-center">
