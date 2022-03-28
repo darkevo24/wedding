@@ -35,7 +35,7 @@ const Register = () => {
     // bride_last_name: "",
     // groom_first_name: "",
     // groom_last_name: "",
-    wedding_date: "",
+    // wedding_date: "",
     email: "",
     password: "",
   });

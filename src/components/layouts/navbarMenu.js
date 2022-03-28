@@ -1,5 +1,6 @@
 import { useRouter } from "next/router";
 import React, { useState } from "react";
+import NavbarMenuHover from "./navbarMenuHover";
 
 const NavbarMenu = () => {
   const route = useRouter();
@@ -27,11 +28,7 @@ const NavbarMenu = () => {
         >
           Plan a Wedding
         </p>
-        <div className={"absolute -right-1/2 top-5 z-20 bg-transparent cursor-pointer " + (planWedding ? "inline animate-fade-in-down" : "hidden")}>
-          <div className={"bg-white h-20 w-60 rounded-md shadow-lg mt-4 cursor-default"}>
-            <p>Plan a Wedding</p>
-          </div>
-        </div>
+        {planWedding && <NavbarMenuHover menu="planWedding" />}
       </div>
       <div className="relative" onClick={() => route.push("/vendor")} onMouseEnter={(e) => setVendor(true)} onMouseLeave={(e) => setVendor(false)}>
         <p
