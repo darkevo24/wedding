@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 
 const PlatformChecklist = () => {
+  const [showOther, setShowOther] = useState(false);
   return (
     <>
-      <div className="md:flex w-3/4 justify-between hidden">
+      <div className="md:flex w-5/6 space-x-16 hidden">
         <div className="space-y-2">
           <div className="flex items-center space-x-5">
             <input
@@ -106,12 +107,14 @@ const PlatformChecklist = () => {
             <input
               type="checkbox"
               id="other"
+              onChange={() => setShowOther(!showOther)}
               className="appearance-none h-5 w-5 border rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 mt-1 align-top bg-no-repeat bg-center bg-contain float-left cursor-pointer"
             />
             <label htmlFor="other" className="ml-2 select-none font-medium text-bg-charcoal">
               Other
             </label>
           </div>
+          {showOther && <input className="p-2" placeholder="Other...." />}
         </div>
       </div>
 

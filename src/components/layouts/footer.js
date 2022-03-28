@@ -38,11 +38,11 @@ const Footer = () => {
           </div>
         </div>
         <div className="flex w-full mt-2">
-          <div className="border-y-0.5 border-r-0.5 border-gray-400 border-opacity-20 w-1/4">
-            <div className="border-b-0.5 border-gray-400 border-opacity-20 flex justify-center py-2">
+          <div className="border-y-0.5 border-r-0.5 border-gray-400 border-opacity-20 w-1/4 pl-10">
+            <div className="border-b-0.5 border-gray-400 border-opacity-20 flex py-2">
               <p className="font-semibold">Planning Tools</p>
             </div>
-            <div className="flex flex-col items-center py-2 font-thin">
+            <div className="flex flex-col py-2 font-thin">
               <p className="cursor-pointer hover:underline">Plan A Wedding</p>
               <p className="cursor-pointer hover:underline">Manage Couple’s Website</p>
               <p className="cursor-pointer hover:underline">Manage Guest List</p>
@@ -51,11 +51,11 @@ const Footer = () => {
               <p className="cursor-pointer hover:underline">Track Wedding Progress</p>
             </div>
           </div>
-          <div className="border-y-0.5 border-r-0.5 border-gray-400 border-opacity-20 w-1/4">
-            <div className="border-b-0.5 border-gray-400 border-opacity-20 flex justify-center py-2">
+          <div className="border-y-0.5 border-r-0.5 border-gray-400 border-opacity-20 w-1/4 pl-10">
+            <div className="border-b-0.5 border-gray-400 border-opacity-20 flex py-2">
               <p className="font-semibold">Need Help?</p>
             </div>
-            <div className="flex flex-col items-center py-2 font-thin">
+            <div className="flex flex-col py-2 font-thin">
               <p className="cursor-pointer hover:underline">Search A Vendor</p>
               <p className="cursor-pointer hover:underline">Find Couple’s Website</p>
               <p className="cursor-pointer hover:underline">FAQs</p>
@@ -64,20 +64,20 @@ const Footer = () => {
               <p className="cursor-pointer hover:underline">Cancellation Policy</p>
             </div>
           </div>
-          <div className="border-y-0.5 border-r-0.5 border-gray-400 border-opacity-20 w-1/4">
-            <div className="border-b-0.5 border-gray-400 border-opacity-20 flex justify-center py-2">
+          <div className="border-y-0.5 border-r-0.5 border-gray-400 border-opacity-20 w-1/4 pl-10">
+            <div className="border-b-0.5 border-gray-400 border-opacity-20 flex py-2">
               <p className="font-semibold">Become A Vendor</p>
             </div>
-            <div className="flex flex-col items-center py-2 font-thin">
+            <div className="flex flex-col py-2 font-thin">
               <p className="cursor-pointer hover:underline">Register as Vendor</p>
               <p className="cursor-pointer hover:underline">Vendor Support</p>
             </div>
           </div>
-          <div className="border-y-0.5 border-gray-400 border-opacity-20 w-1/4">
-            <div className="border-b-0.5 border-gray-400 border-opacity-20 flex justify-center py-2">
+          <div className="border-y-0.5 border-gray-400 border-opacity-20 w-1/4 pl-10">
+            <div className="border-b-0.5 border-gray-400 border-opacity-20 flex py-2">
               <p className="font-semibold">Keep In Touch With Us</p>
             </div>
-            <div className="flex flex-col items-center py-2 font-thin">
+            <div className="flex flex-col py-2 font-thin">
               <p className="cursor-pointer">Email: contact@weddingserv.com</p>
               <p className="cursor-pointer">Tel: +65 8282 7452</p>
               <p className="cursor-pointer">Add: TBA</p>

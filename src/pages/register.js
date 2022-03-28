@@ -149,7 +149,7 @@ const Register = () => {
                     <p className="font-semibold hover:text-bg-eunry">WEDDING DATE</p>
                     <div
                       onClick={() => {
-                        setShowDate(true);
+                        setShowDate(!showDate);
                       }}
                       className="w-full outline-none py-2 px-2 rounded-sm mt-3 bg-white flex justify-between items-center"
                     >
@@ -181,15 +181,15 @@ const Register = () => {
               <div className="mt-9">
                 <p className="text-2xl font-cagily">Almost There!</p>
                 <div className="md:flex">
-                  <p className="font-medium">Create an account, so we can save your preferences.&nbsp;</p>
+                  <p className="font-bold">Create an account, so we can save your preferences.&nbsp;</p>
                   <p className="font-normal italic">
                     Already have an account? <span className="cursor-pointer text-bg-primary hover:underline">Login.</span>
                   </p>
                 </div>
                 <div className="mt-4 space-y-3">
-                  <div className="md:flex md:w-2/3 items-center">
+                  <div className="md:flex md:w-4/5 items-center">
                     <div className="md:w-1/4">
-                      <p className="font-medium">Email Address</p>
+                      <p className="font-bold">Email Address</p>
                     </div>
                     <div className="md:w-3/4">
                       <input
@@ -201,9 +201,9 @@ const Register = () => {
                       />
                     </div>
                   </div>
-                  <div className="md:flex md:w-2/3 items-center">
+                  <div className="md:flex md:w-4/5 items-center">
                     <div className="md:w-1/4">
-                      <p className="font-medium">Password</p>
+                      <p className="font-bold">Password</p>
                       <p className="italic">(8 or more characters)</p>
                     </div>
                     <div className="md:w-3/4">
@@ -215,9 +215,9 @@ const Register = () => {
                       />
                     </div>
                   </div>
-                  <div className="md:flex md:w-2/3 justify-center items-center">
+                  <div className="md:flex md:w-4/5 justify-center items-center">
                     <div className="md:w-1/4 flex items-center">
-                      <p className="font-medium">Confirmation Password</p>
+                      <p className="font-bold">Confirmation Password</p>
                     </div>
                     <div className="md:w-3/4">
                       <input
