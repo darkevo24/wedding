@@ -77,8 +77,23 @@ const Login = () => {
             doLogin();
           }}
         >
-          <div className="mt-5 w-full flex flex-col items-center">
+          <div className="mt-10 w-full flex flex-col items-center">
             <div className="mt-5 w-full md:w-1/3 flex flex-col items-center">
+              <div
+                className="w-full flex justify-center items-center hover:opacity-70 py-2.5 rounded-md cursor-pointer"
+                style={{ backgroundColor: "#3B5998" }}
+              >
+                <FaFacebookF size={20} className="text-white mr-2" />
+                <p className="text-white">Login with Facebook</p>
+              </div>
+              <div
+                className="mt-3 w-full flex justify-center items-center hover:opacity-70 py-2.5 rounded-md cursor-pointer"
+                style={{ backgroundColor: "#dd4b39" }}
+              >
+                <BsGoogle size={20} className="text-white mr-2" />
+                <p className="text-white">Login with Google</p>
+              </div>
+              <div className="border-t border-t-bg-primary opacity-30 my-8 w-full"></div>
               <div className="w-full">
                 <p className="font-semibold">EMAIL ADDRESS *</p>
                 <input
@@ -112,21 +127,6 @@ const Login = () => {
                   Register here
                 </span>
               </p>
-              <div className="border-t border-t-bg-primary opacity-30 my-8 w-full"></div>
-              <div
-                className="w-full flex justify-center items-center hover:opacity-70 py-2.5 rounded-md cursor-pointer"
-                style={{ backgroundColor: "#3B5998" }}
-              >
-                <FaFacebookF size={20} className="text-white mr-2" />
-                <p className="text-white">Login with Facebook</p>
-              </div>
-              <div
-                className="mt-3 w-full flex justify-center items-center hover:opacity-70 py-2.5 rounded-md cursor-pointer"
-                style={{ backgroundColor: "#dd4b39" }}
-              >
-                <BsGoogle size={20} className="text-white mr-2" />
-                <p className="text-white">Login with Google</p>
-              </div>
             </div>
           </div>
         </form>

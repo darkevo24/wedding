@@ -9,6 +9,27 @@
   }
 }
 
+@layer base {
+  @font-face {
+    font-family: "WorkSans-SemiBold";
+    src: url("/fonts/work-sans/WorkSans-SemiBold.woff2") format("woff2");
+  }
+}
+
+@layer base {
+  @font-face {
+    font-family: "WorkSans-Medium";
+    src: url("/fonts/work-sans/WorkSans-Medium.woff2") format("woff2");
+  }
+}
+
+@layer base {
+  @font-face {
+    font-family: "WorkSans-Regular";
+    src: url("/fonts/work-sans/WorkSans-Regular.woff2") format("woff2");
+  }
+}
+
 html,
 body {
   padding: 0;
