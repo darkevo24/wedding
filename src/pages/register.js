@@ -153,8 +153,8 @@ const Register = () => {
                       }}
                       className="w-full outline-none py-2 px-2 rounded-sm mt-3 bg-white flex justify-between items-center"
                     >
-                      <p className={weddingParams.wedding_date.length === 0 && "text-slate-400"}>
-                        {weddingParams.wedding_date.length === 0 ? "Select date" : weddingParams.wedding_date}
+                      <p className={!weddingParams.wedding_date && "text-slate-400"}>
+                        {weddingParams.wedding_date ? weddingParams.wedding_date : "Select date"}
                       </p>
                       <AiOutlineDown className="text-bg-primary font-bold" />
                     </div>
@@ -241,7 +241,7 @@ const Register = () => {
                   <p>{`By clicking 'Sign Up', I agree to WeddingServ's `}</p>
                   <p className="ml-1 font-semibold">Privacy</p>
                   <p className="ml-1">and</p>
-                  <p className="ml-1 font-semibold">Term of Condition</p>
+                  <p className="ml-1 font-semibold">Term of Conditions</p>
                 </div>
               </div>
               <div className="md:flex items-center ">
