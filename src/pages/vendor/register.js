@@ -279,7 +279,7 @@ const Register = () => {
                           )}
                         </div>
                         <div className="w-full font-normal">
-                          {index === 0 && <p>You can add additional service offerings if you are able to offer more than 1 service types</p>}
+                          {index === 0 && <p className="italic">You can add additional service offerings if you are able to offer more than 1 service types</p>}
                         </div>
                       </div>
                     ))}

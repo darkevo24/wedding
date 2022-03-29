@@ -13,7 +13,7 @@ const FooterMobile = () => {
       <div className="my-2">
         <h3>Play Your Wedding Into Reality</h3>
       </div>
-      <div className="w-4/5 bg-white h-0.5 my-1"></div>
+      <div className="w-4/5 my-1" style={{ height: 1, background: "rgba(255,255,255,0.5)" }}></div>
       <div className="my-2">
         <h3>
           <strong>Refer A Friend</strong>
@@ -28,13 +28,13 @@ const FooterMobile = () => {
           </div>
         </div>
       </div>
-      <div className="w-4/5 bg-white h-0.5 my-1"></div>
+      <div className="w-4/5 my-1" style={{ height: 1, background: "rgba(255,255,255,0.5)" }}></div>
       <div className="my-2">
         <h3>
           <strong>Planning Tools</strong>
         </h3>
       </div>
-      <div className="w-4/5 bg-white h-0.5 my-1"></div>
+      <div className="w-4/5 my-1" style={{ height: 1, background: "rgba(255,255,255,0.5)" }}></div>
       <div className="my-2">
         <p>Plan A Wedding</p>
         <p>{"Manage Couple's Website"}</p>
@@ -43,13 +43,13 @@ const FooterMobile = () => {
         <p>Helpful Tips</p>
         <p>Track Wedding Progress</p>
       </div>
-      <div className="w-4/5 bg-white h-0.5 my-1"></div>
+      <div className="w-4/5 my-1" style={{ height: 1, background: "rgba(255,255,255,0.5)" }}></div>
       <div className="my-2">
         <h3>
           <strong>Need Some Help?</strong>
         </h3>
       </div>
-      <div className="w-4/5 bg-white h-0.5 my-1"></div>
+      <div className="w-4/5 my-1" style={{ height: 1, background: "rgba(255,255,255,0.5)" }}></div>
       <div className="my-2">
         <p>Search A Vendor</p>
         <p>{"Find Couple's Website"}</p>
@@ -58,30 +58,30 @@ const FooterMobile = () => {
         <p>Contact Us</p>
         <p>Cancellation Policy</p>
       </div>
-      <div className="w-4/5 bg-white h-0.5 my-1"></div>
+      <div className="w-4/5 my-1" style={{ height: 1, background: "rgba(255,255,255,0.5)" }}></div>
       <div className="my-2">
         <h3>
           <strong>Become A Vendor</strong>
         </h3>
       </div>
-      <div className="w-4/5 bg-white h-0.5 my-1"></div>
+      <div className="w-4/5 my-1" style={{ height: 1, background: "rgba(255,255,255,0.5)" }}></div>
       <div className="my-2">
         <p>Register of Vendor</p>
         <p>Vendor Support</p>
       </div>
-      <div className="w-4/5 bg-white h-0.5 my-1"></div>
+      <div className="w-4/5 my-1" style={{ height: 1, background: "rgba(255,255,255,0.5)" }}></div>
       <div className="my-2">
         <h3>
           <strong>Keep In Touch With Us</strong>
         </h3>
       </div>
-      <div className="w-4/5 bg-white h-0.5 my-1"></div>
+      <div className="w-4/5 my-1" style={{ height: 1, background: "rgba(255,255,255,0.5)" }}></div>
       <div className="my-2">
         <p>Email : contact@weddingserv.com</p>
         <p>Tel : +65 8282 7452</p>
         <p>Add : TBA</p>
       </div>
-      <div className="w-4/5 bg-white h-0.5 my-1"></div>
+      <div className="w-4/5 my-1" style={{ height: 1, background: "rgba(255,255,255,0.5)" }}></div>
       Copyright © 2022 WeddingServ
       <br></br>
       All Rights Reserved.

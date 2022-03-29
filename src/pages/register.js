@@ -28,6 +28,7 @@ const Register = () => {
   const [openAlertLocal, setOpenAlertLocal] = useState(false);
   const [selectedDay, setSelectedDay] = useState();
   const [showDate, setShowDate] = useState(false);
+  const [term, setTerm] = useState(false);
   const [errorMessageLocal, setErrorMessageLocal] = useState("");
   const [confirmPass, setConfirmPass] = useState("");
   const [weddingParams, setWeddingParams] = useState({
@@ -40,21 +41,15 @@ const Register = () => {
     password: "",
   });
 
-  function formatDate(date, format, locale) {
-    return dateFnsFormat(date, format, { locale });
-  }
-
-  function parseDate(str, format, locale) {
-    const parsed = dateFnsParse(str, format, new Date(), { locale });
-    if (DateUtils.isDate(parsed)) {
-      return parsed;
-    }
-    return undefined;
-  }
-
   const doRegister = () => {
-    if (weddingParams.password.length < 6) {
-      setErrorMessageLocal("Password must be at least 6 characters");
+    if (!term) {
+      setErrorMessageLocal("Please check Privacy and Term of Conditions");
+      setOpenAlertLocal(true);
+      return;
+    }
+
+    if (!/"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$"/.test(weddingParams.password)) {
+      setErrorMessageLocal("Password must be have minimum eight characters, at least one uppercase letter, one lowercase letter and one number");
       setOpenAlertLocal(true);
       return;
     }
@@ -187,7 +182,7 @@ const Register = () => {
                   </p>
                 </div>
                 <div className="mt-4 space-y-3">
-                  <div className="md:flex md:w-4/5 items-center">
+                  <div className="md:flex md:w-2/3 items-center">
                     <div className="md:w-1/4">
                       <p className="font-bold">Email Address</p>
                     </div>
@@ -201,7 +196,7 @@ const Register = () => {
                       />
                     </div>
                   </div>
-                  <div className="md:flex md:w-4/5 items-center">
+                  <div className="md:flex md:w-2/3 items-center">
                     <div className="md:w-1/4">
                       <p className="font-bold">Password</p>
                       <p className="italic">(8 or more characters)</p>
@@ -210,14 +205,15 @@ const Register = () => {
                       <input
                         onChange={(e) => setWeddingParams({ ...weddingParams, password: e.target.value })}
                         type="password"
+                        placeholder="One uppercase letter, one lowercase letter and one number"
                         className="w-full outline-none py-2 px-2 rounded-sm mt-3"
                         required
                       />
                     </div>
                   </div>
-                  <div className="md:flex md:w-4/5 justify-center items-center">
+                  <div className="md:flex md:w-2/3 justify-center items-center">
                     <div className="md:w-1/4 flex items-center">
-                      <p className="font-bold">Confirmation Password</p>
+                      <p className="font-bold">Confirm Password</p>
                     </div>
                     <div className="md:w-3/4">
                       <input
@@ -234,7 +230,8 @@ const Register = () => {
                 <input
                   className="mr-2 mt-3 appearance-none h-5 w-5 border rounded-sm bg-white checked:bg-blue-600 checked:border-blue-600 focus:outline-none transition duration-200 align-top bg-no-repeat bg-center bg-contain float-left cursor-pointer"
                   type="checkbox"
-                  value=""
+                  onChange={() => setTerm(!term)}
+                  value={term}
                   id="flexCheckDefault"
                 />
                 <div className="md:w-3/4 mt-3 flex">

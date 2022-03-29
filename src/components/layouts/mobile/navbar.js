@@ -11,7 +11,7 @@ const NavbarMobile = () => {
 
   return (
     <>
-      <div className="md:hidden w-full py-3 px-2 justify-between items-center bg-slate-50 shadow-md">
+      <div className="ipad:hidden w-full py-3 px-2 justify-between items-center bg-slate-50 shadow-md">
         <div className="flex w-full justify-between items-center">
           <div className="text-bg-primary select-none">
             <FiMenu size={30} className="cursor-pointer" onClick={() => setMobileNav(!mobileNav)} />

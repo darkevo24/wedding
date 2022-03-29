@@ -53,8 +53,11 @@ const VendorSearch = () => {
                   </div>
                 </div>
                 <div className="relative rounded-md h-24 w-80 cursor-pointer transition-all hover:scale-105 bg-bg-vendor-section3 bg-cover object-cover bg-center">
-                  <div className=" flex justify-center items-center space-x-2 absolute right-2 bottom-2 transition-all hover:right-1">
-                    <p>Cakes & Confectionary</p>
+                  <div className=" flex items-end space-x-2 absolute right-2 bottom-2 transition-all hover:right-1">
+                    <div>
+                      <p>Cakes &</p>
+                      <p>Confectionary</p>
+                    </div>
                     <HiOutlineArrowRight size={20} />
                   </div>
                 </div>

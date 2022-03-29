@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import Image from "next/image";
 import SearchIcon from "../../../../../public/icons/search.svg";
+import Flower from "../../../../../public/images/flower3.png";
 import ListIcon from "../../../../../public/icons/list.svg";
 import CurrencyIcon from "../../../../../public/icons/currency.svg";
 import CheckedIcon from "../../../../../public/icons/checked.svg";
@@ -13,7 +14,10 @@ const DreamTeam = () => {
   }, []);
 
   return (
-    <div className="bg-bg-romance px-10 py-16 text-bg-primary">
+    <div className="bg-bg-romance px-10 py-16 text-bg-primary relative">
+      <div className="absolute right-28 top-0">
+        <Image src={Flower} height={300} width={330} />
+      </div>
       <div className="w-full flex flex-col items-center">
         <div className="flex flex-col items-center">
           <p className="font-cagily text-3xl">Find Your Dream Team</p>
