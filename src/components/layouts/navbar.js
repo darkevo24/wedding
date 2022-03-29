@@ -80,7 +80,7 @@ const Navbar = () => {
       </div>
       <div className="hidden ipad:flex py-2 w-full px-7 justify-between items-center bg-slate-50 shadow-md">
         <div onClick={() => route.push("/")} className="cursor-pointer select-none">
-          <Image src={Logo} width={212} height={85} />
+          <Image src={Logo} width={212} height={85} objectFit={'contain'} />
         </div>
 
         <NavbarMenu />
