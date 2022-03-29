@@ -38,11 +38,7 @@ const NavbarMenu = () => {
         >
           Vendor
         </p>
-        <div className={"absolute -right-1/2 top-5 z-20 bg-transparent cursor-pointer " + (vendor ? "inline animate-fade-in-down" : "hidden")}>
-          <div className={"bg-white h-20 w-60 rounded-md shadow-lg mt-4 cursor-default"}>
-            <p>Vendor</p>
-          </div>
-        </div>
+        {vendor && <NavbarMenuHover menu="vendor" />}
       </div>
       <div className="relative" onClick={() => route.push("/guest-list")} onMouseEnter={(e) => setGuest(true)} onMouseLeave={(e) => setGuest(false)}>
         <p
@@ -53,11 +49,7 @@ const NavbarMenu = () => {
         >
           Guest List
         </p>
-        <div className={"absolute -right-1/2 top-5 z-20 bg-transparent cursor-pointer " + (guest ? "inline animate-fade-in-down" : "hidden")}>
-          <div className={"bg-white h-20 w-60 rounded-md shadow-lg mt-4 cursor-default"}>
-            <p>guest</p>
-          </div>
-        </div>
+        {guest && <NavbarMenuHover menu="guest" />}
       </div>
       <div
         className="relative"
@@ -73,11 +65,7 @@ const NavbarMenu = () => {
         >
           Inspiration
         </p>
-        <div className={"absolute -right-1/2 top-5 z-20 bg-transparent cursor-pointer " + (inspiration ? "inline animate-fade-in-down" : "hidden")}>
-          <div className={"bg-white h-20 w-60 rounded-md shadow-lg mt-4 cursor-default"}>
-            <p>Inspiration</p>
-          </div>
-        </div>
+        {inspiration && <NavbarMenuHover menu="inspiration" />}
       </div>
       <div className="relative" onClick={() => route.push("/helpful-tips")} onMouseEnter={(e) => setTips(true)} onMouseLeave={(e) => setTips(false)}>
         <p
@@ -88,11 +76,7 @@ const NavbarMenu = () => {
         >
           Helpful Tips
         </p>
-        <div className={"absolute -right-1/2 top-5 z-20 bg-transparent cursor-pointer " + (tips ? "inline animate-fade-in-down" : "hidden")}>
-          <div className={"bg-white h-20 w-60 rounded-md shadow-lg mt-4 cursor-default"}>
-            <p>Tips</p>
-          </div>
-        </div>
+        {tips && <NavbarMenuHover menu="tips" />}
       </div>
     </div>
   );

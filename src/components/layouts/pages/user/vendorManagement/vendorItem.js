@@ -2,9 +2,9 @@ import Image from "next/image";
 import React from "react";
 import { BsChevronDown } from "react-icons/bs";
 import { IoMdClose } from "react-icons/io";
-import LoveCalendar from "../../../../../public/icons/love-calendar.svg";
-import LoveLine from "../../../../../public/icons/love-line.svg";
-import PhoneCall from "../../../../../public/icons/phone-call.svg";
+import LoveCalendar from "../../../../../../public/icons/love-calendar.svg";
+import LoveLine from "../../../../../../public/icons/love-line.svg";
+import PhoneCall from "../../../../../../public/icons/phone-call.svg";
 
 const VendorItem = () => {
   return (
@@ -39,7 +39,7 @@ const VendorItem = () => {
                 <div className="w-full h-full absolute flex items-center justify-center">
                   <p className="text-bg-eunry">50% completed</p>
                 </div>
-                <div style={{ width: "50%" }} className="h-full bg-bg-primary rounded-l-md"></div>
+                <div style={{ width: "50%" }} className="h-full bg-bg-primary rounded-md"></div>
               </div>
             </div>
           </div>
