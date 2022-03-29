@@ -46,7 +46,7 @@ const VendorManagement = () => {
               <div className="w-full">
                 <div className="w-full mb-2 flex justify-between mt-8 text-bg-dark-grey">
                   <p>Status:</p>
-                  <p>Just Said Yes? Let's Get Started!</p>
+                  <p>{"Just Said Yes? Let's Get Started!"}</p>
                 </div>
                 <div className="w-full h-6 bg-gray-200 rounded-xl relative">
                   <div style={{ width: "28%" }} className="h-full bg-bg-primary rounded-xl absolute"></div>
@@ -86,8 +86,8 @@ const VendorManagement = () => {
             <div className="bg-white w-full md:w-1/2 rounded-md py-8 px-10">
               <div className="w-full flex flex-col items-center text-bg-primary-darker">
                 <p className="font-cagily text-3xl mb-3">Wedding Details</p>
-                <p className="text-lg">Congratulations - you're engaged!</p>
-                <p className="text-lg">It's time to start plaanning your dream wedding.</p>
+                <p className="text-lg">{"Congratulations - you're engaged!"}</p>
+                <p className="text-lg">{"It's time to start plaanning your dream wedding."}</p>
               </div>
               <div className="w-full mt-9 flex justify-center">
                 <div className="w-10/12 justify-between flex items-center">
@@ -149,9 +149,9 @@ const VendorManagement = () => {
         <div className="bg-bg-eunry">
           <p>your vendor team</p>
         </div>
-        <div className="bg-bg-primary">
+        {/* <div className="bg-bg-primary">
           <p>upcoming task</p>
-        </div>
+        </div> */}
       </div>
     </>
   );
