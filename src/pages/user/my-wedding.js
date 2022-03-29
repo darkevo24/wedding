@@ -3,19 +3,14 @@ import React from "react";
 import Image from "next/image";
 import girl from "../../../public/icons/girl.png";
 import man from "../../../public/icons/man.png";
-import CustomizedProgressBars from "../../components/vendor-management-style/linearBar";
-import { createTheme } from "@mui/system";
 import ring from "../../../public/icons/ring.png";
 import download from "../../../public/icons/download.png";
 import photo from "../../../public/icons/photo.png";
 import location from "../../../public/icons/location.png";
-import photo2 from "../../../public/icons/photo2.png";
 import mic from "../../../public/icons/mic.png";
 import bus from "../../../public/icons/bus.png";
 import CheckRoundedIcon from "@mui/icons-material/CheckRounded";
 import people from "../../../public/icons/people.png";
-import SliderComponent from "../../components/slider/slider";
-import copy from "../../../public/icons/copy.png";
 
 const VendorManagement = () => {
   return (
@@ -25,7 +20,7 @@ const VendorManagement = () => {
       </Head>
       <div className="">
         <div className="w-full">
-          <div className="bg-bg bg-center object-contain h-full h-80"></div>
+          <div className="bg-bg-mywedding bg-center object-contain h-80"></div>
         </div>
         <div className="w-full h-full mb-10 ">
           <div style={{ backgroundColor: "#F5F1EA" }} className="flex justify-end items-center">
@@ -44,9 +39,7 @@ const VendorManagement = () => {
               </div>
               <p className="text-bg-primary text-center text-2xl">Claire</p>
               <div className="w-full flex justify-center items-center">
-                <div className="w-8/12 my-40">
-                  <CustomizedProgressBars></CustomizedProgressBars>
-                </div>
+                <div className="w-8/12 my-40"></div>
               </div>
               <div style={{ backgroundColor: "#EAE4DA" }} className="w-full h-0.5"></div>
               <div className="cursor-pointer">
@@ -110,9 +103,7 @@ const VendorManagement = () => {
                   <div className="w-full p-10     ">
                     <div className="flex flex-col items-center justify-center lg:items-start lg:justify-start">
                       <p className="font-bold text-2xl">MILESTONE PAID</p>
-                      <div className="w-3/12">
-                        <CustomizedProgressBars></CustomizedProgressBars>
-                      </div>
+                      <div className="w-3/12"></div>
                     </div>
                     <div className="flex items-center justify-center lg:items-start lg:justify-start">
                       <div className="">
@@ -131,22 +122,22 @@ const VendorManagement = () => {
                     <Image src={location}></Image>
                     <p className="text-bg-primary text-xl mt-2">+ Add</p>
                   </div>
-                  <div className="m-4 w-40 h-40 lg:w-60 lg:h-60 flex flex-col justify-center items-center bg-business relative m-4">
+                  <div className="m-4 w-40 h-40 lg:w-60 lg:h-60 flex flex-col justify-center items-center bg-business relative">
                     <p style={{ bottom: 0 }} className="text-white text-xl mt-2 absolute font-bold">
                       Business Name
                     </p>
                   </div>
                 </div>
                 <div className="flex">
-                  <div style={{ backgroundColor: "#F5F1EA" }} className="m-4 m-4 w-40 h-40 lg:w-60 lg:h-60 flex flex-col justify-center items-center">
+                  <div style={{ backgroundColor: "#F5F1EA" }} className="m-4 w-40 h-40 lg:w-60 lg:h-60 flex flex-col justify-center items-center">
                     <Image src={photo}></Image>
                     <p className="text-bg-primary text-xl mt-2">+ Add</p>
                   </div>
-                  <div style={{ backgroundColor: "#F5F1EA" }} className="m-4 m-4 w-40 h-40 lg:w-60 lg:h-60 flex flex-col justify-center items-center">
+                  <div style={{ backgroundColor: "#F5F1EA" }} className="m-4 w-40 h-40 lg:w-60 lg:h-60 flex flex-col justify-center items-center">
                     <Image src={mic}></Image>
                     <p className="text-bg-primary text-xl mt-2">+ Add</p>
                   </div>
-                  <div style={{ backgroundColor: "#F5F1EA" }} className="hidden lg:flex m-4 w-60 h-60 flex flex-col justify-center items-center">
+                  <div style={{ backgroundColor: "#F5F1EA" }} className="lg:flex m-4 w-60 h-60 flex flex-col justify-center items-center">
                     <Image src={bus}></Image>
                     <p className="text-bg-primary text-xl mt-8">+ Add</p>
                   </div>
@@ -196,34 +187,6 @@ const VendorManagement = () => {
                 <button className="w-40 h-10  font-bold" style={{ backgroundColor: "#DBA8A1" }}>
                   Manage Guests
                 </button>
-              </div>
-            </div>
-          </div>
-
-          <div style={{ backgroundColor: "#FBE4D3" }} className="w-full">
-            <p className="text-4xl text-bg-primary p-10">Your Wedding Website</p>
-          </div>
-
-          <div className="text-bg-primary P-20 flex flex-col lg:flex-row justify-center items-center" style={{ backgroundColor: "#F5F1EA" }}>
-            <div className="w-2/3 flex justify-center items-center">
-              <p className="p-10 text-4xl">Refer A Friend</p>
-              <div className="hidden lg:flex h-24 w-0.5 bg-bg-primary ml-10"></div>
-            </div>
-            <div className="w-full p-10 font-bold flex justify-center flex-col items-center">
-              <div className="flex justify-center flex-col lg:flex-row  p-2">
-                <p className="text-2xl">YOUR REFERRAL CODE</p>
-                <div className="lg:w-96 w-72 h-12 p-2 border-bg-primary border-2 lg:ml-4 flex items-center">
-                  <p>X182008SS</p>
-                  <div className="block ml-auto mt-1">
-                    <Image src={copy}></Image>
-                  </div>
-                </div>
-              </div>
-              <div className="flex flex-col items-start justify-start lg:justify-center lg:items-center lg:flex-row text-2xl p-2">
-                <p className="">REFERRAL EARNED</p>
-                <p> ___________</p>
-                <p> REFERRAL PAID</p>
-                <p> ___________ </p>
               </div>
             </div>
           </div>
