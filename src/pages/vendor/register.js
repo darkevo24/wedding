@@ -215,7 +215,11 @@ const Register = () => {
                 </div>
               </div>
               <div className="w-full flex flex-col md:flex-row md:space-x-2">
-                <div className="w-full font-medium">
+                <div className="md:w-1/2 w-full font-medium">
+                  <p>POSTCODE</p>
+                  <input type="text" className="mt-2 w-full h-10 outline-none py-2 px-2"></input>
+                </div>
+                <div className="md:w-1/2 w-full font-medium">
                   <p>WEBSITE</p>
                   <input type="text" className="mt-2 w-full h-10 outline-none py-2 px-2"></input>
                 </div>
@@ -279,7 +283,9 @@ const Register = () => {
                           )}
                         </div>
                         <div className="w-full font-normal">
-                          {index === 0 && <p className="italic">You can add additional service offerings if you are able to offer more than 1 service types</p>}
+                          {index === 0 && (
+                            <p className="italic">You can add additional service offerings if you are able to offer more than 1 service types</p>
+                          )}
                         </div>
                       </div>
                     ))}

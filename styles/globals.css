@@ -30,6 +30,12 @@
   }
 }
 
+@layer base {
+  p {
+    font-family: "WorkSans-Regular";
+  }
+}
+
 html,
 body {
   padding: 0;

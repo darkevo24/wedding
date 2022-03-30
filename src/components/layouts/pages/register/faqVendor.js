@@ -18,13 +18,13 @@ const FaqVendor = () => {
           aria-controls="panel1a-content"
           id="panel1a-header"
         >
-          <Typography>{"WHAT IS A VENDOR'S REGISTRATION FORM?"}</Typography>
+          <p>{"WHAT IS A VENDOR'S REGISTRATION FORM?"}</p>
         </AccordionSummary>
         <AccordionDetails style={{ backgroundColor: "#FCE4D4" }}>
-          <Typography>
+          <p>
             A vendor registration form is a way to collect information about potential vendors to register them as partners or collaborators for a
             particular event
-          </Typography>
+          </p>
         </AccordionDetails>
       </Accordion>
       <div className="w-full border-t border-t-bg-primary my-8"></div>
@@ -36,13 +36,13 @@ const FaqVendor = () => {
           aria-controls="panel1a-content"
           id="panel1a-header"
         >
-          <Typography>{"WHAT IS A VENDOR'S REGISTRATION FORM?"}</Typography>
+          <p>{"WHAT IS A VENDOR'S REGISTRATION FORM?"}</p>
         </AccordionSummary>
         <AccordionDetails style={{ backgroundColor: "#FCE4D4" }}>
-          <Typography>
+          <p>
             A vendor registration form is a way to collect information about potential vendors to register them as partners or collaborators for a
             particular event
-          </Typography>
+          </p>
         </AccordionDetails>
       </Accordion>
     </div>
