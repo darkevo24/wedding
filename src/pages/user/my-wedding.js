@@ -1,19 +1,20 @@
 import Head from "next/head";
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
-import girl from "../../../public/icons/girl.png";
-import man from "../../../public/icons/man.png";
 import ring from "../../../public/icons/ring.png";
-import download from "../../../public/icons/download.png";
-import photo from "../../../public/icons/photo.png";
-import location from "../../../public/icons/location.png";
-import mic from "../../../public/icons/mic.png";
-import bus from "../../../public/icons/bus.png";
-import CheckRoundedIcon from "@mui/icons-material/CheckRounded";
-import people from "../../../public/icons/people.png";
 import { MdOutlinePhotoCamera, MdOutlineFileUpload } from "react-icons/md";
+import DayPicker from "react-day-picker";
+import dateFnsFormat from "date-fns/format";
+import { MdOutlineFastfood, MdOutlineDirectionsBusFilled } from "react-icons/md";
+import { GoLocation } from "react-icons/go";
+import { BsCamera } from "react-icons/bs";
+import { GiMicrophone } from "react-icons/gi";
 
 const VendorManagement = () => {
+  const [showWeddingCalendar, setShowWeddingCalendar] = useState(false);
+  const [weddingDate, setWeddingDate] = useState("");
+  const [selectedDay, setSelectedDay] = useState("");
+
   return (
     <>
       <Head>
@@ -122,15 +123,26 @@ const VendorManagement = () => {
                       </div>
                     </div>
                   </div>
-                  <div className="w-full mt-2 space-y-2">
+                  <div className="w-full mt-2 space-y-2 relative">
                     <p className="font-worksans-medium">Wedding Date</p>
-                    <input
-                      type="date"
-                      placeholder="dd/mm/yyyy"
-                      min="1997-01-01"
-                      max="2030-12-31"
-                      className="outline-none w-full border-b border-b-gray-100"
-                    />
+                    <div
+                      onClick={() => setShowWeddingCalendar(!showWeddingCalendar)}
+                      className="outline-none w-full border-b border-b-gray-100 cursor-pointer select-none"
+                    >
+                      <p>{weddingDate ? weddingDate : "dd/mm/yyyy"}</p>
+                    </div>
+                    <div className="bg-white absolute top-13">
+                      {showWeddingCalendar && (
+                        <DayPicker
+                          onDayClick={(e) => {
+                            setSelectedDay(e);
+                            setShowWeddingCalendar(false);
+                            setWeddingDate(dateFnsFormat(e, "dd-MMM-yyyy"));
+                          }}
+                          selectedDays={selectedDay}
+                        />
+                      )}
+                    </div>
                   </div>
                   <div className="w-full flex items-center space-x-2 mt-4">
                     <input type="checkbox" className="h-4 w-4 rounded-full" id="weddingDetail" />
@@ -146,8 +158,89 @@ const VendorManagement = () => {
             </div>
           </div>
         </div>
-        <div className="bg-bg-eunry">
-          <p>your vendor team</p>
+        <div className="bg-bg-eunry w-full flex justify-center md:py-14">
+          <div className="w-full px-3 md:w-10/12 md:px-0">
+            <div className="w-full flex text-white">
+              <div className="w-1/2 flex flex-col justify-between">
+                <p className="font-cagily text-4xl">Your Vendor Team</p>
+                <p className="font-worksans-medium text-lg">0 OUT OF 21 CATEGORIES HIRED</p>
+              </div>
+              <div className="flex w-1/2 space-x-5">
+                <div className="w-1/2 flex flex-col justify-between">
+                  <div className="flex items-center space-x-2">
+                    <div className="w-1/4 flex items-center">
+                      <p className="font-semibold text-xl">BUDGET</p>
+                    </div>
+                    <div className="flex border-b border-b-white py-0.5 text-xl font-semibold w-1/2">
+                      <p>$</p>
+                      <input type="number" className="outline-none bg-transparent text-xl font-semibold w-full" />
+                    </div>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <div className="w-1/4 flex items-center">
+                      <p className="font-semibold text-xl">ACTUAL</p>
+                    </div>
+                    <div className="flex border-b border-b-white py-0.5 text-xl font-semibold w-1/2">
+                      <p>$</p>
+                      <input type="number" className="outline-none bg-transparent text-xl font-semibold w-full" />
+                    </div>
+                  </div>
+                </div>
+                <div className="w-1/2">
+                  <p className="font-semibold">MILESTONE PAID</p>
+                  <div className="w-full h-5 rounded-xl bg-bg-romance relative mt-1">
+                    <div className="w-full h-full absolute flex items-center justify-center">
+                      <p className="text-bg-eunry">50% completed</p>
+                    </div>
+                    <div style={{ width: "50%" }} className="h-full bg-bg-primary rounded-xl"></div>
+                  </div>
+                  <div className="mt-2 border-b border-b-white">
+                    <p className="font-semibold text-xl">$7000 of $15000</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="w-full flex mt-14 justify-between space-x-3">
+              <div className="text-white flex flex-col items-center space-y-2">
+                <div className="w-48 h-48 rounded-md bg-bg-romance flex flex-col justify-center items-center text-bg-primary cursor-pointer hover:opacity-80">
+                  <GoLocation size={30} className="text-bg-primary" />
+                  <p className="font-semibold mt-2">+ Add</p>
+                </div>
+                <p className="text-lg">Venue</p>
+              </div>
+              <div className="text-white flex flex-col items-center space-y-2">
+                <div className="w-48 h-48 rounded-md bg-bg-romance flex flex-col justify-center items-center text-bg-primary cursor-pointer hover:opacity-80">
+                  <MdOutlineFastfood size={30} />
+                  <p className="font-semibold mt-2">+ Add</p>
+                </div>
+                <p className="text-lg">Catering</p>
+              </div>
+              <div className="text-white flex flex-col items-center space-y-2">
+                <div className="w-48 h-48 rounded-md bg-bg-romance flex flex-col justify-center items-center text-bg-primary cursor-pointer hover:opacity-80">
+                  <BsCamera size={30} />
+                  <p className="font-semibold mt-2">+ Add</p>
+                </div>
+                <p className="text-lg">Photographer</p>
+              </div>
+              <div className="text-white flex flex-col items-center space-y-2">
+                <div className="w-48 h-48 rounded-md bg-bg-romance flex flex-col justify-center items-center text-bg-primary cursor-pointer hover:opacity-80">
+                  <GiMicrophone size={30} />
+                  <p className="font-semibold mt-2">+ Add</p>
+                </div>
+                <p className="text-lg">Music</p>
+              </div>
+              <div className="text-white flex flex-col items-center space-y-2">
+                <div className="w-48 h-48 rounded-md bg-bg-romance flex flex-col justify-center items-center text-bg-primary cursor-pointer hover:opacity-80">
+                  <MdOutlineDirectionsBusFilled size={30} />
+                  <p className="font-semibold mt-2">+ Add</p>
+                </div>
+                <p className="text-lg">Transportation</p>
+              </div>
+            </div>
+            <div className="w-full flex justify-center mt-10 text-white">
+              <button className="bg-bg-primary hover:bg-bg-primary-darker rounded-md px-8 py-2 font-worksans-medium">View Vendors</button>
+            </div>
+          </div>
         </div>
         {/* <div className="bg-bg-primary">
           <p>upcoming task</p>
