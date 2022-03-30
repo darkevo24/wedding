@@ -357,7 +357,7 @@ const Register = () => {
                 />
                 <div className="md:w-3/4 mt-3 flex select-none">
                   <p>{`By clicking 'Sign Up', I agree to WeddingServ's `}</p>
-                  <p className="ml-1 font-semibold">Privacy</p>
+                  <p className="ml-1 font-semibold hover:underline cursor-pointer">Privacy</p>
                   <p className="ml-1">and</p>
                   <p className="ml-1 font-semibold hover:underline cursor-pointer">{"Terms & Conditions"}</p>
                 </div>

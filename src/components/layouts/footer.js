@@ -10,7 +10,7 @@ const Footer = () => {
     <div>
       <div className="hidden md:block bg-bg-primary w-full px-5 py-2 text-white">
         <div className="flex justify-between mt-5">
-          <div className="flex items-center">
+          <div className="flex items-center ml-12">
             <Image src={Logo} width={310} height={75} />
           </div>
           <div>

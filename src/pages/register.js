@@ -48,7 +48,9 @@ const Register = () => {
       return;
     }
 
-    if (!/"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{8,}$"/.test(weddingParams.password)) {
+    var strongRegex = new RegExp("^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*])(?=.{8,})");
+
+    if (!strongRegex.test(weddingParams.password)) {
       setErrorMessageLocal("Password must be have minimum eight characters, at least one uppercase letter, one lowercase letter and one number");
       setOpenAlertLocal(true);
       return;
@@ -88,7 +90,7 @@ const Register = () => {
       <div className="py-10 px-5 bg-bg-serenade text-bg-charcoal relative">
         <div className="flex flex-col items-center text-bg-primary">
           <p className="text-2xl font-cagily">So you said Yes - Congrats!</p>
-          <p className="text-xl font-cagily">{`We can't wait to help you get started!`}</p>
+          <p className="md:text-xl text-lg font-cagily">{`We can't wait to help you get started!`}</p>
         </div>
         <form
           onSubmit={(e) => {
@@ -106,13 +108,13 @@ const Register = () => {
                       <input
                         onChange={(e) => setWeddingParams({ ...weddingParams, bride_first_name: e.target.value })}
                         type="text"
-                        className="w-full outline-none py-2 px-2 rounded-sm mt-3"
+                        className="w-full outline-none py-2 px-2 rounded-sm mt-3 z-10"
                         placeholder="First Name"
                       />
                       <input
                         onChange={(e) => setWeddingParams({ ...weddingParams, bride_last_name: e.target.value })}
                         type="text"
-                        className="w-full outline-none py-2 px-2 rounded-sm mt-3"
+                        className="w-full outline-none py-2 px-2 rounded-sm mt-3 z-10"
                         placeholder="Last Name"
                       />
                     </div>
@@ -120,7 +122,7 @@ const Register = () => {
                 </div>
                 <div className="md:w-1/2">
                   <div>
-                    <p className="font-semibold hover:text-bg-eunry">{"GROOM'S NAME"}</p>
+                    <p className="font-semibold hover:text-bg-eunry md:mt-0 mt-5">{"GROOM'S NAME"}</p>
                     <div className="flex space-x-2">
                       <input
                         onChange={(e) => setWeddingParams({ ...weddingParams, groom_first_name: e.target.value })}
@@ -140,20 +142,20 @@ const Register = () => {
               </div>
               <div className="md:flex md:space-x-2 mt-5">
                 <div className="md:w-1/2">
-                  <div className="relative">
+                  <div className="">
                     <p className="font-semibold hover:text-bg-eunry">WEDDING DATE</p>
                     <div
                       onClick={() => {
                         setShowDate(!showDate);
                       }}
-                      className="w-full outline-none py-2 px-2 rounded-sm mt-3 bg-white flex justify-between items-center"
+                      className="w-full outline-none py-2 px-2 rounded-sm mt-3 bg-white flex justify-between items-center z-10"
                     >
                       <p className={!weddingParams.wedding_date && "text-slate-400"}>
                         {weddingParams.wedding_date ? weddingParams.wedding_date : "Select date"}
                       </p>
                       <AiOutlineDown className="text-bg-primary font-bold" />
                     </div>
-                    <div className="bg-white absolute top-20">
+                    <div className="bg-white absolute top-20 z-10">
                       {showDate && (
                         <DayPicker
                           onDayClick={(e) => {
@@ -174,7 +176,7 @@ const Register = () => {
                 <PlatformChecklist />
               </div>
               <div className="mt-9">
-                <p className="text-2xl font-cagily">Almost There!</p>
+                <p className="text-2xl font-cagily text-bg-primary">Almost There!</p>
                 <div className="md:flex">
                   <p className="font-bold">Create an account, so we can save your preferences.&nbsp;</p>
                   <p className="font-normal italic">
@@ -199,13 +201,12 @@ const Register = () => {
                   <div className="md:flex md:w-2/3 items-center">
                     <div className="md:w-1/4">
                       <p className="font-bold">Password</p>
-                      <p className="italic">(8 or more characters)</p>
                     </div>
                     <div className="md:w-3/4">
                       <input
                         onChange={(e) => setWeddingParams({ ...weddingParams, password: e.target.value })}
                         type="password"
-                        placeholder="One uppercase letter, one lowercase letter and one number"
+                        placeholder="8 characters or longer. Combine upper and lowercase letters along with numbers and special characters"
                         className="w-full outline-none py-2 px-2 rounded-sm mt-3"
                         required
                       />
@@ -215,11 +216,11 @@ const Register = () => {
                     <div className="md:w-1/4 flex items-center">
                       <p className="font-bold">Confirm Password</p>
                     </div>
-                    <div className="md:w-3/4">
+                    <div className="md:w-3/4 z-10">
                       <input
                         onChange={(e) => setConfirmPass(e.target.value)}
                         type="password"
-                        className="w-full outline-none py-2 px-2 rounded-sm mt-3"
+                        className="w-full outline-none py-2 px-2 rounded-sm mt-3 z-30"
                         required
                       />
                     </div>
@@ -235,10 +236,15 @@ const Register = () => {
                   id="flexCheckDefault"
                 />
                 <div className="md:w-3/4 mt-3 flex">
-                  <p>{`By clicking 'Sign Up', I agree to WeddingServ's `}</p>
-                  <p className="ml-1 font-semibold">Privacy</p>
+                  <p>
+                    {`By clicking 'Sign Up', I agree to WeddingServ's `}
+                    <span className="font-semibold hover:underline cursor-pointer">Privacy</span>
+                    <span> and </span>
+                    <span className="font-semibold  hover:underline cursor-pointer">Terms & Conditions</span>
+                  </p>
+                  {/* <p className="ml-1 font-semibold"></p>
                   <p className="ml-1">and</p>
-                  <p className="ml-1 font-semibold">{"Terms & Conditions"}</p>
+                  <p className="ml-1 font-semibold">{"Terms & Conditions"}</p> */}
                 </div>
               </div>
               <div className="md:flex items-center ">
@@ -256,7 +262,7 @@ const Register = () => {
           <Image src={Flower2} />
         </div>
 
-        <div className="absolute right-0 bottom-0">
+        <div className="hidden md:inline absolute right-0 bottom-0">
           <Image src={Flower} />
         </div>
 

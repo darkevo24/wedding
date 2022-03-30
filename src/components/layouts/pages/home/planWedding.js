@@ -27,7 +27,7 @@ const PlanWedding = () => {
             <button className="bg-bg-eunry text-white px-8 py-2 rounded-lg hover:opacity-70">Start Planning</button>
           </div>
         </div>
-        <div className="w-full flex justify-end">
+        <div className="w-full flex justify-end -mt-20 -mr-28">
           <div data-aos="fade-right" style={{ height: "70vh", width: "100%" }} className="relative">
             <Image className="object-contain" src={Gift} layout="fill" />
           </div>

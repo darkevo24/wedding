@@ -18,8 +18,8 @@ const DreamTeam = () => {
       <div className="absolute right-28 top-0">
         <Image src={Flower} height={300} width={330} />
       </div>
-      <div className="w-full flex flex-col items-center">
-        <div className="flex flex-col items-center">
+      <div className="w-full flex flex-col items-center ">
+        <div className="flex flex-col items-center z-10">
           <p className="font-cagily text-3xl">Find Your Dream Team</p>
           <div className="flex flex-col items-center mt-2">
             <p className="font-cagily">Streamline your search of pre-screened vendors with highly personalized preferences.</p>
@@ -27,12 +27,12 @@ const DreamTeam = () => {
           </div>
         </div>
         <div className="flex flex-col items-center w-full mt-5">
-          <div className="bg-white h-10 flex items-center rounded-md w-1/2">
-            <form className="w-full h-full flex items-center">
-              <div className="w-1/2 h-full flex items-center justify-center border-r border-r-bg-soapstone select-none">
+          <div className="bg-white h-10 flex items-center rounded-md md:w-1/2 w-full z-10">
+            <form className="w-full h-full md:flex items-center">
+              <div className="md:w-1/2 w-full h-full flex items-center justify-center border-r border-r-bg-soapstone select-none">
                 <p>Wedding Vendor</p>
               </div>
-              <div className="w-1/2 flex h-full">
+              <div className="md:w-1/2 md:mt-0 mt-2 w-full flex h-full bg-white">
                 <input className="bg-transparent w-full outline-none px-2 text-center" type="text" placeholder="Region / Area" required />
                 <button type="submit" className="bg-bg-primary text-white px-2 h-full rounded-tr-md rounded-br-md">
                   <MdSearch size={25} />
@@ -40,7 +40,7 @@ const DreamTeam = () => {
               </div>
             </form>
           </div>
-          <div className="mt-2">
+          <div className="md:mt-2 mt-14 z-10">
             <p className="font-light text-sm">Wedding Venues, Photographers, DJs,Hair & Makeup, Planners, Caterers, Florists and more</p>
           </div>
         </div>
