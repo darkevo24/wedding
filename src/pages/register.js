@@ -5,7 +5,6 @@ import React, { useState, useRef } from "react";
 import { AiOutlineDown } from "react-icons/ai";
 import DayPicker from "react-day-picker";
 import { DateUtils } from "react-day-picker";
-import "react-day-picker/lib/style.css";
 import PlatformChecklist from "../components/layouts/pages/register/platformChecklist";
 import { fetchApiRegister } from "../helper/fetchApi/user";
 import { useRouter } from "next/router";
@@ -212,7 +211,7 @@ const Register = () => {
                       />
                     </div>
                   </div>
-                  <div className="md:flex md:w-2/3 justify-center items-center">
+                  <div className="md:flex md:w-2/3 justify-center items-center z-30">
                     <div className="md:w-1/4 flex items-center">
                       <p className="font-bold">Confirm Password</p>
                     </div>
@@ -258,7 +257,7 @@ const Register = () => {
           </div>
         </form>
 
-        <div className="absolute right-0 top-32">
+        <div className="absolute right-0 top-32 z-10">
           <Image src={Flower2} />
         </div>
 
