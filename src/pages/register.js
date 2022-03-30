@@ -5,7 +5,6 @@ import React, { useState, useRef } from "react";
 import { AiOutlineDown } from "react-icons/ai";
 import DayPicker from "react-day-picker";
 import { DateUtils } from "react-day-picker";
-import "react-day-picker/lib/style.css";
 import PlatformChecklist from "../components/layouts/pages/register/platformChecklist";
 import { fetchApiRegister } from "../helper/fetchApi/user";
 import { useRouter } from "next/router";
@@ -211,15 +210,15 @@ const Register = () => {
                       />
                     </div>
                   </div>
-                  <div className="md:flex md:w-2/3 justify-center items-center">
+                  <div className="md:flex md:w-2/3 justify-center items-center z-30">
                     <div className="md:w-1/4 flex items-center">
                       <p className="font-bold">Confirm Password</p>
                     </div>
-                    <div className="md:w-3/4">
+                    <div className="md:w-3/4 z-30">
                       <input
                         onChange={(e) => setConfirmPass(e.target.value)}
                         type="password"
-                        className="w-full outline-none py-2 px-2 rounded-sm mt-3"
+                        className="w-full outline-none py-2 px-2 rounded-sm mt-3 z-30"
                         required
                       />
                     </div>
@@ -252,11 +251,11 @@ const Register = () => {
           </div>
         </form>
 
-        <div className="absolute right-0 top-32">
+        <div className="absolute right-0 top-32 z-10">
           <Image src={Flower2} />
         </div>
 
-        <div className="absolute right-0 bottom-0">
+        <div className="absolute right-0 bottom-0 z-10">
           <Image src={Flower} />
         </div>
 

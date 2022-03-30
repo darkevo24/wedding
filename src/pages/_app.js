@@ -1,5 +1,6 @@
 import "../../styles/globals.css";
 import "aos/dist/aos.css";
+import "react-day-picker/lib/style.css";
 import Aos from "aos";
 import { store } from "../redux/store/store";
 import { Provider } from "react-redux";
